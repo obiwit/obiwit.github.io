@@ -1,0 +1,16 @@
+.page-header {
+    background-color: #ba6b03;
+    background-image: linear-gradient(120deg, #000, #FF691A 90%);
+    /*linear-gradient(120deg, #000, #e58302); /* #ff6a1a */
+}
+.page-header img {
+    width: 20%;
+    display: inline-block;
+    margin-right: 5%;
+    margin-left: 5%;
+    min-width: 100px;
+    min-height: 100px;
+}
+
+.header-text { display: inline-block; position: relative; top: -20px; }
+@media screen and (max-width: 37.8em) { .header-text { position: static; } }
