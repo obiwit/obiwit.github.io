@@ -1,7 +1,12 @@
+/*****************************
+ * General Styles
+ ****************************/
+
 .page-header {
+    padding-top: 4.5rem;
+    padding-bottom: 2.5rem;
     background-color: #ba6b03;
-    background-image: linear-gradient(120deg, #000, #FF691A 90%);
-    /*linear-gradient(120deg, #000, #e58302); /* #ff6a1a */
+    background-image: linear-gradient(120deg, #000, #ff691a 90%);
 }
 .page-header img {
     width: 20%;
@@ -14,3 +19,40 @@
 
 .header-text { display: inline-block; position: relative; top: -20px; }
 @media screen and (max-width: 37.8em) { .header-text { position: static; } }
+
+
+.main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 { color: #ff691a; }
+
+h1.contrast, h2.contrast, h3.contrast, h4.contrast, h5.contrast, h6.contrast { color: #ffab43; font-weight: lighter; font-style: italic; }
+
+ul li {
+  list-style: square;
+}
+
+.site-footer ul {
+  text-align: right;
+}
+.site-footer ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 3%;
+}
+.site-footer ul li .fa {
+  color: #ff691a;
+}
+
+/*****************************
+ * Specific Styles
+ ****************************/
+ul#projects li {
+  list-style: none;
+  margin-top: 4%;
+  padding: 0 1% 3% 1%;
+  border-bottom: 1px solid #aaa;
+}
+ul#projects li:last-child, ul#projects li.last {
+  border: none;
+}
+ul#projects .contrast {
+  margin-left: -3.5%;
+}

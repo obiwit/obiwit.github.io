@@ -2,12 +2,19 @@
 title:        Beatriz Borges R
 tagline:      Passionate young computer scientist!
 baseurl:      ""
-#paginate:     1
+
 
 # About/contact
 author:
   name:       Beatriz Borges R
   url:        http://obiwit.com
+
+  github_username:        obiwit
+  linkedin_username:      obiwit
+  stackoverflow_username: 3059443/obiwit
+  #twitter_username:
+  #google_plus_username:
+  #facebook_username:
 
 # Gems
 #plugins:
