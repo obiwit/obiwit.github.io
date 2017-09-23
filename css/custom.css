@@ -18,17 +18,21 @@
     min-height: 100px;
 }
 
-.page-header a#home {
+.page-header a {
     color: #ff691a;
     position: absolute;
-    top: 10%;
-    left: 4%;
+    top: 25%;
+    left: 3.5%;
     opacity: 0.75;
     text-decoration: none;
 }
+.page-header a#home {
+  top: 10%;
+  left: 4%;
+}
 .page-header a#home i { display: block; }
-@media screen and (max-width: 28em) { .page-header a#home { top: 3%; left: 3%;} }
-@media screen and (min-width: 28em) and (max-width: 40em) { .page-header a#home { left: 5%;} }
+@media screen and (max-width: 28em) { .page-header a {top: 15%; left: 1.5%; } .page-header a#home { top: 3%; left: 3%;} }
+@media screen and (min-width: 28em) and (max-width: 40em) { .page-header a { left: 4%; } .page-header a#home { left: 5%;} }
 
 .header-text { display: inline-block; position: relative; top: -20px; }
 @media screen and (max-width: 37.8em) { .header-text { position: static; } }
@@ -46,6 +50,9 @@ ul li {
   list-style: square;
 }
 
+a {
+  color: #20add2;
+}
 
 .site-footer ul {
   text-align: right;
@@ -78,4 +85,56 @@ ul#projects li h4 {
   color: #934c28; /* darker "orange" */
   margin-top: -1rem;
   padding-top: 0;
+}
+
+button.toggle-accordion {
+  background-color: #ddd; /* #ffb763 */
+  width: 100%;
+  margin: 2% 0;
+  padding: 1%;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+button.toggle-accordion:after {
+    content: '\002B';
+    font-size: 1em;
+    float: right;
+    margin-right: 2%;
+}
+button.toggle-accordion.expanded:after {
+    content: "\2212";
+}
+button.toggle-accordion.expanded, button.toggle-accordion:hover {
+    background-color: #ccc;
+}
+.accordion {
+    display: none;
+    background-color: #eee;
+    margin-top: -2%;
+    padding: 3% 2% 1% 2%;
+    font-size: 80%;
+
+   -webkit-columns: 3;
+    -moz-columns: 3;
+    columns: 3;
+    -moz-column-fill: balance;
+    column-fill: balance;
+    -webkit-column-count: 3;
+    -moz-column-count:    3;
+    column-count:         3;
+    -webkit-column-gap:   1em;
+    -moz-column-gap:      1em;
+    column-gap: 1em;
+}
+.accordion img {
+  width: 100% !important;
+  height: auto !important;
+  display: inline-block;
+  margin: 0 0 1em;
+  width: 100%;
+}
+.accordion img:hover {
+  opacity: 0.6;
+  cursor: pointer;
 }
