@@ -53,6 +53,9 @@ ul li {
 a {
   color: #20add2;
 }
+span.small {
+    font-size: 80%;
+}
 
 .cursor:hover {
   cursor: pointer;
@@ -142,6 +145,9 @@ button.toggle-accordion.expanded, button.toggle-accordion:hover {
 .accordion img:hover {
   opacity: 0.6;
   cursor: pointer;
+}
+.accordion .break-after {
+  display: block;
 }
 @media screen and (max-width: 38em) { .accordion { -webkit-columns: 1;  -moz-columns: 1;  columns: 1;  -webkit-column-count: 1;  -moz-column-count: 1;  column-count: 1; } }
 @media screen and (min-width: 38em) and (max-width: 50em) { .accordion { -webkit-columns: 2;  -moz-columns: 2;  columns: 2;  -webkit-column-count: 2;  -moz-column-count: 2;  column-count: 2; } }

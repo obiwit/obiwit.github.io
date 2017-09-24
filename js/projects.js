@@ -62,6 +62,9 @@ $(function() {
      } else {
        $('#main-image').css('maxWidth', (imageWidth/imageHeight * 60) + "vh" );
      }
+     if($image.parent().data()["items"] < 3) {
+       $('#main-image').css('maxWidth', (imageWidth/imageHeight * 80) + "vh" );
+     }
 
      // add caption based on img's alt text
      $('#caption').html($image.attr('alt'));
@@ -90,6 +93,7 @@ $(function() {
    }
 
    // Adds several smaller images below the principal, for navigational purposes
+   // Doesn't show image previews if there aren't enough images in a gallery (ie. at least 3)
    function addPreviews() {
      // clear previous images
      $('#previews').html('');
@@ -103,10 +107,12 @@ $(function() {
 
      var indexes = [-3, -2, 0, 1];
      var navInfo = ['Back two images', 'Previous image', 'Next image', 'Foward two images'];
-     if (screenWidth < 500) {
+     if (totalImgNum < 3) {
+       indexes = [];
+     } else if (screenWidth < 500 || totalImgNum < 4) {
        indexes = [-2, 0]
        var navInfo = ['Previous image', 'Next image'];
-     } else if (screenWidth < 850) {
+     } else if (screenWidth < 850 || totalImgNum < 5) {
        indexes = [-2, 0, 1];
        var navInfo = ['Previous image', 'Next image', 'Foward two images'];
      }

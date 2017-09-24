@@ -12,37 +12,46 @@ title: {{ site.name }}
     <li>
       <h3>Machine Learning projects coming soon!</h3>
     </li>
-    <li>
+    <li id="gp-obiwit">
+      <h3>obiwit 2.0</h3>
+      <h4>This website iself!</h4>
+      <p>This website was my first venture into Github Pages. It was based on Jekyll's Cayman theme. However, since then I've completely reworked it! And all the image grids, modal galleries and other cool stuff are my own, from-scratch creation!</p>
+      <button class="toggle-accordion">See more</button>
+      <div class="accordion" data-items="1">
+        <img src="{{ site.baseurl }}/img/projects/gp-obiwit0.png" alt="Designing the Modal Pop-Up image gallery." data-index="1" data-project="gp-obiwit">
+      </div>
+    </li>
+    <li id="100-cerebros">
       <h3>100 Cerebros</h3>
-      <h4>(Online Gallery, Photo Editor and Meme Generator)</h4>
+      <h4>Online Gallery, Photo Editor and Meme Generator</h4>
       <p>An online applicatin allowing you to upload photos, to which you can add several effects, or turn into a meme. You can preview and undo each one of the effects (and meme captions). This was a 4 person group project, where the application's interface (ie. how the front and back-ends communicate) was done by me. I also did all the design and front-end, as well as about half of the back-end. The rest of the back-end, the database management and the image treatment were done by the other 3 persons.</p>
     </li>
-    <li class="last">
+    <li id="vhdl-enigma" class="last">
       <h3>VHDL Model for Enigma M3</h3>
       <p>A VHDL Model for two Enigmas M3 - one for ciphering the message and a second one to decipher it, using the RS232 to communicate between themselves - that I developed for a class on Digital Systems. The devices, in terms of functionality, are identical to their World War Two counterparts, sharing the more than 158,962,555,217,826,360,000 possible configurations!</p>
       <a href="https://www.youtube.com/watch?v=rjT6-Ye7jDg">Check it out in (almost spy-like) action!</a>
     </li>
     <h2 class="contrast">From 2016</h2>
-    <li id="obiwit">
+    <li id="wp-obiwit">
       <h3>obiwit (Orange Bit of Wit)</h3>
       My previous personal website and blog, using WordPress, plenty of plugins, as well of being an experiment in design and usability. This was a long project. I started out by designing Style Tiles (pictured below), and testing a few mock-ups. I also learned how to use WordPress, having heavily customized it and made use of several plug-ins. I also dabbled in email marketing, SEO optimization, and social media integration.
       <button class="toggle-accordion">See more</button>
       <div class="accordion" data-items="7">
-        <img src="{{ site.baseurl }}/img/projects/obiwit0.png" alt="The finished website, on a desktop." data-index="1" data-project="obiwit">
-        <img src="{{ site.baseurl }}/img/projects/orange_bow-styleTiles.png" alt="Style Tiles I made before doing the actual website, as part of the design process." data-index="2" data-project="obiwit">
-        <img src="{{ site.baseurl }}/img/projects/obiwit1.png" alt="Feedback form (with validation) detail." data-index="3" data-project="obiwit">
-        <img src="{{ site.baseurl }}/img/projects/obiwit3.png" alt="The finished website, on a mobile phone." data-index="4" data-project="obiwit">
-        <img src="{{ site.baseurl }}/img/projects/obiwit5.png" alt="How an article read on a desktop." data-index="5" data-project="obiwit">
-        <img src="{{ site.baseurl }}/img/projects/obiwit4.png" alt="How an article read on a mobile phone." data-index="6" data-project="obiwit">
-        <img src="{{ site.baseurl }}/img/projects/obiwit2.png" alt="Footer Detail" data-index="7" data-project="obiwit">
+        <img src="{{ site.baseurl }}/img/projects/obiwit0.png" alt="The finished website, on a desktop." data-index="1" data-project="wp-obiwit">
+        <img src="{{ site.baseurl }}/img/projects/orange_bow-styleTiles.png" alt="Style Tiles I made before doing the actual website, as part of the design process." data-index="2" data-project="wp-obiwit">
+        <img src="{{ site.baseurl }}/img/projects/obiwit1.png" alt="Feedback form (with validation) detail." data-index="3" data-project="wp-obiwit">
+        <img src="{{ site.baseurl }}/img/projects/obiwit3.png" alt="The finished website, on a mobile phone." data-index="4" data-project="wp-obiwit">
+        <img src="{{ site.baseurl }}/img/projects/obiwit5.png" alt="How an article read on a desktop." data-index="5" data-project="wp-obiwit">
+        <img src="{{ site.baseurl }}/img/projects/obiwit4.png" alt="How an article read on a mobile phone." data-index="6" data-project="wp-obiwit">
+        <img src="{{ site.baseurl }}/img/projects/obiwit2.png" alt="Footer Detail" data-index="7" data-project="wp-obiwit">
       </div>
     </li>
-    <li>
+    <li id="pacman">
       <h3>Pacman</h3>
       <p>A processing (Java based) implementation of pacman, with the ghosts activelly chasing pacman (not following pre-determined routes), several difficulty levels, semi-random maps, and lots of cheat codes!</p>
       <p>Unfortunately, the inferface is in Portuguese, since this project was part of a programming assignment for my university.</p>
     </li>
-    <li>
+    <li id="80k-quizzes">
       <h3>80,000 Hours' Mock-Up Quizzes</h3>
       <p>I did two mock-up quizzes for 80,000 Hours, devoting approximately three somewhat intensive days to each. The <a href="https://github.com/obiwit/80K_quiz_mockup">first one</a> is simpler, and beyond HTML, CSS, Javascript and jQuery, also uses Sass to greatly improve the quiz that was then being provided. This was not only an exercise in web development and programming, but also in design, which was redone from scratch, with a focus on usability.</p>
       <p>The <a href="https://github.com/obiwit/ccApp">second one</a> used more advanced technologies, like Yeoman, Angular, Grunt, Bower (and Sass once again). This quiz was done by me, however I was in England and my laptop broke, so I ended using another computer, which was already linked to github, hence the @bborgesr.</p>
@@ -51,7 +60,7 @@ title: {{ site.name }}
       <h3>Bookmarking App</h3>
       An incomplete MEAN stack app, attempting to create a more visual appealing browser bookmarking system.
     </li>
-    <li class="last">
+    <li id="robot-hand" class="last">
       <h3>Flexwire heat-shrinkable hand</h3>
       On the backside of this hand, runs a muscle wire to create a realistically moving robot hand. Made of nickel-titanium alloy, this wire contracts with heat and stays expanded when cool, which is exactly the opposite of what you'd expect of a metal. Each finger of the robot hand contains a muscle wire connected to an LED. The LED lights up when power runs through the finger. As the wire heats, the finger bends! Also, check out my original futurist design of the controller box :)
       <br><br>
@@ -59,17 +68,17 @@ title: {{ site.name }}
     </li>
 
     <h2 class="contrast">From 2015</h2>
-    <li>
+    <li id="ee40lx-robot">
       <h3>Stimuli-responsive robot</h3>
       This was the final course project for BerkeleyX's Electronic Interfaces (EE40LX): a craft-stick vibrating hopper robot controlled by the MSP430G2 LaunchPad. It has the following subsystems: a voltage regulator, two photocell front ends, a speaker driver, a microphone front end and two DC motor drivers. These systems communicate with the MSP430G2 LaunchPad in order to allow the robot to move in response to its environment. In layman's terms, this robot will start moving and making noises in reaction to light and sound stimuli. <a href="https://www.youtube.com/watch?v=MmWrJUKf1GM">Check out the demo video!</a>
     </li>
-    <li>
+    <li id="alarm-circuit">
       <h3>Home alarm system</h3>
       An intrusion alarm system, using magnetic sensor switches to respond to movement. The two LEDs indicate both whether the system is on or off and whether it is self-locked or not (to continue making noise if, for example, someone opens a door and closes it quickly).
       <br><br>
       See project Home alarm system
     </li>
-    <li class="last">
+    <li id="rpg" class="last">
       <h3>rpg (Rewarding Programming Game)</h3>
       An interactive checklist, with a progress bar that tells you how close you are to the next level and its reward! It makes use of HTML5's localStorage. This whole project started when I drew all that I wanted to do (instead of actually doing that, procrastination at its best!) Note: Due to the localStorage cross-browser implementation, this app works better in Chrome or chrome-based browsers (i.e. Opera).
       <br><br>
@@ -77,35 +86,43 @@ title: {{ site.name }}
     </li>
 
     <h2 class="contrast">From 2014</h2>
-    <li>
+    <li id="pig-game">
       <h3>Pig Game</h3>
       An implementation of the famous chance game, with abundant JavaScript and SASS plugins (ex: compass, bourbon, refills, suzy). Check it out, it's pretty fun (even if slightly addicting)!
       <br><br>
       See a <a href="https://www.youtube.com/watch?v=Qy-x7LhwmGM">short demo</a> or play the game!
     </li>
-    <li>
+    <li id="breakawake">
       <h3>BreakAwake</h3>
       A website, focusing on design and responsive layouts at all levels. After several iterations, it evolved from the original flower-like design to a more modern tiled one. Prototyping and design (mock-up pictured) played a crucial role in this process. Check out the website, but bear in mind, I've never actually finished it, since this was mainly an experiment in design and responsiveness. Also, take a look at my mockups: http://obiwit.com/wp-content/uploads/2015/09/breakAwake-mockups_grey.png
       <br><br>
       See project BreakAwake
     </li>
-    <li>
+    <li id="riddles">
       <h3>Riddles</h3>
       An interactive riddle game, build on HTML5, CSS3, Javascript, and jQuery.
-      <br><br>
-      See project Riddles
+      <button class="toggle-accordion">See more</button>
+      <div class="accordion" data-items="1">
+        <img src="{{ site.baseurl }}/img/projects/riddle.png" alt="An example of the interface during a playthrough. You are present with a picture that contains the answer, and are tasked with clicking on the right portion of the image! The game was complete with a soundtrack you could turn on or off.
+        <br><span class='small' style='color: #bbb'>PS. If you were wondering, the correct answer for this particular riddle is envelope ;)</span>" data-index="1" data-project="riddles">
+      </div>
     </li>
-    <li>
+    <li id="useless-box">
       <h3>Useless box!</h3>
       This was my first electronics project: a fully functional useless box made from scratch (including the wooden box itself and its pretty design). This project was inspired by ThinkGeek's Useless Box Kit. Check out their description: "Ok, so it's a black box, sort of shiny, with a switch on top. But what does the switch do? Does it launch a nuclear attack? Does it terminate someone you don't know somewhere in the world? Does it make bacon magically appear? You stare at it over and over, hour after hour, until you can't take it anymore. You turn it on. And out of the box, a little finger pops out and turns the unit back off. That's all it does, and the smile on your face is proof it works."
-      <br><br>
-      See project Useless box!
+      <button class="toggle-accordion">See more</button>
+      <div class="accordion" data-items="2">
+        <img src="{{ site.baseurl }}/img/projects/useless-box-on.jpg" alt="The useless box. Notice the circuitry-inspired art!" data-index="1" data-project="useless-box" class="break-after">
+        <img src="{{ site.baseurl }}/img/projects/useless-box-inside.jpg" alt="The inside of the useless box." data-index="2" data-project="useless-box">
+      </div>
     </li>
-    <li class="last">
+    <li id="sarcasm" class="last">
       <h3>src: sarcasm</h3>
       A simple static webpage, my first venture into web development!
-      <br><br>
-      See project src: sarcasm
+      <button class="toggle-accordion">See more</button>
+      <div class="accordion" data-items="1">
+        <img src="{{ site.baseurl }}/img/projects/src.png" alt="The finished website." data-index="1" data-project="sarcasm">
+      </div>
     </li>
   </ul>
 </div>
