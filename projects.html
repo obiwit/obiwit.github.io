@@ -23,18 +23,18 @@ title: {{ site.name }}
       <a href="https://www.youtube.com/watch?v=rjT6-Ye7jDg">Check it out in (almost spy-like) action!</a>
     </li>
     <h2 class="contrast">From 2016</h2>
-    <li>
+    <li id="obiwit">
       <h3>obiwit (Orange Bit of Wit)</h3>
-      My previous personal website and blog, using WordPress, plenty of plugins, as well of being an experiment in design and usability. This was a long project. I started out by designing Style Tiles (pictured), and testing a few mock-ups. I also learned how to use WordPress, having heavily customized it and made use of several plug-ins. I also dabbled in email marketing, SEO optimization, and social media integration.
+      My previous personal website and blog, using WordPress, plenty of plugins, as well of being an experiment in design and usability. This was a long project. I started out by designing Style Tiles (pictured below), and testing a few mock-ups. I also learned how to use WordPress, having heavily customized it and made use of several plug-ins. I also dabbled in email marketing, SEO optimization, and social media integration.
       <button class="toggle-accordion">See more</button>
-      <div class="accordion two-column-grid">
-        <img src="{{ site.baseurl }}/img/projects/obiwit0.png" alt="The finished website, on a desktop.">
-        <img src="{{ site.baseurl }}/img/projects/orange_bow-styleTiles.png" alt="Style Tiles I made before doing the actual website, as part of the design process.">
-        <img src="{{ site.baseurl }}/img/projects/obiwit1.png" alt="Feedback form (with validation) detail.">
-        <img src="{{ site.baseurl }}/img/projects/obiwit3.png" alt="The finished website, on a mobile phone.">
-        <img src="{{ site.baseurl }}/img/projects/obiwit5.png" alt="How an article read on a desktop.">
-        <img src="{{ site.baseurl }}/img/projects/obiwit4.png" alt="How an article read on a mobile phone.">
-        <img src="{{ site.baseurl }}/img/projects/obiwit2.png" alt="Footer Detail">
+      <div class="accordion" data-items="7">
+        <img src="{{ site.baseurl }}/img/projects/obiwit0.png" alt="The finished website, on a desktop." data-index="1" data-project="obiwit">
+        <img src="{{ site.baseurl }}/img/projects/orange_bow-styleTiles.png" alt="Style Tiles I made before doing the actual website, as part of the design process." data-index="2" data-project="obiwit">
+        <img src="{{ site.baseurl }}/img/projects/obiwit1.png" alt="Feedback form (with validation) detail." data-index="3" data-project="obiwit">
+        <img src="{{ site.baseurl }}/img/projects/obiwit3.png" alt="The finished website, on a mobile phone." data-index="4" data-project="obiwit">
+        <img src="{{ site.baseurl }}/img/projects/obiwit5.png" alt="How an article read on a desktop." data-index="5" data-project="obiwit">
+        <img src="{{ site.baseurl }}/img/projects/obiwit4.png" alt="How an article read on a mobile phone." data-index="6" data-project="obiwit">
+        <img src="{{ site.baseurl }}/img/projects/obiwit2.png" alt="Footer Detail" data-index="7" data-project="obiwit">
       </div>
     </li>
     <li>
@@ -108,4 +108,21 @@ title: {{ site.name }}
       See project src: sarcasm
     </li>
   </ul>
+</div>
+
+<div id="modal-gallery" class="modal">
+  <span class="close cursor">&times;</span>
+  <div class="modal-content">
+
+    <div id="main-image"></div>
+
+    <a class="prev cursor">&#10094;</a>
+    <a class="next cursor">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+     <div id="previews"></div>
+  </div>
 </div>
