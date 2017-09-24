@@ -167,7 +167,7 @@ button.toggle-accordion.expanded, button.toggle-accordion:hover {
   width: 90%;
 }
 .close, .prev, .next {
-  color: white;
+  color: #ff691a;
   position: absolute;
   font-weight: bold;
 }
@@ -187,12 +187,10 @@ button.toggle-accordion.expanded, button.toggle-accordion:hover {
   border-radius: 3px 0 0 3px;
 }
 .close:hover, .close:focus, .prev:hover, .prev:focus, .next:hover, .next:focus {
-  color: #999;
+  color: #990000; /*#d55917;*/
   text-decoration: none;
 }
 .modal-content div#main-image {
-  max-width: 90%;
-  max-height: 80vh;
   text-align: center;
   margin: 0 auto;
   margin-top: -5%;
@@ -202,11 +200,38 @@ button.toggle-accordion.expanded, button.toggle-accordion:hover {
   padding: 0;
   color: white;
 }
-
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
+#previews{
+  width: 100%;
+  margin-top: 3%;
+  text-align: center;
+}
+#previews img {
+  /*max-width: 23.3%;*/
+  max-height: 100px;
+  vertical-align: top;
+  margin-right: 1%;
+  padding: 0;
+  display: inline-block;
+  opacity: 0.7;
+}
+#previews img:hover, #previews img:focus {
+  opacity: 1;
+  cursor: pointer;
+}
+@media screen and (max-width: 31em) { #previews img { max-width: 45%; } }
+@media screen and (min-width: 31em) and (max-width: 53em) { #previews img { max-width: 28%; } }
+div.preview {
+  position: relative;
+  display: inline-block;
+    max-width: 23.3%;
+}
+div.preview span {
   position: absolute;
-  top: 0;
+  font-size: 50%;
+  color: white;
+  background: rgba(0,0,0,0.7);
+  z-index: 100;
+  width: 100%;
+  top: 100px;
+  text-align: center;
 }
