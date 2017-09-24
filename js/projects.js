@@ -69,6 +69,11 @@ $(function() {
      // add caption based on img's alt text
      $('#caption').html($image.attr('alt'));
 
+     // add PS (sub-caption) if it exists
+     if ($image.data()["ps"]){
+        $('#caption').append('<br><span class="small" style="color: #bbb">'+$image.data()["ps"]+'</span>');
+     }
+
      // add navigational previews below the caption
      addPreviews();
    }
@@ -118,8 +123,8 @@ $(function() {
      }
 
      for(var i = 0; i < indexes.length; i++) {
-       var $img = $("#" + imgProject).find("[data-index='" + ((imgIndex+totalImgNum+indexes[i])%totalImgNum+1) + "']");
-       $('#previews').append($('<div class="preview"><span>'+navInfo[i]+'</span></div>').append($img.clone().css('margin', "0 " + parseInt($img.height()/$img.width() * 0.04 * screenWidth) + "px" )));
+       var $image = $("#" + imgProject).find("[data-index='" + ((imgIndex+totalImgNum+indexes[i])%totalImgNum+1) + "']");
+       $('#previews').append($('<div class="preview"><span>'+navInfo[i]+'</span></div>').append($image.clone().css('margin', "0 " + parseInt($image.height()/$image.width() * 0.04 * screenWidth) + "px" )));
      }
 
      $('#previews div img').click(function(event) {
