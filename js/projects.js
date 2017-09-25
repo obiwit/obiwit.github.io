@@ -51,6 +51,8 @@ $(function() {
    function modalLoadImage($image) {
      // clean modal
      $('#main-image').html('');
+     $('#modal-gallery a.prev').show();
+     $('#modal-gallery a.next').show();
 
     // add selected image to the modal, and show it
      $('#main-image').append($image.clone());
@@ -62,12 +64,25 @@ $(function() {
      } else {
        $('#main-image').css('maxWidth', (imageWidth/imageHeight * 60) + "vh" );
      }
-     if($image.parent().data()["items"] < 3) {
+     var gallerySize = $image.parent().data()["items"];
+     if(gallerySize < 3) {
        $('#main-image').css('maxWidth', (imageWidth/imageHeight * 80) + "vh" );
+       if (gallerySize == 1) {
+         // if the gallery only has one element, hide the next and previous buttons
+         $('#modal-gallery a.prev').hide();
+         $('#modal-gallery a.next').hide();
+       }
+     }
+     // add caption based on img's alt text
+     var caption = $image.attr('alt');
+
+     // add pre-caption (bold italized text before the actual caption)if it exists
+     if ($image.data()["pre"]){
+       caption = '<strong><em>' + $image.data()["pre"] + '</em></strong>' + caption;
      }
 
-     // add caption based on img's alt text
-     $('#caption').html($image.attr('alt'));
+     // add caption itself
+     $('#caption').html(caption);
 
      // add PS (sub-caption) if it exists
      if ($image.data()["ps"]){
