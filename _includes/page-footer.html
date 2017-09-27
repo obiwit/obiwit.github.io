@@ -1,5 +1,12 @@
 <footer class="site-footer">
   <ul>
+    {% if site.author.email %}
+      <li>
+        <a href="mailto:{{ site.author.email }}">
+          <i class="fa fa-envelope fa-3x"></i>
+        </a>
+      </li>
+    {% endif %}
     {% if site.author.github_username %}
       <li>
         <a href="https://github.com/{{ site.author.github_username }}">
