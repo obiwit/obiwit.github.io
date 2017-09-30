@@ -14,8 +14,8 @@ title: {{ site.name }}
     </li>
     <li id="gp-obiwit">
       <h3>obiwit 2.0</h3>
-      <h4>This website iself!</h4>
-      <p>This website was my first venture into Github Pages. It was based on Jekyll's Cayman theme. However, since then I've completely reworked it! And all the image grids, modal galleries and other cool stuff are my own, from-scratch creation!</p>
+      <h4>This website itself!</h4>
+      <p>This website was my first venture into GitHub Pages. It was based on Jekyll's Cayman theme. However, since then I've completely reworked it! And all the image grids, modal galleries and other cool stuff are my own, from-scratch creation!</p>
       <button class="toggle-accordion">See more</button>
       <div class="accordion" data-items="1">
         <img src="{{ site.baseurl }}/img/projects/gp-obiwit0.png" alt="Designing the Modal Pop-Up image gallery." data-index="1" data-project="gp-obiwit">
@@ -24,17 +24,34 @@ title: {{ site.name }}
     <li id="100-cerebros">
       <h3>100 Cerebros</h3>
       <h4>Online Gallery, Photo Editor and Meme Generator</h4>
-      <p>An online applicatin allowing you to upload photos, to which you can add several effects, or turn into a meme. You can preview and undo each one of the effects (and meme captions). This was a 4 person group project, where the application's interface (ie. how the front and back-ends communicate) was done by me. I also did all the design and front-end, as well as about half of the back-end. The rest of the back-end, the database management and the image treatment were done by the other 3 persons.</p>
+      <p>An online application allowing you to upload photos, to which you can add several effects, or turn into a meme. You can preview and undo each one of the effects (and meme captions). This was a 4-person group project, where the application's interface (ie. how the front and back-ends communicate) was done by me. I also did all the design and front-end, as well as about half of the back-end. The rest of the back-end, the database management and the image treatment were done by the other 3 persons.</p>
+      <button class="toggle-accordion">See more</button>
+      <div class="accordion" data-items="14">
+        <img src="{{ site.baseurl }}/img/projects/100cerebros_1.png" alt="After login, the landing page of the app." data-index="1" data-project="100-cerebros">
+        <img src="{{ site.baseurl }}/img/projects/100cerebros_3.png" alt="Your profile page, which allows you to change your name or your profile image." data-index="2" data-project="100-cerebros">
+        <img src="{{ site.baseurl }}/img/projects/100cerebros_2.png" alt="Changing you profile image." data-index="3" data-project="100-cerebros">
+        <img src="{{ site.baseurl }}/img/projects/100cerebros_4.png" alt="There are three distinct galleries, according to the type of images they contain." data-index="4" data-project="100-cerebros">
+        <img src="{{ site.baseurl }}/img/projects/100cerebros_6.png" alt="The Photo Gallery. Notice how your up and down-votes of each image are highlighted under it." data-index="5" data-project="100-cerebros">
+        <img src="{{ site.baseurl }}/img/projects/100cerebros_11.png" alt="The view of a standard image. You can up or down vote it." data-index="6" data-project="100-cerebros">
+        <img src="{{ site.baseurl }}/img/projects/100cerebros_5.png" alt="When you up or down-vote an image, your choice is remembered and the buttons 'lock', not allowing you to up or down-vote again." data-index="7" data-project="100-cerebros">
+        <img src="{{ site.baseurl }}/img/projects/100cerebros_12.png" alt="The Effects gallery. Notice it has different images from the Photos gallery." data-index="8" data-project="100-cerebros">
+        <img src="{{ site.baseurl }}/img/projects/100cerebros_13.png" alt="You can sort the images on a gallery by views, up-votes, total votes, or by their age." data-index="9" data-project="100-cerebros">
+        <img src="{{ site.baseurl }}/img/projects/100cerebros_7.png" alt="When you upload a photo, you have to option to upload it as is, add one or more effects to it, or turn it into a meme." data-index="10" data-project="100-cerebros">
+        <img src="{{ site.baseurl }}/img/projects/100cerebros_8.png" alt="When you choose to add an effect to an image, you are presented with this screen, allowing you to choose which effect you want to add to your image." data-index="11" data-project="100-cerebros">
+        <img src="{{ site.baseurl }}/img/projects/100cerebros_9.png" alt="After you choose an effect, your preview image is updated, and you have the option to submit it, undo the last effect or add another effect." data-index="12" data-project="100-cerebros">
+        <img src="{{ site.baseurl }}/img/projects/100cerebros_10.png" alt="Dynamic Effect Chaining - you can add an effect on top of another effect." data-index="13" data-project="100-cerebros">
+        <img src="{{ site.baseurl }}/img/projects/100cerebros_14.png" alt="When applying an effect, you get a loading screen preventing you from clicking on a new effect before the previous one was completed." data-index="14" data-project="100-cerebros">
+      </div>
     </li>
     <li id="vhdl-enigma" class="last">
       <h3>VHDL Model for Enigma M3</h3>
       <p>A VHDL Model for two Enigmas M3 - one for ciphering the message and a second one to decipher it, using the RS232 to communicate between themselves - that I developed for a class on Digital Systems. The devices, in terms of functionality, are identical to their World War Two counterparts, sharing the more than 158,962,555,217,826,360,000 possible configurations!</p>
-      <a href="https://www.youtube.com/watch?v=rjT6-Ye7jDg">Check it out in (almost spy-like) action!</a>
+      <a target="_blank" href="https://www.youtube.com/watch?v=rjT6-Ye7jDg">Check it out in (almost spy-like) action!</a>
       <button class="toggle-accordion">See more</button>
       <div class="accordion" data-items="4">
         <img src="{{ site.baseurl }}/img/projects/enigma_overview.jpg" alt="Overview of the final system, with the two FPGA kits connected." data-index="1" data-project="vhdl-enigma" class="break-after">
-        <img src="{{ site.baseurl }}/img/projects/enigma_before.jpg" alt="Before encription - the encription machine (right) will encrypt A to T. The Seven Segment Displays shows a preview of the next encription, so you can know the next A will be encrypted as T." data-index="2" data-project="vhdl-enigma" class="break-after">
-        <img src="{{ site.baseurl }}/img/projects/enigma_after.jpg" alt="After encription - the encription machine (right) shows on its LCD screen that A was encripted as T; the deciphering machine (left) shows on its Seven Segment Display that T was deciphered as A." data-index="3" data-project="vhdl-enigma" class="break-after">
+        <img src="{{ site.baseurl }}/img/projects/enigma_before.jpg" alt="Before encryption - the encription machine (right) will encrypt A to T. The Seven Segment Displays shows a preview of the next encription, so you can know the next A will be encrypted as T." data-index="2" data-project="vhdl-enigma" class="break-after">
+        <img src="{{ site.baseurl }}/img/projects/enigma_after.jpg" alt="After encryption - the encryption machine (right) shows on its LCD screen that A was encrypted as T; the deciphering machine (left) shows on its Seven Segment Display that T was deciphered as A." data-index="3" data-project="vhdl-enigma" class="break-after">
         <img src="{{ site.baseurl }}/img/projects/enigma_FSM1.png" alt="The Finite State Machine of the setup process, which allows the configuration of both cipher and deciphering machines by the user." data-index="4" data-project="vhdl-enigma">
       </div>
     </li>
@@ -55,8 +72,8 @@ title: {{ site.name }}
     </li>
     <li id="pacman">
       <h3>Pacman</h3>
-      <p>A processing (Java based) implementation of pacman, with the ghosts actively chasing pacman (not following pre-determined routes), several difficulty levels, semi-random maps, and lots of cheat codes!</p>
-      <p>Unfortunately, the inferface is in Portuguese, since this project was part of a programming assignment for my university.</p>
+      <p>A processing (Java based) implementation of Pacman, with the ghosts actively chasing Pacman (not following pre-determined routes), several difficulty levels, semi-random maps, and lots of cheat codes!</p>
+      <p>Unfortunately, the interface is in Portuguese, since this project was part of a programming assignment for my university.</p>
       <button class="toggle-accordion">See more</button>
       <div class="accordion" data-items="7">
         <img src="{{ site.baseurl }}/img/projects/pacman_menu.png" alt="Main menu of the game, which shows scores, allows the user to choose a difficulty level and plays a catchy tune! Notice that the harder the level, the higher you score as well!" data-index="1" data-project="pacman">
@@ -70,8 +87,8 @@ title: {{ site.name }}
     </li>
     <li id="80k-quizzes">
       <h3>80,000 Hours' Mock-Up Quizzes</h3>
-      <p>I did two mock-up quizzes for 80,000 Hours, devoting approximately three somewhat intensive days to each. The <a href="https://github.com/obiwit/80K_quiz_mockup">first one</a> is simpler, and beyond HTML, CSS, Javascript and jQuery, also uses Sass to greatly improve the quiz that was then being provided. This was not only an exercise in web development and programming, but also in design, which was redone from scratch, with a focus on usability.</p>
-      <p>The <a href="https://github.com/obiwit/ccApp">second one</a> used more advanced technologies, like Yeoman, Angular, Grunt, Bower (and Sass once again). This quiz was done by me, however I was in England and my laptop broke, so I ended using another computer, which was already linked to github, hence the @bborgesr.</p>
+      <p>I did two mock-up quizzes for 80,000 Hours, devoting approximately three somewhat intensive days to each. The <a target="_blank" href="https://github.com/obiwit/80K_quiz_mockup">first one</a> is simpler, and beyond HTML, CSS, Javascript and jQuery, also uses Sass to greatly improve the quiz that was then being provided. This was not only an exercise in web development and programming, but also in design, which was redone from scratch, with a focus on usability.</p>
+      <p>The <a target="_blank" href="https://github.com/obiwit/ccApp">second one</a> used more advanced technologies, like Yeoman, Angular, Grunt, Bower (and Sass once again). This quiz was done by me, however I was in England and my laptop broke, so I ended using another computer, which was already linked to GitHub, hence the <em>@bborgesr</em>.</p>
       <button class="toggle-accordion">See more</button>
       <div class="accordion" data-items="7">
         <img src="{{ site.baseurl }}/img/projects/80k_1.png" data-pre="First Mock-Up - " alt="The (to-the-point) landing page." data-index="1" data-project="80k-quizzes">
@@ -88,7 +105,7 @@ title: {{ site.name }}
       An incomplete MEAN stack app, attempting to create a more visual appealing browser bookmarking system.
     </li>
     <li id="robot-hand" class="last">
-      <h3>Flexwire heat-shrinkable hand</h3>
+      <h3>Flex-wire heat-shrinkable hand</h3>
       On the backside of this hand, runs a muscle wire to create a realistically moving robot hand. Made of nickel-titanium alloy, this wire contracts with heat and stays expanded when cool, which is exactly the opposite of what you'd expect of a metal. Each finger of the robot hand contains a muscle wire connected to an LED. The LED lights up when power runs through the finger. As the wire heats, the finger bends! Also, check out my original futurist design of the controller box :)
       <button class="toggle-accordion">See more</button>
       <div class="accordion" data-items="3">
@@ -101,10 +118,10 @@ title: {{ site.name }}
     <h2 class="contrast">From 2015</h2>
     <li id="ee40lx-robot">
       <h3>Stimuli-responsive robot</h3>
-      This was the final course project for BerkeleyX's Electronic Interfaces (EE40LX): a craft-stick vibrating hopper robot controlled by the MSP430G2 LaunchPad. It has the following subsystems: a voltage regulator, two photocell front ends, a speaker driver, a microphone front end and two DC motor drivers. These systems communicate with the MSP430G2 LaunchPad in order to allow the robot to move in response to its environment. In layman's terms, this robot will start moving and making noises in reaction to light and sound stimuli. <a href="https://www.youtube.com/watch?v=MmWrJUKf1GM">Check out the demo video!</a>
+      This was the final course project for BerkeleyX's Electronic Interfaces (EE40LX): a craft-stick vibrating hopper robot controlled by the MSP430G2 LaunchPad. It has the following subsystems: a voltage regulator, two photocell front ends, a speaker driver, a microphone front end and two DC motor drivers. These systems communicate with the MSP430G2 LaunchPad in order to allow the robot to move in response to its environment. In layman's terms, this robot will start moving and making noises in reaction to light and sound stimuli. <a target="_blank" href="https://www.youtube.com/watch?v=MmWrJUKf1GM">Check out the demo video!</a>
       <button class="toggle-accordion">See more</button>
       <div class="accordion" data-items="1">
-        <img src="{{ site.baseurl }}/img/projects/ee40lx-robot.jpg" alt="The robot. Notice the black cilindrical buzzer, the two eye-like photocells, and its funny light-ativated spring legs. Behind it all, the MSP430G2 LaunchPad, controlling the inputs and outputs of the circuit." data-index="1" data-project="ee40lx-robot">
+        <img src="{{ site.baseurl }}/img/projects/ee40lx-robot.jpg" alt="The robot. Notice the black cylindrical  buzzer, the two eye-like photocells, and its funny light-activated spring legs. Behind it all, the MSP430G2 LaunchPad, controlling the inputs and outputs of the circuit." data-index="1" data-project="ee40lx-robot">
       </div>
     </li>
     <li id="alarm-circuit">
@@ -117,7 +134,7 @@ title: {{ site.name }}
     </li>
     <li id="rpg" class="last">
       <h3>rpg (Rewarding Programming Game)</h3>
-      An interactive checklist, with a progress bar that tells you how close you are to the next level and its reward! It makes use of HTML5's localStorage. This whole project started when I drew all that I wanted to do (instead of actually doing that, procrastination at its best!) Note: Due to the localStorage cross-browser implementation, this app works better in Chrome or chrome-based browsers (i.e. Opera).
+      An interactive checklist, with a progress bar that tells you how close you are to the next level and its reward! It makes use of HTML5's localStorage. This whole project started when I drew all that I wanted to do (instead of actually doing it, procrastination at its best!) Note: Due to the localStorage cross-browser implementation, this app works better in Chrome or chrome-based browsers (i.e. Opera).
       <button class="toggle-accordion">See more</button>
       <div class="accordion" data-items="3">
         <img src="{{ site.baseurl }}/img/projects/The-Beginning.png" alt="The picture I drew that inspired it all." data-index="1" data-project="rpg" class="break-after">
@@ -131,7 +148,7 @@ title: {{ site.name }}
       <h3>Pig Game</h3>
       An implementation of the famous chance game, with abundant JavaScript and SASS plugins (ex: compass, bourbon, refills, suzy). Check it out, it's pretty fun (even if slightly addicting)!
       <br><br>
-      See a <a href="https://www.youtube.com/watch?v=Qy-x7LhwmGM">short demo</a> or play the game!
+      See a <a target="_blank" href="https://www.youtube.com/watch?v=Qy-x7LhwmGM">short demo</a> or play the game!
       <button class="toggle-accordion">See more</button>
       <div class="accordion" data-items="1">
         <img src="{{ site.baseurl }}/img/projects/piggame.png" alt="The main screen of the game." data-index="1" data-project="pig-game">
@@ -152,7 +169,7 @@ title: {{ site.name }}
       An interactive riddle game, build on HTML5, CSS3, Javascript, and jQuery.
       <button class="toggle-accordion">See more</button>
       <div class="accordion" data-items="1">
-        <img src="{{ site.baseurl }}/img/projects/riddle.png" alt="An example of the interface during a playthrough. You are present with a picture that contains the answer, and are tasked with clicking on the right portion of the image! The game was complete with a soundtrack you could turn on or off." data-ps="PS. If you were wondering, the correct answer for this particular riddle is envelope ;)" data-index="1" data-project="riddles">
+        <img src="{{ site.baseurl }}/img/projects/riddle.png" alt="An example of the interface during a play-through. You are present with a picture that contains the answer, and are tasked with clicking on the right portion of the image! The game was complete with a soundtrack you could turn on or off." data-ps="PS. If you were wondering, the correct answer for this particular riddle is envelope ;)" data-index="1" data-project="riddles">
       </div>
     </li>
     <li id="useless-box">
