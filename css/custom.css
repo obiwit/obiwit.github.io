@@ -176,6 +176,7 @@ button.toggle-accordion.expanded, button.toggle-accordion:hover {
   color: #ff691a;
   position: absolute;
   font-weight: bold;
+  z-index: 9999;
 }
 .close {
   top: 10px;
@@ -206,13 +207,16 @@ button.toggle-accordion.expanded, button.toggle-accordion:hover {
   padding: 0;
   color: white;
 }
-#previews{
+#previews {
   width: 100%;
   margin-top: 3%;
   text-align: center;
 }
+@media screen and (max-width: 31em) { #previews {  margin-top: 5%; } }
+@media screen and (min-width: 31em) and (max-width: 53em) { #previews { margin-top: 10%; } }
+
 #previews img {
-  /*max-width: 23.3%;*/
+  max-width: 90%;
   max-height: 100px;
   vertical-align: top;
   margin-right: 1%;
@@ -224,20 +228,24 @@ button.toggle-accordion.expanded, button.toggle-accordion:hover {
   opacity: 1;
   cursor: pointer;
 }
-@media screen and (max-width: 31em) { #previews img { max-width: 45%; } }
-@media screen and (min-width: 31em) and (max-width: 53em) { #previews img { max-width: 28%; } }
 div.preview {
   position: relative;
   display: inline-block;
-    max-width: 23.3%;
+  max-width: 23.3%;
 }
+@media screen and (max-width: 31em) { div.preview  { max-width: 45%; } }
+@media screen and (min-width: 31em) and (max-width: 53em) { div.preview { max-width: 28%; } }
 div.preview span {
   position: absolute;
-  font-size: 50%;
+  font-size: 60%;
   color: white;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.5);
   z-index: 100;
   width: 100%;
-  top: 100px;
+  height: 100%;
+  top: 0;
+  padding-top: 35px;
   text-align: center;
 }
+@media screen and (max-width: 31em) {div.preview span { padding-top: 35px; } }
+@media screen and (min-width: 31em) and (max-width: 53em) { div.preview span { padding-top: 30px; } }
