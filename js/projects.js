@@ -21,7 +21,7 @@ $(function() {
 
    // Event Listeners
    $('#projects div.accordion img').click(function(event) {
-     openModal(event);
+     openModal($(event.target));
    });
    $('#modal-gallery span.close').click(closeModal);
    $('#modal-gallery a.next').click(function(event) {
@@ -30,19 +30,35 @@ $(function() {
    $('#modal-gallery a.prev').click(function(event) {
      handleNextPrevious(false)
    });
+   $(window).on('hashchange', function(){
+     var hash = window.location.hash;
+     if (!window.location.hash) {
+       closeModal();
+     }
+   });
+
+   /*{
+     hash = hash.split('/');
+     console.log(hash);
+     openModal($("img[data-project='" + hash[0] + "'][data-index='" + hash[1] + "']"));
+   } else */
 
    // Open a modal window (called when an image is clicked)
-   function openModal(elem) {
+   function openModal($image) {
 
      $('#main-image').html('');
 
-     var $image = $(elem.target);
+     window.location.hash = 'modal/' + $image.data('project') + '/' + $image.data('index');
+
      $('#modal-gallery').toggle();
      modalLoadImage($image);
    }
 
    // Close a modal window
    function closeModal() {
+     //window.location.hash = '';
+     //window.history.back();
+     history.replaceState(null, null, '/projects.html');
      $('#modal-gallery').hide();
    }
 
