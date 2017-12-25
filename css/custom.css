@@ -35,7 +35,12 @@
 .page-header a#nav_blog {
   top: 44%;
 }
-.page-header a i { display: block; }
+.page-header a i {
+  display: block;
+}
+.page-header a i.fa-inverse {
+  color: #000;
+}
 @media screen and (max-width: 28em) {
   .page-header a#nav_blog     {top: 30%; left: 1.5%; }
   .page-header a#nav_projects {top: 15%; left: 1.5%; }
