@@ -3,6 +3,10 @@ title:        Beatriz Borges R
 tagline:      Passionate young computer scientist!
 baseurl:      ""
 
+# Blog-related
+blog:
+  title:   Learning from Nada (and Data)
+  tagline: A Machine Learning blog
 
 # About/contact
 author:
