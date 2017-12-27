@@ -288,3 +288,6 @@ div.preview span {
   #blog_nav a#nav_projects {top: 18%; }
   #blog_nav a#nav_home     { top: 5%; }
 }
+ul li.spacious {
+  margin-bottom: 1.2%;
+}

@@ -1,6 +1,7 @@
 # Setup
 title:        Beatriz Borges R
 tagline:      Passionate young computer scientist!
+description:  obiwit's personal website and Machine Learning blog
 baseurl:      ""
 
 # Blog-related
@@ -22,8 +23,9 @@ author:
   #facebook_username:
 
 # Gems
-#plugins:
-#  - jekyll-paginate
+plugins:
+  - jekyll-seo-tag
+  #  - jekyll-paginate
 
 #Others
 markdown: kramdown
