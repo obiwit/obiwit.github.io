@@ -291,3 +291,8 @@ div.preview span {
 ul li.spacious {
   margin-bottom: 1.2%;
 }
+
+section.main-content {
+  font-family: 'Quattrocento Sans', sans-serif;
+  font-size: 1.25rem;
+}
