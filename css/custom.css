@@ -295,4 +295,9 @@ ul li.spacious {
 section.main-content {
   font-family: 'Quattrocento Sans', sans-serif;
   font-size: 1.25rem;
+  padding-bottom: 0;
+}
+
+footer span.copy-footer  {
+  opacity: 0.3;
 }
