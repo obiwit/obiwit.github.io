@@ -22,18 +22,17 @@
     color: #ff691a;
     position: absolute;
     left: 3%;
-    opacity: 0.75;
+    opacity: 0.5;
     text-decoration: none;
 }
 .page-header a#nav_home {
-  top: 10%;
-  left: 3.5%;
+  top: 8%;
 }
 .page-header a#nav_projects {
-  top: 25%;
+  top: 22.5%;
 }
 .page-header a#nav_blog {
-  top: 44%;
+  top: 37.5%;
 }
 .page-header a i {
   display: block;
@@ -42,13 +41,13 @@
   color: #000;
 }
 @media screen and (max-width: 28em) {
-  .page-header a#nav_blog     {top: 30%; left: 1.5%; }
+  .page-header a#nav_blog     {top: 29%; left: 1.5%; }
   .page-header a#nav_projects {top: 15%; left: 1.5%; }
-  .page-header a#nav_home     { top: 3%; left: 3%;}
+  .page-header a#nav_home     { top: 2%; left: 1.5%;}
 }
 @media screen and (min-width: 28em) and (max-width: 40em) {
-  .page-header a          { left: 3.5%; }
-  .page-header a#nav_home { left: 4%;}
+  .page-header a              { left: 3%; }
+  .page-header a#nav_projects { top: 25.2%; }
 }
 
 .header-text { display: inline-block; position: relative; top: -20px; }
@@ -278,14 +277,14 @@ div.preview span {
 }
 
 #blog_nav a#nav_projects {
-  top: 26%;
+  top: 28%;
 }
 #blog_nav a#nav_blog {
   top: 48%;
 }
 @media screen and (max-width: 28em) {
   #blog_nav a#nav_blog     {top: 37%; }
-  #blog_nav a#nav_projects {top: 18%; }
+  #blog_nav a#nav_projects {top: 21%; }
   #blog_nav a#nav_home     { top: 5%; }
 }
 ul li.spacious {
@@ -301,3 +300,17 @@ section.main-content {
 footer span.copy-footer  {
   opacity: 0.3;
 }
+
+.blog-post h1, .blog-post h2, .blog-post h3, .blog-post h4, .blog-post h5, .blog-post h6 {
+  color: #d15514;
+}
+.blog-post h1#title {
+  border-bottom: 1px solid #d15514;
+  width: 100%;
+}
+.blog-post h6#post-info {
+  text-align: right;
+  margin-top: -10px;
+}
+
+a#ref1, a#ref2, a#ref3, a#ref4, a#ref5 { padding-left: 1px; }
