@@ -1,5 +1,7 @@
-## A relatively simple python parser from (a variant of) markdown to an HTML blog post for my personal website and blog, obiwit.com
-## For now, this is a very simple text parser, that creates only the file header, the text headers, paragraphs, bolds, italics, footnotes and unordered lists
+## A relatively simple python parser from (a variant of) markdown to an HTML blog post
+# for my personal website and blog, obiwit.com
+## For now, this is a very simple text parser, that creates only the file header,
+# the text headers, paragraphs, bolds, italics, footnotes and unordered lists
 
 
 import re
@@ -38,7 +40,7 @@ def parse(in_file, out_file, author, meta_author, date):
             title = f_in.readline().split('\n')[0]
             f_out.write("""---
 layout: blog
-title: """+ meta_author + meta_title + title +"""
+title: """+ meta_author + "'s " + meta_title + " - " + title +"""
 author: """+meta_author+"""
 ---
 
@@ -140,7 +142,7 @@ if __name__ == "__main__":
         # in and out files
         in_file = sys.argv[1] if len(sys.argv) > 1 else "in.txt"
         in_file_path = in_file.split('.')
-        out_file = in_file_path[0] + "_parsed.html" #+ in_file_path[1]
+        out_file = in_file_path[0] + "_parsed.html"
 
         # author
         author = sys.argv[2] if len(sys.argv) > 2 else "Beatriz Borges R"
@@ -158,7 +160,7 @@ if __name__ == "__main__":
                 meta_author = sys.argv[4]
 
         # meta-title
-        meta_title = sys.argv[5] if len(sys.argv) > 5 else "'s Machine Learning blog - "
+        meta_title = sys.argv[5] if len(sys.argv) > 5 else "Machine Learning blog"
 
         # display info
         print ("\nInput file path:", in_file)
