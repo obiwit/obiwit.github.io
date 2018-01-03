@@ -1,3 +1,5 @@
 # obiwit.github.io
 
-My personal website. Check it out at [obiwit.com](http://obiwit.com).
+My personal website, now featuring a Machine Learning blog as well. Check it out at [obiwit.com](http://obiwit.com)!
+
+I've also coded up a python parser to generate my blog posts' HTML syntax from a somewhat uncommon variant of markdown that works for me - you can find it [here](https://github.com/obiwit/obiwit.github.io/blob/master/blog/blog_post_parser.py).

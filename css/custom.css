@@ -73,6 +73,9 @@ a {
 span.small {
     font-size: 80%;
 }
+p.small {
+  font-size: 90%;
+}
 
 .cursor:hover {
   cursor: pointer;
@@ -314,3 +317,19 @@ footer span.copy-footer  {
 }
 
 a#ref1, a#ref2, a#ref3, a#ref4, a#ref5 { padding-left: 1px; }
+
+.blog-post figure {
+  display: table; /* so that figcaption has the same width of the image */
+  text-align: center;
+  margin: 0 auto;
+}
+.blog-post figure img {
+  display: inline-block;
+  max-height: 600px;
+}
+.blog-post figure figcaption {
+  display: table-caption; /* so that figcaption has the same width of the image */
+  caption-side: bottom;
+  font-size: 80%;
+  color: #d15514;
+}
