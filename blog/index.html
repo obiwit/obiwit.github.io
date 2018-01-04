@@ -15,9 +15,11 @@ author: obiwit
 
   <h2>Blog Map</h2>
   <ul>
-    <li class="spacious"><a href="">Introduction <span class="small">(this page)</span></a></li>
-    <li class="spacious"><a href="{{ site.baseurl }}/blog/types_learning.html">Types of Learning</a></li>
-    <li class="spacious"><a href="{{ site.baseurl }}/blog/what_is_ml.html">What is (Supervised) Machine Learning?</a></li>
+    {% for post in site.blog.posts %}
+      <li class="spacious">
+        <a href="{{ site.baseurl }}/blog/{{ post.url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
   </ul>
 
 </div>

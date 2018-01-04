@@ -6,6 +6,15 @@
   <body>
     {% include blog-header.html %}
 
+    <section id="sidebar">
+        <h5>Blog Map</h5>
+        <ul>
+          {% for post in site.blog.posts %}
+            <li><a href="{{ site.baseurl }}/blog/{{ post.url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+    </section>
+
     <section class="main-content blog-post">
 
       {{ content }}
