@@ -37,12 +37,6 @@ $(function() {
      }
    });
 
-   /*{
-     hash = hash.split('/');
-     console.log(hash);
-     openModal($("img[data-project='" + hash[0] + "'][data-index='" + hash[1] + "']"));
-   } else */
-
    // Open a modal window (called when an image is clicked)
    function openModal($image) {
 
@@ -56,8 +50,6 @@ $(function() {
 
    // Close a modal window
    function closeModal() {
-     //window.location.hash = '';
-     //window.history.back();
      history.replaceState(null, null, '/projects.html');
      $('#modal-gallery').hide();
    }

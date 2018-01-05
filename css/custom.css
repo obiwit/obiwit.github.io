@@ -29,7 +29,7 @@
   top: 8%;
 }
 .page-header a#nav_projects {
-  top: 22.5%;
+  top: 22.75%;
 }
 .page-header a#nav_blog {
   top: 37.5%;
@@ -47,7 +47,8 @@
 }
 @media screen and (min-width: 28em) and (max-width: 40em) {
   .page-header a              { left: 3%; }
-  .page-header a#nav_projects { top: 25.2%; }
+  .page-header a#nav_projects { top: 24%; } /* 25.2%; */
+  .page-header a#nav_blog     { top: 40%; }
 }
 
 .header-text { display: inline-block; position: relative; top: -20px; }
@@ -96,6 +97,10 @@ p.small {
 /*****************************
  * Specific Styles
  ****************************/
+
+/****************************/
+/***************** PROJECTS */
+/****************************/
 ul#projects li {
   list-style: none;
   margin-top: 4%;
@@ -270,6 +275,67 @@ div.preview span {
 @media screen and (max-width: 31em) {div.preview span { padding-top: 35px; } }
 @media screen and (min-width: 31em) and (max-width: 53em) { div.preview span { padding-top: 30px; } }
 
+/******************************/
+/***************** ABOUT/HOME */
+/******************************/
+div#viewer {
+  position: relative;
+  margin: auto;
+  text-align: center;
+  width: 90%;
+  height: 95%;
+  z-index: 10;
+  top: -100px; /* due to loader icon */
+}
+div#viewer:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+div#viewer iframe.youtube-embed, div.document-viewer div#pdf-fail {
+	position: relative;
+  width: 90%;
+  z-index: 10;
+  display: inline-block;
+  vertical-align: middle;
+}
+div.document-viewer {
+  padding-top: 2.5%;
+  overflow: hidden;
+}
+div.document-viewer div#pdf-fail {
+  color: #fff;
+  padding: 10%;
+  /* margin: 12.5% auto 0; */
+  width: 90%;
+  max-width: 60em;
+  z-index: 10;
+  background-color: #191919; /* #222; */
+}
+/* loader code based on w3schools.com's */
+/* (https://www.w3schools.com/howto/howto_css_loader.asp) */
+div.document-viewer .loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #ff691a;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  z-index: 2;
+  top: 40%;
+  margin: 0 auto;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 
 /*****************************
  * Blog Specific Styles
