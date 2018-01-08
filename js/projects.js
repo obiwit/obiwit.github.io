@@ -2,17 +2,18 @@ $(function() {
   /**
    * Accordion Logic
    */
-  $('button.toggle-accordion').click(function() {
-
+  $('button.toggle-accordion').on('click', function() {
     var elem = $(this);
-    var nextElemText = elem.hasClass('expanded') ? 'See more' : 'See less';
-    elem.toggleClass('expanded');
-    elem.html(nextElemText);
-
-    var accordionContent = elem.next();
-    accordionContent.toggle();
+    toggleAccordion(elem);
   });
+  function toggleAccordion(accordion) {
+    var nextElemText = accordion.hasClass('expanded') ? 'See more' : 'See less';
+    accordion.toggleClass('expanded');
+    accordion.html(nextElemText);
 
+    var accordionContent = accordion.next();
+    accordionContent.toggle();
+  }
 
 
   /**
@@ -20,14 +21,16 @@ $(function() {
    */
 
    // Event Listeners
-   $('#projects div.accordion img').click(function(event) {
-     openModal($(event.target));
+   $('#projects div.accordion img').on('click', function(event) {
+     // Open a modal window (called when an image is clicked)
+     $('#modal-gallery').toggle();
+     modalLoadImage($image);
    });
-   $('#modal-gallery span.close').click(closeModal);
-   $('#modal-gallery a.next').click(function(event) {
+   $('#modal-gallery span.close').on('click', closeModal);
+   $('#modal-gallery a.next').on('click', function(event) {
      handleNextPrevious(true);
    });
-   $('#modal-gallery a.prev').click(function(event) {
+   $('#modal-gallery a.prev').on('click', function(event) {
      handleNextPrevious(false)
    });
    $(window).on('hashchange', function(){
@@ -37,36 +40,53 @@ $(function() {
      }
    });
 
-   // Open a modal window (called when an image is clicked)
-   function openModal($image) {
-
-     $('#main-image').html('');
-
-     window.location.hash = 'modal/' + $image.data('project') + '/' + $image.data('index');
-
+   // check if landing url is a "modal" url, and if so, open corresponding modal
+   var modal_url = window.location.href.split('#')[1];
+   var url_parts = modal_url.split("/");
+   if (modal_url && url_parts.length == 3) {
+     var list_elem_id = "li#"+ url_parts[1];
+     // open the modal immediately, so the website appears faster
      $('#modal-gallery').toggle();
-     modalLoadImage($image);
+
+     // open corresponding accordion
+     toggleAccordion($(list_elem_id + " button.toggle-accordion"));
+     // scroll to it
+     $('html, body').animate({
+       scrollTop: $(list_elem_id).offset().top
+     }, 1000);
+
+     // add image to the modal
+     var $image = $(list_elem_id + " div.accordion img[data-index='"+ url_parts[2] +"']");
+     $image.on("load", function() {
+       modalLoadImage($image);
+     });
    }
 
    // Close a modal window
    function closeModal() {
      history.replaceState(null, null, '/projects.html');
      $('#modal-gallery').hide();
+     $('#main-image').html('');
    }
 
    // load an image into the main content part of the modal window (doesn't open
    // the modal window itself)
    function modalLoadImage($image) {
-     // clean modal
+     // guarantee modal is clean
      $('#main-image').html('');
      $('#modal-gallery a.prev').show();
      $('#modal-gallery a.next').show();
 
-    // add selected image to the modal, and show it
+     // update url
+     window.location.hash = 'modal/' + $image.data('project') + '/' + $image.data('index');
+
+     // add selected image to the modal, and show it
      $('#main-image').append($image.clone());
 
      var imageHeight = $image.height();
      var imageWidth = $image.width();
+     console.log(imageHeight);
+     console.log(imageWidth);
      if (imageHeight > imageWidth) {
        $('#main-image').css('maxWidth', (imageWidth/imageHeight * 65) + "vh" );
      } else {
@@ -150,7 +170,7 @@ $(function() {
        $('#previews').append($('<div class="preview"><span>'+navInfo[i]+'</span></div>').append($image.clone().css('margin', "0 " + parseInt($image.height()/$image.width() * 0.04 * screenWidth) + "px" )));
      }
 
-     $('#previews div img').click(function(event) {
+     $('#previews div img').on('click', function(event) {
        modalLoadImage($(event.target).css('margin', "0"));
      });
    }
