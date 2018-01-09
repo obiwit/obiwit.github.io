@@ -1,50 +1,60 @@
+<symbol id="icon-kaggle" viewBox="0 0 32 32">
+  <path d="M25.1 31.812c-0.030 0.124-0.156 0.188-0.374 0.188h-4.186c-0.248 0-0.468-0.11-0.656-0.33l-6.904-8.786-1.93 1.832v6.814c0 0.314-0.156 0.47-0.47 0.47h-3.24c-0.316 0-0.472-0.156-0.472-0.47v-31.060c0-0.31 0.156-0.47 0.472-0.47h3.24c0.314 0 0.47 0.16 0.47 0.47v19.124l8.27-8.364c0.22-0.22 0.44-0.328 0.66-0.328h4.32c0.19 0 0.314 0.080 0.38 0.24 0.060 0.2 0.046 0.34-0.048 0.42l-8.74 8.46 9.114 11.34c0.126 0.14 0.156 0.28 0.094 0.48z"></path>
+</symbol>
 <footer class="site-footer">
   <ul>
     {% if site.author.email %}
       <li>
-        <a href="mailto:{{ site.author.email }}">
+        <a href="mailto:{{ site.author.email }}" aria-label="send me an email">
           <i class="fa fa-envelope fa-3x"></i>
         </a>
       </li>
     {% endif %}
     {% if site.author.github_username %}
       <li>
-        <a href="https://github.com/{{ site.author.github_username }}">
+        <a href="https://github.com/{{ site.author.github_username }}" aria-label="my github profile">
           <i class="fa fa-github-square fa-3x"></i>
         </a>
       </li>
     {% endif %}
     {% if site.author.linkedin_username %}
       <li>
-        <a href="https://linkedin.com/in/{{ site.author.linkedin_username }}">
+        <a href="https://linkedin.com/in/{{ site.author.linkedin_username }}" aria-label="my Linkedin profile">
           <i class="fa fa-linkedin-square fa-3x"></i>
+        </a>
+      </li>
+    {% endif %}
+    {% if site.author.kaggle_username %}
+      <li>
+        <a href="https://www.kaggle.com/{{ site.author.kaggle_username }}" aria-label="my kaggle profile">
+            <i class="fa fa-square fa-3x"></i><span class="icon-overlay">k</span>
         </a>
       </li>
     {% endif %}
     {% if site.author.stackoverflow_username %}
       <li>
-        <a href="https://stackoverflow.com/users/{{ site.author.stackoverflow_username }}">
+        <a href="https://stackoverflow.com/users/{{ site.author.stackoverflow_username }}"  aria-label="my stackoverflow profile">
           <i class="fa fa-stack-overflow fa-3x"></i>
         </a>
       </li>
     {% endif %}
     {% if site.author.twitter_username %}
       <li>
-        <a href="https://twitter.com/{{ site.author.twitter_username }}">
+        <a href="https://twitter.com/{{ site.author.twitter_username }}"  aria-label="my twitter account">
           <i class="fa fa-twitter-square fa-3x"></i>
         </a>
       </li>
     {% endif %}
     {% if site.author.facebook_username %}
       <li>
-        <a href="https://www.facebook.com/{{ site.author.facebook_username }}">
+        <a href="https://www.facebook.com/{{ site.author.facebook_username }}"  aria-label="my facebook account">
           <i class="fa fa-facebook-square fa-3x"></i>
         </a>
       </li>
     {% endif %}
     {% if site.author.google_plus_username %}
       <li>
-        <a href="https://plus.google.com/{{ site.author.google_plus_username }}">
+        <a href="https://plus.google.com/{{ site.author.google_plus_username }}"  aria-label="my google plus account">
           <i class="fa fa-google-plus-square fa-3x"></i>
         </a>
       </li>

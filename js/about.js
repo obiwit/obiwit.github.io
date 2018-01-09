@@ -17,8 +17,10 @@ $(function() {
   // Event Listeners
   /******************************************* MODAL WINDOW */
   $('div#home a').on("click", function(event) {
-   event.preventDefault();
-   openModal($(this));
+    if (event.target.prop('target') == "_blank") {
+       event.preventDefault();
+       openModal($(this));
+     }
   });
   $('#modal-gallery span.close').on("click", closeModal);
   $(window).on('hashchange', function(){

@@ -1,17 +1,16 @@
 <section class="page-header small-header">
   <nav id="blog_nav">
-    <a id="nav_home" href="{{ site.baseurl }}/" class="fa-stack fa-lg">
-      <i class="fa fa-square fa-stack-2x"></i>
-      <i class="fa fa-home fa-stack-1x fa-inverse"></i>
-    </a>
-    <a id="nav_projects" class="fa-stack fa-lg" href="{{ site.baseurl }}/projects.html">
-      <i class="fa fa-square fa-stack-2x"></i>
-      <i class="fa fa-terminal fa-stack-1x fa-inverse"></i>
-    </a>
-    <a id="nav_blog" class="fa-stack fa-lg" href="{{ site.baseurl }}/blog/index.html">
-      <i class="fa fa-square fa-stack-2x"></i>
-      <i class="fa fa-newspaper-o fa-stack-1x fa-inverse"></i>
-    </a>
+    <ul>
+      <li><a id="nav_home" href="{{ site.baseurl }}/">
+        <i class="fa fa-home"></i>  <span>About Me</span></a>
+      </li>
+      <li><a id="nav_projects" href="{{ site.baseurl }}/projects.html">
+        <i class="fa fa-terminal"></i>  <span>Projects</span></a>
+      </li>
+      <li><a id="nav_blog" href="{{ site.baseurl }}/blog/index.html">
+        <i class="fa fa-newspaper-o"></i>  <span>ML Blog</span></a>
+      </li>
+    </ul>
   </nav>
   <div class="header-text">
     <h1 class="project-name">{{ site.blog.title }}</h1>

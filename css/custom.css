@@ -17,38 +17,33 @@
     min-width: 100px;
     min-height: 100px;
 }
-
+.page-header ul {
+  position: absolute;
+  top: -6.5%;
+  left: 0;
+  padding-top: 2%;
+  padding-bottom: 1%;
+  width: 65%;
+  text-align: left;
+  background: linear-gradient(to right,rgba(255, 255, 255, 0.3) , rgba(255, 255, 255, 0));
+}
 .page-header a {
-    color: #ff691a;
-    position: absolute;
-    left: 3%;
+    /* color: #ff691a; */
+    color: #fff;
     opacity: 0.5;
     text-decoration: none;
 }
-.page-header a#nav_home {
-  top: 8%;
+.page-header ul li {
+  list-style: none !important;
+  display: inline-block;
+  margin-right: 5%;
 }
-.page-header a#nav_projects {
-  top: 22.75%;
+.page-header ul li a span{
+  text-decoration: underline;
 }
-.page-header a#nav_blog {
-  top: 37.5%;
-}
-.page-header a i {
-  display: block;
-}
-.page-header a i.fa-inverse {
-  color: #000;
-}
-@media screen and (max-width: 28em) {
-  .page-header a#nav_blog     {top: 29%; left: 1.5%; }
-  .page-header a#nav_projects {top: 15%; left: 1.5%; }
-  .page-header a#nav_home     { top: 2%; left: 1.5%;}
-}
-@media screen and (min-width: 28em) and (max-width: 40em) {
-  .page-header a              { left: 3%; }
-  .page-header a#nav_projects { top: 24%; }
-  .page-header a#nav_blog     { top: 40%; }
+@media screen and (max-width: 36em) { /* img changes on 30em, btw */
+    .page-header ul { width: 100%; padding: 3.5% 0 0.5% 0; }
+    .page-header ul li { width: 29%; margin: 0 0 0 3%; }
 }
 
 .header-text { display: inline-block; position: relative; top: -20px; }
@@ -84,16 +79,26 @@ p.small {
 
 .site-footer ul {
   text-align: right;
+  margin-bottom: 0;
 }
 .site-footer ul li {
   list-style: none;
   display: inline-block;
   margin: 0 3%;
 }
+.site-footer ul li a:active, .site-footer ul li a:hover {
+  text-decoration: none;
+}
 .site-footer ul li .fa {
   color: #ff691a;
 }
-
+.site-footer ul li span.icon-overlay {
+  color: white;
+  position: relative;
+  left: -31px;
+  font-size: 250%;
+  font-weight: bold;
+}
 /*****************************
  * Specific Styles
  ****************************/

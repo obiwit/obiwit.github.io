@@ -42,24 +42,26 @@ $(function() {
 
    // check if landing url is a "modal" url, and if so, open corresponding modal
    var modal_url = window.location.href.split('#')[1];
-   var url_parts = modal_url.split("/");
-   if (modal_url && url_parts.length == 3) {
-     var list_elem_id = "li#"+ url_parts[1];
-     // open the modal immediately, so the website appears faster
-     $('#modal-gallery').toggle();
+   if (modal_url) {
+     var url_parts = modal_url.split("/");
+     if (url_parts.length == 3) {
+       var list_elem_id = "li#"+ url_parts[1];
+       // open the modal immediately, so the website appears faster
+       $('#modal-gallery').toggle();
 
-     // open corresponding accordion
-     toggleAccordion($(list_elem_id + " button.toggle-accordion"));
-     // scroll to it
-     $('html, body').animate({
-       scrollTop: $(list_elem_id).offset().top
-     }, 1000);
+       // open corresponding accordion
+       toggleAccordion($(list_elem_id + " button.toggle-accordion"));
+       // scroll to it
+       $('html, body').animate({
+         scrollTop: $(list_elem_id).offset().top
+       }, 1000);
 
-     // add image to the modal
-     var $image = $(list_elem_id + " div.accordion img[data-index='"+ url_parts[2] +"']");
-     $image.on("load", function() {
-       modalLoadImage($image);
-     });
+       // add image to the modal
+       var $image = $(list_elem_id + " div.accordion img[data-index='"+ url_parts[2] +"']");
+       $image.on("load", function() {
+         modalLoadImage($image);
+       });
+     }
    }
 
    // Close a modal window
