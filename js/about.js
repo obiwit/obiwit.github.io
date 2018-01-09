@@ -17,7 +17,7 @@ $(function() {
   // Event Listeners
   /******************************************* MODAL WINDOW */
   $('div#home a').on("click", function(event) {
-    if (event.target.prop('target') == "_blank") {
+    if ($(event.target).prop('target') == "_blank") {
        event.preventDefault();
        openModal($(this));
      }

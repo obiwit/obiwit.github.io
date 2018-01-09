@@ -24,7 +24,7 @@ $(function() {
    $('#projects div.accordion img').on('click', function(event) {
      // Open a modal window (called when an image is clicked)
      $('#modal-gallery').toggle();
-     modalLoadImage($image);
+     modalLoadImage($(event.target));
    });
    $('#modal-gallery span.close').on('click', closeModal);
    $('#modal-gallery a.next').on('click', function(event) {
@@ -87,8 +87,6 @@ $(function() {
 
      var imageHeight = $image.height();
      var imageWidth = $image.width();
-     console.log(imageHeight);
-     console.log(imageWidth);
      if (imageHeight > imageWidth) {
        $('#main-image').css('maxWidth', (imageWidth/imageHeight * 65) + "vh" );
      } else {
