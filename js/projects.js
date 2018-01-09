@@ -1,21 +1,3 @@
-
-//check if landing url is a "modal" url, and if so, add an event listener to
-// the image on the url (it's important that this is done outside of the ready
-// function)
-var modal_url = window.location.href.split('#')[1];
-if (modal_url) {
- var url_parts = modal_url.split("/");
- if (url_parts.length == 3) {
-   var list_elem_id = "li#"+ url_parts[1];
-
-   // add image to the modal
-   var $image = $(list_elem_id + " div.accordion img[data-index='"+ url_parts[2] +"']");
-   $image.on("load", function() {
-     modalLoadImage($image);
-   });
- }
-}
-
 $(function() {
   /**
    * Accordion Logic
@@ -76,10 +58,10 @@ $(function() {
 
        // add image to the modal
        var $image = $(list_elem_id + " div.accordion img[data-index='"+ url_parts[2] +"']");
-       $image.on("load", function() {
-         console.log("loaded");
-         modalLoadImage($image);
-       });
+       modalLoadImage($image);
+       // $image.on("load", function() {
+       //   modalLoadImage($image);
+       // });
      }
    }
 
@@ -189,7 +171,10 @@ $(function() {
        $('#previews').append($('<div class="preview"><span>'+navInfo[i]+'</span></div>').append($image.clone().css('margin', "0 " + parseInt($image.height()/$image.width() * 0.04 * screenWidth) + "px" )));
      }
 
-     $('#previews div img').on('click', function(event) {
+     $('#previews span').on('click', function(event) {
+       modalLoadImage($(event.target).next().css('margin', "0"));
+     });
+     $('#previews img').on('click', function(event) {
        modalLoadImage($(event.target).css('margin', "0"));
      });
    }
