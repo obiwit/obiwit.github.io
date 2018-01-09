@@ -58,7 +58,7 @@ $(function() {
 
        // add image to the modal
        var $image = $(list_elem_id + " div.accordion img[data-index='"+ url_parts[2] +"']");
-       setTimeout(function(){ modalLoadImage($image); }, 500);
+       setTimeout(function(){ modalLoadImage($image); }, 1000);
      }
    }
 
