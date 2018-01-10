@@ -77,6 +77,9 @@ p.small {
   cursor: pointer;
 }
 
+.site-footer {
+  margin-top: 1rem;
+}
 .site-footer ul {
   text-align: right;
   margin-bottom: 0;
@@ -183,7 +186,7 @@ button.toggle-accordion.expanded, button.toggle-accordion:hover {
 @media screen and (min-width: 38em) and (max-width: 50em) { .accordion { -webkit-columns: 2;  -moz-columns: 2;  columns: 2;  -webkit-column-count: 2;  -moz-column-count: 2;  column-count: 2; } }
 
 /* Modal styles */
-.modal {
+div.modal {
   display: none;
   overflow: auto;
   z-index: 1;
@@ -195,57 +198,59 @@ button.toggle-accordion.expanded, button.toggle-accordion:hover {
   background-color: rgba(0,0,0,0.9);
   padding-top: 100px;
 }
-.modal-content {
+div#modal-gallery .modal-content {
   position: relative;
   margin: auto;
   padding: 0;
   height: 100%;
   width: 90%;
 }
-.close, .prev, .next {
+div#modal-gallery .close, div#modal-gallery .prev, div#modal-gallery .next {
   color: #ff691a;
   position: absolute;
   font-weight: bold;
   z-index: 9999;
 }
-.close {
+div#modal-gallery .close {
   top: 10px;
   right: 25px;
   font-size: 35px;
 }
-.prev, .next {
+div#modal-gallery .prev, div#modal-gallery .next {
   top: 50%;
   padding: 16px;
   margin-top: -50px;
   font-size: 20px;
 }
-.next {
+div#modal-gallery .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-.close:hover, .close:focus, .prev:hover, .prev:focus, .next:hover, .next:focus {
+div#modal-gallery .close:hover, div#modal-gallery .close:focus, div#modal-gallery .prev:hover, div#modal-gallery .prev:focus, div#modal-gallery .next:hover, div#modal-gallery .next:focus {
   color: #990000; /*#d55917;*/
   text-decoration: none;
 }
-.modal-content div#main-image {
+div#modal-gallery .modal-content div#main-image {
   text-align: center;
   margin: 0 auto;
   margin-top: -5%;
 }
-.caption-container {
+div#modal-gallery .caption-container {
   text-align: center;
   padding: 0;
   color: white;
 }
-#previews {
+div#modal-gallery #previews {
   width: 100%;
   margin-top: 3%;
   text-align: center;
 }
-@media screen and (max-width: 31em) { #previews {  margin-top: 5%; } }
-@media screen and (min-width: 31em) and (max-width: 53em) { #previews { margin-top: 10%; } }
+@media screen and (max-width: 31em) { div#modal-gallery #previews {  margin-top: 5%; } }
+@media screen and (min-width: 31em) and (max-width: 53em) {
+  div#modal-gallery #previews { margin-top: 10%; }
+}
 
-#previews img {
+div#modal-gallery #previews img {
   max-width: 90%;
   max-height: 100px;
   vertical-align: top;
@@ -254,18 +259,18 @@ button.toggle-accordion.expanded, button.toggle-accordion:hover {
   display: inline-block;
   opacity: 0.7;
 }
-#previews img:hover, #previews img:focus {
+div#modal-gallery #previews img:hover, div#modal-gallery #previews img:focus {
   opacity: 1;
   cursor: pointer;
 }
-div.preview {
+div#modal-gallery div.preview {
   position: relative;
   display: inline-block;
   max-width: 23.3%;
 }
-@media screen and (max-width: 31em) { div.preview  { max-width: 45%; } }
-@media screen and (min-width: 31em) and (max-width: 53em) { div.preview { max-width: 28%; } }
-div.preview span {
+@media screen and (max-width: 31em) { div#modal-gallery div.preview  { max-width: 45%; } }
+@media screen and (min-width: 31em) and (max-width: 53em) { div#modal-gallery div.preview { max-width: 28%; } }
+div#modal-gallery div.preview span {
   position: absolute;
   font-size: 60%;
   color: white;
@@ -277,8 +282,12 @@ div.preview span {
   padding-top: 35px;
   text-align: center;
 }
-@media screen and (max-width: 31em) {div.preview span { padding-top: 35px; } }
-@media screen and (min-width: 31em) and (max-width: 53em) { div.preview span { padding-top: 30px; } }
+@media screen and (max-width: 31em) {
+  div#modal-gallery div.preview span { padding-top: 35px; }
+}
+@media screen and (min-width: 31em) and (max-width: 53em) {
+  div#modal-gallery div.preview span { padding-top: 30px; }
+}
 
 /******************************/
 /***************** ABOUT/HOME */
@@ -413,4 +422,20 @@ section#sidebar { display: none; }
     position: absolute;
     font-size: 80%;
   }
+}
+
+div#prev-next {
+  width: 100%;
+  font-size: 80%;
+  margin-top: 2rem;
+}
+div#prev-next:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both; }
+div#prev-next a.next-post {
+  text-align: right;
+  float: right;
 }

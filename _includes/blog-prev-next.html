@@ -1,0 +1,14 @@
+<div id="prev-next">
+  {% for post in site.blog.posts %}
+      {% if post.title == page.title %}
+          {% unless forloop.first %}
+              <a class="prev-post" href="{{ site.baseurl }}/blog/{{ prev.url }}">&larr;{{ prev.title }}</a>
+          {% endunless %}
+          {% unless forloop.last %}
+              {% assign next = site.blog.posts[forloop.index] %}
+              <a class="next-post" href="{{ site.baseurl }}/blog/{{ next.url }}">{{ next.title }}&rarr;</a>
+          {% endunless %}
+      {% endif %}
+      {% assign prev = post %}
+  {% endfor %}
+</div>

@@ -40,7 +40,8 @@ def parse(in_file, out_file, author, meta_author, date):
             title = f_in.readline().split('\n')[0]
             f_out.write("""---
 layout: blog
-title: """+ meta_author + "'s " + meta_title + " - " + title +"""
+title: """+ title +"""
+description: """+ meta_author + "'s " + meta_title + " - " + title +"""
 author: """+meta_author+"""
 ---
 

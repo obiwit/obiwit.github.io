@@ -37,13 +37,18 @@ $(function() {
      var hash = window.location.hash;
      if (!window.location.hash) {
        closeModal();
+     } else {
+       url_parts = hash.split("/");
+       if (url_parts.length != 3 || url_parts[3] != $('#modal-gallery img').data('index')) {
+         window.location.reload(true);
+       }
      }
    });
 
    // check if landing url is a "modal" url, and if so, open corresponding modal
-   var modal_url = window.location.href.split('#')[1];
-   if (modal_url) {
-     var url_parts = modal_url.split("/");
+   var hash = window.location.hash; //window.location.href.split('#')[1];
+   if (hash) {
+     var url_parts = hash.split("/");
      if (url_parts.length == 3) {
        var list_elem_id = "li#"+ url_parts[1];
        // open the modal immediately, so the website appears faster
