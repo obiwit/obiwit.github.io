@@ -39,7 +39,7 @@ $(function() {
        closeModal();
      } else {
        url_parts = hash.split("/");
-       if (url_parts.length != 3 || url_parts[3] != $('#modal-gallery img').data('index')) {
+       if (url_parts.length != 3 || url_parts[2] != $('#modal-gallery img').data('index')) {
          window.location.reload(true);
        }
      }
@@ -63,7 +63,7 @@ $(function() {
 
        // add image to the modal
        var $image = $(list_elem_id + " div.accordion img[data-index='"+ url_parts[2] +"']");
-       setTimeout(function(){ modalLoadImage($image); }, 1000);
+       setTimeout(function(){ modalLoadImage($image); }, 1000); // 500 is too little for some images
      }
    }
 
@@ -96,7 +96,7 @@ $(function() {
        $('#main-image').css('maxWidth', (imageWidth/imageHeight * 60) + "vh" );
      }
      var gallerySize = $image.parent().data()["items"];
-     if(gallerySize < 3) {
+     if(gallerySize <= 1) {
        $('#main-image').css('maxWidth', (imageWidth/imageHeight * 80) + "vh" );
        if (gallerySize == 1) {
          // if the gallery only has one element, hide the next and previous buttons
@@ -112,8 +112,10 @@ $(function() {
        caption = '<strong><em>' + $image.data()["pre"] + '</em></strong>' + caption;
      }
 
-     // add caption itself
+     // add caption itself, with a very slight delay that creates a more 'fluid' experience
      $('#caption').html(caption);
+     $('#caption').hide();
+     setTimeout(function() { $('#caption').show(); }, 100);
 
      // add PS (sub-caption) if it exists
      if ($image.data()["ps"]){
@@ -148,6 +150,13 @@ $(function() {
    function addPreviews() {
      // clear previous images
      $('#previews').html('');
+     $('#previews').hide();
+     setTimeout(function() {
+       $('#previews').show();
+       $('#previews span').hide();
+       setTimeout(function() { $('#previews span').show(); }, 100);
+     }, 100);
+     // the above lines create a more 'fluid' experience
 
      // add new images
      var imgIndex = $('#main-image img').data()["index"];
@@ -158,12 +167,15 @@ $(function() {
 
      var indexes = [-3, -2, 0, 1];
      var navInfo = ['Back two images', 'Previous image', 'Next image', 'Foward two images'];
-     if (totalImgNum < 3) {
+     if (totalImgNum <= 1) {
        indexes = [];
-     } else if (screenWidth < 500 || totalImgNum < 4) {
+     } else if (totalImgNum <= 2) {
+       indexes = [0];
+       var navInfo = ['Next image'];
+     } else if (screenWidth < 500 || totalImgNum <= 3) {
        indexes = [-2, 0]
        var navInfo = ['Previous image', 'Next image'];
-     } else if (screenWidth < 850 || totalImgNum < 5) {
+     } else if (screenWidth < 850 || totalImgNum <= 4) {
        indexes = [-2, 0, 1];
        var navInfo = ['Previous image', 'Next image', 'Foward two images'];
      }

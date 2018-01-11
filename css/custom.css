@@ -263,6 +263,9 @@ div#modal-gallery #previews img:hover, div#modal-gallery #previews img:focus {
   opacity: 1;
   cursor: pointer;
 }
+div#modal-gallery #previews span {
+cursor: pointer;
+}
 div#modal-gallery div.preview {
   position: relative;
   display: inline-block;
