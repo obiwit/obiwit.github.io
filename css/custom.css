@@ -106,6 +106,57 @@ p.small {
  * Specific Styles
  ****************************/
 
+ /****************************/
+ /********************** 404 */
+ /****************************/
+ div#four-oh-four h1 {
+   font-size: 4em;
+   line-height: 1;
+   letter-spacing: -1px;
+   text-align: center;
+ }
+ div#four-oh-four img {
+   display: inline-block;
+   float: left;
+   max-width: 50%;
+ }
+div#four-oh-four p {
+  display: inline-block;
+  float: left;
+  max-width: 40%;
+  margin-left: 9%;
+  text-align: left;
+  font-size: 110%;
+}
+div#four-oh-four span#ps {
+  display: block;
+  clear: both;
+  padding-top: 5%;
+  font-size: 70%;
+}
+div#four-oh-four:after {
+   content: " ";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+@media screen and (max-width: 36em) {
+   div#four-oh-four img {
+     display: block;
+     float: none;
+     max-width: 100%;
+     margin: 0 auto;
+   }
+  div#four-oh-four p {
+    display: block;
+    float: none;
+    max-width: 100%;
+    margin: inherit auto;
+    text-align: center;
+  }
+}
+
 /****************************/
 /***************** PROJECTS */
 /****************************/
@@ -437,7 +488,8 @@ div#prev-next:after {
    visibility: hidden;
    display: block;
    height: 0;
-   clear: both; }
+   clear: both;
+}
 div#prev-next a.next-post {
   text-align: right;
   float: right;
