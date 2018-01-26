@@ -9,12 +9,24 @@ blog:
   title:   Learning from Nada (and Data)
   tagline: A Machine Learning blog
   posts:
-    - title: Introduction
-      url: index.html
-    - title: Types of Learning
-      url: types_learning.html
-    - title: What is (Supervised) Machine Learning?
-      url: what_is_ml.html
+    - category:
+      posts:
+        - title: Introduction
+          url: index.html
+    - category: Basics of Machine Learning
+      posts:
+        - title: Types of Learning
+          url: types_learning.html
+        - title: What is (Supervised) Machine Learning?
+          url: what_is_ml.html
+    - category: Algorithms
+      posts:
+        - title: </a>Nothing yet!<a> # very sad hack, I know...
+          url:
+    - category: Other Topics
+      posts:
+      - title: More Resources on Machine Learning
+        url: more_resources.html
 
 # About/contact
 author:

@@ -423,10 +423,16 @@ div.document-viewer .loader {
   #blog_nav a#nav_projects {top: 21%; }
   #blog_nav a#nav_home     { top: 5%; }
 }
-ul li.spacious {
-  margin-bottom: 1.2%;
+ul#blog-map {
+  padding: 0 3%;
 }
-
+ul#blog-map li {
+  list-style: none;
+}
+ul#blog-map .map-categories {
+  color: #ff691a;
+  margin: 5% auto 0;
+}
 section.main-content {
   font-family: 'Quattrocento Sans', sans-serif;
   font-size: 1.25rem;
