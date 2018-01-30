@@ -9,8 +9,13 @@
     <section id="sidebar">
         <h5>Blog Map</h5>
         <ul>
-          {% for post in site.blog.posts %}
-            <li><a href="{{ site.baseurl }}/blog/{{ post.url }}">{{ post.title }}</a></li>
+          {% for section in site.blog.posts %}
+            {% if section.category %}
+            <br/><strong>{{ section.category }}</strong><br/>
+            {% endif %}
+            {% for post in section.posts %}
+            <li>• <a href="{{ site.baseurl }}/blog/{{ post.url }}">{{ post.title }}</a></li>
+            {% endfor %}
           {% endfor %}
         </ul>
     </section>

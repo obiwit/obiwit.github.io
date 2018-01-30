@@ -474,6 +474,9 @@ a#ref1, a#ref2, a#ref3, a#ref4, a#ref5 { padding-left: 1px; }
 }
 
 section#sidebar { display: none; }
+section#sidebar h5 { color: #ff691a; font-size: 100%; }
+section#sidebar ul { padding: 0 3%; }
+section#sidebar ul li { list-style: none; }
 @media screen and (min-width: 71em) {
   section#sidebar {
     display: inline-block;
