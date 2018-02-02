@@ -44,6 +44,15 @@ $(function() {
        }
      }
    });
+   // handle (phone and tablet's) swiping events as well
+   var modal_el = document.getElementById('modal-gallery');
+   var mc = new Hammer(modal_el);
+   mc.on("swiperight", function(ev) {
+       handleNextPrevious(true);
+   });
+   mc.on("swipeleft", function(ev) {
+       handleNextPrevious(false);
+   });
 
    // check if landing url is a "modal" url, and if so, open corresponding modal
    var hash = window.location.hash; //window.location.href.split('#')[1];
