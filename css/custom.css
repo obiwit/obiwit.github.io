@@ -224,7 +224,7 @@ button.toggle-accordion.expanded, button.toggle-accordion:hover {
   height: auto !important;
   display: inline-block;
   margin: 0 0 1em;
-  width: 100%;
+  float: left;
 }
 .accordion img:hover {
   opacity: 0.6;
