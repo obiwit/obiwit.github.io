@@ -1,0 +1,55 @@
+---
+layout: blog
+title: Types of Learning
+description: obiwit's Machine Learning blog - Types of Learning
+author: obiwit
+---
+
+<div id="ml-blog">
+  <h1 id="title">Types of Learning</h1>
+  <h6 id="post-info">By Beatriz Borges R, <span class="small">edited on Mar 16, 12018</span></h6>
+
+  <p>Machine Learning algorithms can be broadly classified into four separate categories: <strong>Supervised Learning</strong>, <strong>Unsupervised Learning</strong>, <strong>Semi-Supervised Learning</strong> and <strong>Reinforcement Learning</strong>. They vary in what information they receive – and this in turn affects how they can manipulate the data, and what models they can generate for it.</p>
+
+  <h2>Supervised Learning</h2>
+  <p>Our data has <strong>input and the correct output</strong>. With this data, the computer will try to <strong>mimic/predict</strong> the input data.</p>
+  <p>Some examples are:</p>
+  <ul>
+    <li>Predicting the price of a given product,</li>
+    <li>Filtering spam emails,</li>
+    <li>Recognizing handwritten digits,</li>
+    <li>Captioning an image,</li>
+    <li>Translating between languages.</li>
+  </ul>
+
+  <h2>Unsupervised Learning</h2>
+  <p>Our data has <strong>only input</strong>. With this data, the computer will try to <strong>find structure and relationships</strong> in the data.</p>
+  <p>Some examples are:</p>
+  <ul>
+    <li>Clustering data (i.e. market segmentation),</li>
+    <li>Dimensionality reduction.</li>
+  </ul>
+  <p>As an interesting aside, Generative Adversarial Networks (GANs) are technically Unsupervised Learning algorithms that try to mimic the given data.<sup><a href="#fn2" id="ref2">2</a></sup></p>
+
+   <h2>Semi-Supervised Learning</h2>
+   <p>Our data has <strong> both only input and input with the correct output</strong>. Like Supervised Learning, with this data, the computer will try  to <strong>mimic/predict</strong> the input data.</p>
+   <p>Semi-Supervised Learning is basically a combination of Supervised and Unsupervised Learning, in the sense that you are building a 'Supervised' model while making use of unlabeled data - usually a small fraction of your data will be labelled (the type of input Supervised Learning uses), and the majority will be unlabeled<sup><a href="#fn1" id="ref1">1</a></sup> (the type of input Unsupervised Learning uses).</p>
+   <p>An example is:</p>
+   <ul>
+     <li>Anomaly detection.</li>
+   </ul>
+
+  <h2>Reinforcement Learning</h2>
+  <p>Our data has <strong>input, and an output for a sequence of states</strong>. With this data, the computer will try to <strong>learn the right sequence of actions</strong> that leads to a successful output/conclusion.</p>
+  <p>Reinforcement learning has a temporal component (in the sense that it learns an action sequence), as opposed to Supervised and Unsupervised Learning.</p>
+  <p>Some examples are:</p>
+  <ul>
+    <li>Playing a game,</li>
+    <li>Making a robot grab a cup.</li>
+  </ul>
+
+  <br/><br/><sup id="fn1">1. [For the unlabeled portion of data used in Semi-Supervised Learning, a label is assumed. For example, in anomaly detection, you usually assume all your unlabeled data is nonanomalous.]<a href="#ref1" title="Jump back to footnote 1 in the text.">↩</a></sup>
+  <br/><sup id="fn2">2. [It'll be awhile until we talk about GANs again, so if you're curious, check <a href="https://deeplearning4j.org/generative-adversarial-network">this article out</a> to gain a general idea of what a GAN is.]<a href="#ref2" title="Jump back to footnote 2 in the text.">↩</a></sup>
+</div>
+
+<!-- Footnote code by Karl Winegardner (http://karlwinegardner.blogspot.pt/2011/02/how-to-create-footnotes-in-html.html) -->

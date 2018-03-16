@@ -1,0 +1,49 @@
+---
+layout: blog
+title: What is (Supervised) Machine Learning?
+description: obiwit's Machine Learning blog - What is (Supervised) Machine Learning?
+author: obiwit
+---
+
+<div id="ml-blog">
+  <h1 id="title">What is (Supervised) Machine Learning?</h1>
+  <h6 id="post-info">By Beatriz Borges R, <span class="small">edited on Mar 16, 12018</span></h6>
+  <p>Machine Learning is basically using data to gain information. This information can take various shapes.</p>
+  <p>In Supervised Learning, Semi-Supervised Learning and part of Unsupervised Learning<sup><a href="#fn1" id="ref1">1</a></sup> you use an algorithm to transform <strong>data</strong> into a <strong>model</strong>, that you then use to try to predict some feature of new, never-before-seen data. A model is a representation (read: simplification) of some aspect of reality, and is created by combining a ML algorithm and data.</p>
+  <p>It’s worth it to take a little detour here and talk about what this data actually is. A dataset has two main components: <strong>descriptive features</strong> (or just <strong>features</strong>) and a <strong>target feature</strong>.</p>
+  <p>For example, if you want to predict house prices, the price of a given house is the target feature, and its location, area, number of rooms, etc. are the (descriptive) features. Another example could be a bird recognition system, that receives photos and returns a Boolean value (either true or false) that indicates whether the picture contains a bird. The target feature is the Boolean value, and the features are the (color) values of each pixel. This means that all images the system receives have to be scaled to a given resolution (and can also be converted to grayscale), i.e. 64px by 64px, for a total of 4096 features<sup><a href="#fn2" id="ref2">2</a></sup>.</p>
+  <figure>
+    <img src="img/what_is_ml/elvis_final.png" alt="Example image pre-processing to obtain 64x64 pixels grayscale images.">
+    <figcaption>Figure 1 - Example dataset. After pre-processing, the brightness of each pixel of the 64x64 grayscale images is treated as a feature.</figcaption>
+  </figure>
+  <p>Wrapping up this small detour, <strong>data is usually in the form of a table</strong>, or can at least be thought of in this way. Every entry, or row, is a <strong>training example</strong> made up of both descriptive features and a target feature<sup><a href="#fn3" id="ref3">3</a></sup>. After you have this table, you then want to build a model that allows you to predict target features using only descriptive features (of examples that aren’t on the table you used to train the model). For example, predict whether an image you’ve never seen before has a bird or not.</p>
+  <p>So, in short, you give <strong>data</strong> to a computer; it uses an <strong>algorithm</strong> to extract <strong>patterns</strong> from that data; using these patterns, it builds a <strong>model</strong>; using that model, it tries to <strong>predict the value of never seen before data</strong>. This value might be a price, a class (i.e. if something is spam), or some other thing.</p>
+  <h2>Why is there more than one algorithm?</h2>
+  <p>Why are there different algorithms to build models from data? Or why don’t we just use the best algorithm that builds the best models for everything? The answer is simple – there is no universal best model<sup><a href="#fn4" id="ref4">4</a></sup>.</p>
+  <p>It’s easy to get an intuitive understanding of why this would be the case: we said a model was a simplification, or generalisation, of reality. To build such a simplification, you must first strip away the unnecessary details, and leave only the big overall tendencies. But here lies the problem – how do you decide what is an unnecessary detail and what is a big tendency? You’ll have to use some set of <strong>core beliefs</strong>, or <strong>inductive assumptions</strong>. And every algorithm uses a different set of them!</p>
+  <h2>When is a model not useful?</h2>
+  <p>George Box famously said “all models are wrong, but some are useful.” Which begs the question – when is a model not useful? Generally, <strong>a model is not useful if it doesn’t generalise well</strong>.</p>
+  <p>An easy example that demonstrates this is to imagine that instead of using Machine Learning, you just memorise whatever dataset you have. Well, let’s see if this model is actually useful with two simple but important questions: what happens if your data was even slightly noisy?, or if you meet an example that doesn't match any of your data's entries? You'll probably agree that memorization isn't the best model we can build, since it doesn't generalize your data into a more useful format.</p>
+  <p>In (Supervised) Machine Learning, there are a two very common terms to describe when an algorithm is not generalising well:</p>
+  <ul>
+    <li><strong>High bias</strong>, or <strong>underfitting</strong> – this means the algorithm is too rigid to fit the data correctly. It can’t generalize well the given data, because its belief of how the dataset should look like (its bias) and how the dataset actually looks like are different. This is also called underfitting, since the model generated underfits the given data.</li>
+    <li><strong>High variance</strong>, or <strong>overfitting</strong> – this means the algorithm is too flexible to fit the data correctly. It can’t generalize well the given data, because it wobbles (or varies) around too much between examples, aiming to perfectly fit each training example. This is also called overfitting, since the model generated overfits the given data.</li>
+  </ul>
+  <p>Hopefully, the following figure helps explain what I mean:</p>
+  <figure>
+    <img src="img/what_is_ml/graph_labelled.png" alt="Example dataset and several fitting curves.">
+    <figcaption>Figure 2 - Examples, for a given dataset (a), of underfitting (b), a 'right' fit (c), and overfitting (d)</figcaption>
+  </figure>
+  <p>Before ending this post, I just wanted to leave you with a few quick tips on how you can mitigate underfitting and overfitting<sup><a href="#fn5" id="ref5">5</a></sup>:</p>
+  <ul>
+    <li>For underfitting, you want to make your algorithm more flexible – adding more features per training example is one way to do so.</li>
+    <li>For overfitting, you want to make your algorithm more rigid, or less wobbly – using less features per training example, and using more training examples are ways to do so.</li>
+  </ul>
+  <br/>
+  <p class="small"><em><strong>Note</strong>: I plan to come back to this article to add Reinforcement Learning and (probably in another update) complete Unsupervised Learning as well – but I would like to have a deeper understanding of them before I do that, so it may take a little while… but then I’ll be able to take that ‘(Supervised)’ off the title, so it’ll be awesome! :D</em></p>
+  <br/><br/><sup id="fn1">1. [More on what those names mean <a href="{{ site.baseurl }}/blog/types_learning.html">here</a>.] <a href="#ref1" title="Jump back to footnote 1 in the text.">↩</a></sup>
+  <br/><sup id="fn2">2. [The number of features is the total number of pixels. 4096 = 64*64.] <a href="#ref2" title="Jump back to footnote 2 in the text.">↩</a></sup>
+  <br/><sup id="fn3">3. [This applies only to Supervised Learning. In Unsupervised Learning, for example, you are never given target features, and in Semi-Supervised Learning target features are only known for part of your data.] <a href="#ref3" title="Jump back to footnote 3 in the text.">↩</a></sup>
+  <br/><sup id="fn4">4. [This is known as the <strong>No Free Lunch Theorem</strong> – you can read more about it <a href="https://en.wikipedia.org/wiki/No_free_lunch_in_search_and_optimization">here</a>.] <a href="#ref4" title="Jump back to footnote 4 in the text.">↩</a></sup>
+  <br/><sup id="fn5">5. [Detecting whether your algorithm is under-, over- or right-fitting your dataset deserves another whole blog post in and of itself! (Which I plan to write as well, of course ;)] <a href="#ref5" title="Jump back to footnote 5 in the text.">↩</a></sup>
+</div>
