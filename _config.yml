@@ -10,20 +10,24 @@ blog:
   tagline: A Machine Learning blog
   posts:
     - category:
+      baseurl:
       posts:
         - title: Introduction
           url: index.html
     - category: Basics of Machine Learning
+      baseurl: basics/
       posts:
         - title: Types of Learning
           url: types_learning.html
         - title: What is (Supervised) Machine Learning?
           url: what_is_ml.html
     - category: Algorithms
+      baseurl: algorithms/
       posts:
         - title: </a>Nothing yet!<a> # very sad hack, I know...
           url:
     - category: Other Topics
+      baseurl: misc/
       posts:
       - title: More Resources on Machine Learning
         url: more_resources.html
