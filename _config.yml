@@ -17,6 +17,8 @@ blog:
     - category: Basics of Machine Learning
       baseurl: basics/
       posts:
+        - title: Machine Learning’s Context
+          url: ml_context.html
         - title: Types of Learning
           url: types_learning.html
         - title: What is (Supervised) Machine Learning?

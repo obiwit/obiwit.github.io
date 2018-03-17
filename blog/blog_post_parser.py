@@ -17,7 +17,7 @@ The input file should have the following format:
     - Title on first line, without any markdown, optionally followed by a blank line;
     - The text's paragraphs should follow, with each paragraph separated by a blank line;
         + Asterisks denote bold text like *so*;
-        + Double hats denote italic text like $$so$$;
+        + Double dollar signs denote italic text like $$so$$;
         + Pounds denote headings like # so (the heading and pound symbols must be separated by a space; 1 to 6 pound symbols are currently supported);
         + To use a footnote, use an underscore followed by a curly brace, the footnote text and a closing curly brace like _{so} (at the moment multi-line footnotes (i.e. a newline inside the footnote) aren't supported);
         + Double hyphens denote an unordered list item (the parser automatically detects the beginning and end of the unordered list), like -- so (again, the item and hyphens must be separated by a space);

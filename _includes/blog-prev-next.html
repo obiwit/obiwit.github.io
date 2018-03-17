@@ -1,14 +1,48 @@
 <div id="prev-next">
-  {% for post in site.blog.posts %}
-      {% if post.title == page.title %}
-          {% unless forloop.first %}
-              <a class="prev-post" href="{{ site.baseurl }}/blog/{{ prev.url }}">&larr;{{ prev.title }}</a>
-          {% endunless %}
-          {% unless forloop.last %}
-              {% assign next = site.blog.posts[forloop.index] %}
-              <a class="next-post" href="{{ site.baseurl }}/blog/{{ next.url }}">{{ next.title }}&rarr;</a>
-          {% endunless %}
-      {% endif %}
-      {% assign prev = post %}
+  {% for section in site.blog.posts %}
+    {% assign outer_forloop = forloop %}
+
+    {% for post in section.posts %}
+        {% if post.title == page.title %}
+            <!-- Previous post -->
+            {% unless outer_forloop.first %}
+              {% if forloop.first %}
+
+                <!-- Ignore empty categories -->
+                {% if prev.title contains "Nothing yet!" and outer_forloop.index0 > 1 %}
+                  {% assign prev_section_index = outer_forloop.index0 | minus: 2 %}
+                  {% assign prev_section = site.blog.posts[prev_section_index] %}
+                  {% assign prev = prev_section.posts.last %}
+                {% endif %}
+
+                <a class="prev-post" href="{{ site.baseurl }}/blog/{{prev_section.baseurl}}{{ prev.url }}">&larr; {{ prev.title }}</a>
+              {% else %}
+                <a class="prev-post" href="{{ site.baseurl }}/blog/{{section.baseurl}}{{ prev.url }}">&larr; {{ prev.title }}</a>
+              {% endif %}
+            {% endunless %}
+
+            <!-- Next post -->
+            {% unless outer_forloop.last and forloop.last %}
+              {% if forloop.last %}
+                {% assign next_section = site.blog.posts[outer_forloop.index] %}
+                {% assign next = next_section.posts.first %}
+                
+                <!-- Ignore empty categories -->
+                {% if next.title contains "Nothing yet!" and outer_forloop.rindex0 > 1 %}
+                  {% assign next_section_index = outer_forloop.index | plus: 1 %}
+                  {% assign next_section = site.blog.posts[next_section_index] %}
+                  {% assign next = next_section.posts.first %}
+                {% endif %}
+
+                  <a class="next-post" href="{{ site.baseurl }}/blog/{{next_section.baseurl}}{{ next.url }}">{{ next.title }} &rarr;</a>
+              {% else %}
+                  {% assign next = section.posts[forloop.index] %}
+                  <a class="next-post" href="{{ site.baseurl }}/blog/{{section.baseurl}}{{ next.url }}">{{ next.title }} &rarr;</a>
+              {% endif %}
+            {% endunless %}
+        {% endif %}
+        {% assign prev = post %}
+      {% endfor %}
+      {% assign prev_section = section %}
   {% endfor %}
 </div>

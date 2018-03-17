@@ -102,6 +102,11 @@ p.small {
   font-size: 250%;
   font-weight: bold;
 }
+
+.main-content hr {
+  margin: 2.5rem 0;
+}
+
 /*****************************
  * Specific Styles
  ****************************/
