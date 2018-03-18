@@ -160,6 +160,70 @@ div#four-oh-four:after {
 /****************************/
 /***************** PROJECTS */
 /****************************/
+
+/* For the timeline */
+ul#projects, ul#projects h2 {
+  position: relative;
+}
+/* Timeline bar */
+ul#projects::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #ffab43;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: 1.5% 0;
+    margin-left: -1.6%;
+}
+/* Timeline circles */
+ul#projects h2::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: -40px;
+    bottom: 18%;
+    background-color: white;
+    border: 4px solid #ffab43;
+    border-radius: 50%;
+    z-index: 1;
+}
+@media screen and (max-width: 53em) { ul#projects::after {  margin-left: -1.1%; } }
+@media screen and (max-width: 43em) {
+  ul#projects::after {
+    margin-top: 3%;
+    margin-left: -0.5%;
+    width: 2px;
+  }
+  ul#projects h2::after {
+    width: 18px;
+    height: 18px;
+    left: -33px;
+    bottom: 24%;
+    border-width: 3px;
+  }
+}
+@media screen and (max-width: 36em) { ul#projects::after {  margin-left: 0; } }
+@media screen and (max-width: 30em) { ul#projects::after {  margin-left: 0.5%; } }
+@media screen and (max-width: 27em) { ul#projects::after {  margin-top: 4%; margin-left: 1.4%; } }
+@media screen and (max-width: 24em) { ul#projects::after {  margin-left: 2%; } }
+
+div#ongoing-projects {
+  padding-left: 5%;
+}
+div#ongoing-projects {
+  margin-bottom: 10%;
+}
+div#ongoing-projects ul li h4 a {
+  text-decoration: none;
+  /* text color = #606c71 */
+}
+div#ongoing-projects ul li h4 a span.duration {
+  float: right;
+}
+
 /* div#top-projects {
   margin-top: 5%;
 } */
