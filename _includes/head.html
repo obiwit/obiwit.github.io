@@ -22,9 +22,13 @@
   {% if page.dir == "/blog/" %}
   <script src="{{ site.baseurl }}/js/blog.js" type="text/javascript"></script>
   {% endif %}
-  {% if page.url == "/all_projects.html" %}
+  {% if page.url == "/projects.html" %}
   <script src="https://hammerjs.github.io/dist/hammer.js"></script> <!-- to handle swipe events -->
   <script src="{{ site.baseurl }}/js/projects.js" type="text/javascript"></script>
+  {% endif %}
+  {% if page.url == "/all_projects.html" %}
+  <script src="https://hammerjs.github.io/dist/hammer.js"></script> <!-- to handle swipe events -->
+  <script src="{{ site.baseurl }}/js/all_projects.js" type="text/javascript"></script>
   {% endif %}
   {% if page.url == "/" %}
   <script src="/js/pdfobject.min.js"></script>

@@ -4,53 +4,67 @@ title: obiwit's CS and EE Projects
 author: obiwit
 ---
 
-<div class="content">
+<div class="content"> <!-- sad hack is sad -->
   <h1>My Projects</h1>
   <p>Here are my top 4 most relevant Computer Science projects.<br/>
     <span class="small">You can check out a more comprehensive list of projects related to Computer Science and Electrical Engineering <a href="{{ site.baseurl }}/all_projects.html">here</a>.</span></p>
 
   <div id="top-projects">
-    <div class="project left top" data-proj-index="1">
+    <div id="nada" class="project" data-index="1">
     <!-- ML Blog -->
-      <div class="fade">
-        <img src="{{ site.baseurl }}/img/projects/top_nada.png" alt="">
+      <div class="background">
+        <img src="{{ site.baseurl }}/img/projects/top/top_nada.jpg" alt="">
       </div>
-      <h3>Learning from Nada (and Data)</h3>
-      <h4>A Machine Learning Blog!</h4>
-      <p>The idea is that this blog will become the resource I wish I had right now, or at least a helpful summary of what I don't want to forget, while simultaneously serving as a way to consolidate my knowledge in Machine Learning!</p>
-      <p>You can find it <a href="{{ site.baseurl }}/blog/index.html">here</a>.</p>
+      <div class="description">
+        <h3>Learning from Nada (and Data)</h3>
+        <h4>A Machine Learning Blog!</h4>
+        <p>The idea is that this blog will become the resource I wish I had right now, or at least a helpful summary of what I don't want to forget, while simultaneously serving as a way to consolidate my knowledge in Machine Learning!</p>
+        <p>You can find it <a href="{{ site.baseurl }}/blog/index.html">here</a>.</p>
+      </div>
+      <p><span class="small"><br><a href="all_projects.html#nada">&rarr; Learn more about this project</a></span></p>
     </div>
 
-    <div class="project top" data-proj-index="2">
+    <div id="mpei" class="project hidden" data-index="2">
     <!-- MPEI -->
-      <div class="fade">
-        <img src="{{ site.baseurl }}/img/projects/top_mpei.png" alt="">
+      <div class="background">
+        <img src="{{ site.baseurl }}/img/projects/top/top_mpei.jpg" alt="">
       </div>
-      <h3>Smart Library</h3>
-      <h4>An automatic and semi-autonomous self-organizing text library</h4>
-      <p>A system which could automatically detect a text's language, and sort it into one of several categories according to its subject. MinHashes, a vanilla bloom filter (used to check whether the file already existed in the library), and a counting bloom filter (designed to supplement the 'choice' of a given text's subject) were used.</p>
-
+      <div class="description">
+        <h3>Smart Library</h3>
+        <h4>An automatic and semi-autonomous self-organizing text library</h4>
+        <p>A system which could automatically detect a text's language, and sort it into one of several categories according to its subject. MinHashes, a vanilla bloom filter (used to check whether the file already existed in the library), and a counting bloom filter (designed to supplement the 'choice' of a given text's subject) were used.</p>
+      </div>
+      <p><span class="small"><br><a href="all_projects.html#mpei">&rarr; Learn more about this project</a></span></p>
     </div>
-    <div class="project left" data-proj-index="3">
+
+    <div id="100cerebros" class="project hidden" data-index="3">
     <!-- 100Cerebros Img gallery -->
-      <div class="fade">
-        <img src="{{ site.baseurl }}/img/projects/top_100cerebros.png" alt="">
+      <div class="background">
+        <img src="{{ site.baseurl }}/img/projects/top/top_100cerebros.jpg" alt="">
       </div>
-      <h3>100 Cerebros Image Gallery</h3>
-      <h4>Online Gallery, Photo Editor and Meme Generator</h4>
-      <p>An online application allowing you to upload photos, to which you can add several effects, or turn into a meme. You can preview and undo each one of the effects (and meme captions).</p>
-
+      <div class="description">
+        <h3>100 Cerebros Image Gallery</h3>
+        <h4>Online Gallery, Photo Editor and Meme Generator</h4>
+        <p>An online application allowing you to upload photos, to which you can add several effects, or turn into a meme. You can preview and undo each one of the effects (and meme captions).</p>
+        <p><span class="small"><br><a href="all_projects.html#100cerebros">&rarr; Learn more about this project</a></span></p>
+      </div>
     </div>
-    <div class="project" data-proj-index="4">
+
+    <div id="pacman" class="project hidden" data-index="4">
     <!-- Pacman -->
-      <div class="fade">
-        <img src="{{ site.baseurl }}/img/projects/top_pacman.png" alt="">
+      <div class="background">
+        <img src="{{ site.baseurl }}/img/projects/top/top_pacman.jpg" alt="">
       </div>
-      <h3>Pacman</h3>
-      <p>A processing (Java based) implementation of Pacman, with the ghosts actively chasing Pacman (not following pre-determined routes), several difficulty levels, semi-random maps, and lots of cheat codes!</p>
-
+      <div class="description">
+        <h3>Pacman</h3>
+        <p>A processing (Java based) implementation of Pacman, with the ghosts actively chasing Pacman (not following pre-determined routes), several difficulty levels, semi-random maps, and lots of cheat codes!</p>
+        <p><span class="small"><br><a href="all_projects.html#pacman">&rarr; Learn more about this project</a></span></p>
+      </div>
     </div>
+
     <!-- I'm currently also rocking it out over at kaggle! -->
+    <a class="prev cursor">&#10094;</a>
+    <a class="next cursor">&#10095;</a>
   </div>
 
   <p>Haven't had enough? <a href="{{ site.baseurl }}/all_projects.html">See more projects!</a></p>
