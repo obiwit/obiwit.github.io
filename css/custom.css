@@ -226,27 +226,46 @@ div#ongoing-projects ul li h4 a span.duration {
 
 
 /* top projects */
-div.hidden { display: none !important; }
+div.hidden {
+  display: none !important;
+}
 div#top-projects {
   position: relative;
   overflow: hidden;
+  min-height: 29em;
 }
 div#top-projects div.background {
   position: absolute;
   opacity: 0.6;
-  top: 0;
-  /* width: 150%; */
   left: -10%;
-  height: 100%;
+  right: 0;
   top: -10%;
+  bottom: 0;
   z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+div#nada div.background {
+  background-image: url("../img/projects/top/top_nada.jpg");
+  transform: scale(1.5);
+}
+div#mpei div.background {
+  background-image: url("../img/projects/top/top_mpei.jpg");
+}
+div#cerebros div.background {
+  background-image: url("../img/projects/top/top_100cerebros.jpg");
+}
+div#pacman div.background {
+  background-image: url("../img/projects/top/top_pacman.jpg");
 }
 div#top-projects div.project img {
-      display: block;
+  display: block;
 }
 div#top-projects div.project {
   display: inline-block;
   vertical-align: top;
+  min-height: 25em;
   margin: 0 2%;
   width: 45%;
   padding: 5%;
@@ -256,7 +275,7 @@ div#top-projects div.project {
 }
 div#top-projects a.cursor {
   font-size: 200%;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
   position: absolute;
   top: 42%;
@@ -272,6 +291,21 @@ div#top-projects div.project h3 {
 }
 div#top-projects div.project h4 {
   color: #934c28; /* darker "orange" */
+}
+span.subtle-color {
+  color: #7d7d7d;
+}
+@media screen and (max-width: 59em) { div#top-projects { min-height: 31.5em; } }
+@media screen and (max-width: 54em) {
+  div#top-projects { min-height: 29em; }
+  div#top-projects div.project div.description {  font-size: 90%; padding-top: 5%; } }
+@media screen and (max-width: 48em) { div#top-projects div.project {  width: 60%; } }
+@media screen and (max-width: 40em) { div#top-projects div.project {  margin-left: 15%; } }
+@media screen and (max-width: 32em) { div#top-projects div.project {  width: 70%; } }
+@media screen and (max-width: 26em) {
+  div#top-projects {  min-height: 30em; }
+  div#top-projects div.project {  width: 80%; margin-left: 10%; }
+  div#top-projects a.cursor { font-size: 150%; }
 }
 
 /****************************/
