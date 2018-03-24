@@ -83,6 +83,7 @@ p.small {
 .site-footer ul {
   text-align: right;
   margin-bottom: 0;
+  padding: 0;
 }
 .site-footer ul li {
   list-style: none;
@@ -101,6 +102,9 @@ p.small {
   left: -31px;
   font-size: 250%;
   font-weight: bold;
+}
+@media screen and (max-width: 23em) {
+  .site-footer ul li {  margin-right: 1%; }
 }
 
 .main-content hr {
