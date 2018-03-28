@@ -3,6 +3,7 @@ title:        Beatriz Borges R
 tagline:      Passionate young computer scientist!
 description:  Beatriz Borges R's, aka obiwit, machine learning blog and website
 baseurl:      ""
+url:          http://obiwit.com
 
 # Blog-related
 blog:
@@ -44,8 +45,8 @@ author:
   email:      bea@obiwit.com
   github_username:        obiwit
   linkedin_username:      obiwit
-  kaggle_username:        obiwit
   twitter_username:       obiwit
+  kaggle_username:        obiwit
   #stackoverflow_username: 3059443/obiwit
   #google_plus_username:
   #facebook_username:
