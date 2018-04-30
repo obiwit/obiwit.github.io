@@ -15,6 +15,21 @@ $(function() {
   }
 
   // Event Listeners
+  /**************************************** GENERAL PURPOSE */
+  // close modal on 'escape' key press
+  document.onkeydown = function(evt) {
+    evt = evt || window.event;
+    var isEscape = false;
+    if ("key" in evt) {
+        isEscape = (evt.key == "Escape" || evt.key == "Esc");
+    } else {
+        isEscape = (evt.keyCode == 27);
+    }
+    if (isEscape) {
+        closeModal();
+    }
+  };
+
   /******************************************* MODAL WINDOW */
   $('div#home a').on("click", function(event) {
     if ($(event.target).prop('target') == "_blank") {

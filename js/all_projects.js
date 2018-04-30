@@ -44,6 +44,29 @@ $(function() {
        }
      }
    });
+
+   // close modal on 'escape' key press, handle side arrows to navigate modal
+   document.onkeydown = function(evt) {
+     evt = evt || window.event;
+     var isEscape = false, isRightArrow = false, isLeftArrow = false;
+     if ("key" in evt) {
+         isEscape = (evt.key == "Escape" || evt.key == "Esc");
+         isRightArrow = (evt.key == "ArrowRight");
+         isLeftArrow = (evt.key == "ArrowLeft");
+     } else {
+         isEscape = (evt.keyCode == 27);
+         isRightArrow = (evt.keyCode == 39);
+         isLeftArrow = (evt.keyCode == 37);
+     }
+     if (isEscape) {
+         closeModal();
+     } else if (isRightArrow) {
+         handleNextPrevious(true);
+     } else if (isLeftArrow) {
+         handleNextPrevious(false);
+     }
+   };
+
    // handle (phone and tablet's) swiping events as well
    var modal_el = document.getElementById('modal-gallery');
    var mc = new Hammer(modal_el);
