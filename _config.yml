@@ -21,11 +21,11 @@ blog:
       baseurl: basics/
       posts:
         - title: Machine Learning’s Context
-          url: ml_context.html
+          url: ml-context.html
         - title: Types of Learning
-          url: types_learning.html
+          url: types-learning.html
         - title: What is (Supervised) Machine Learning?
-          url: what_is_ml.html
+          url: what-is-ml.html
     - category: Algorithms
       baseurl: algorithms/
       posts:
@@ -35,7 +35,7 @@ blog:
       baseurl: misc/
       posts:
       - title: More Resources on Machine Learning
-        url: more_resources.html
+        url: more-resources.html
 
 # About/contact
 author:

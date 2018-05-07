@@ -77,35 +77,39 @@ p.small {
   cursor: pointer;
 }
 
-.site-footer {
+footer.site-footer {
   margin-top: 1rem;
 }
-.site-footer ul {
+footer.site-footer  span.copy-footer  {
+  opacity: 0.3;
+}
+footer.site-footer ul {
   text-align: right;
   margin-bottom: 0;
   padding: 0;
 }
-.site-footer ul li {
+footer.site-footer ul li {
   list-style: none;
   display: inline-block;
-  margin: 0 3%;
+  margin: 0 1%;
 }
-.site-footer ul li a:active, .site-footer ul li a:hover {
+footer.site-footer ul li a:active, footer.site-footer ul li a:hover {
   text-decoration: none;
 }
-.site-footer ul li .fa {
-  color: #ff691a;
+footer.site-footer ul li .fa {
+  /* color: #ff691a; */
+  color: #000;
 }
-.site-footer ul li span.icon-overlay {
+footer.site-footer ul li span.icon-overlay {
   color: white;
   position: relative;
   left: -31px;
   font-size: 250%;
   font-weight: bold;
 }
-@media screen and (max-width: 23em) {
-  .site-footer ul li {  margin-right: 1%; }
-}
+/* @media screen and (max-width: 23em) {
+  footer.site-footer ul li {  margin-right: 1%; }
+} */
 
 .main-content hr {
   margin: 2.5rem 0;
@@ -568,8 +572,15 @@ div.document-viewer .loader {
  * Blog Specific Styles
  ****************************/
 .small-header {
-    padding-top: 5rem;
-    padding-bottom: 1rem;
+    padding-top: 10rem;     /* 8rem */
+    padding-bottom: 2rem;   /* 1rem */
+    background:
+      linear-gradient(
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+      ),
+      url("https://pbs.twimg.com/profile_banners/3407846841/1521229964/1500x500");
+    background-size: cover;
 }
 
 #blog_nav a#nav_projects {
@@ -597,10 +608,6 @@ section.main-content {
   font-family: 'Quattrocento Sans', sans-serif;
   font-size: 1.25rem;
   padding-bottom: 0;
-}
-
-footer span.copy-footer  {
-  opacity: 0.3;
 }
 
 .blog-post h1, .blog-post h2, .blog-post h3, .blog-post h4, .blog-post h5, .blog-post h6 {
