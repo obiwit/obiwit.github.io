@@ -5,7 +5,7 @@
     {% for post in section.posts %}
         {% if post.title == page.title %}
             <!-- Previous post -->
-            {% unless outer_forloop.first %}
+            {% unless forloop.first and outer_forloop.first %}
               {% if forloop.first %}
 
                 <!-- Ignore empty categories -->
@@ -26,7 +26,7 @@
               {% if forloop.last %}
                 {% assign next_section = site.blog.posts[outer_forloop.index] %}
                 {% assign next = next_section.posts.first %}
-                
+
                 <!-- Ignore empty categories -->
                 {% if next.title contains "Nothing yet!" and outer_forloop.rindex0 > 1 %}
                   {% assign next_section_index = outer_forloop.index | plus: 1 %}

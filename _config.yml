@@ -15,7 +15,7 @@ blog:
       posts:
         - title: Introduction
           url: index.html
-        - title: Why Machine Learning is Cool
+        - title: Why Machine Learning is such an exciting field
           url: motivation.html
     - category: Basics of Machine Learning
       baseurl: basics/
