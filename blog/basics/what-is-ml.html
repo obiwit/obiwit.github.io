@@ -3,11 +3,13 @@ layout: blog
 title: What is (Supervised) Machine Learning?
 description: What is (Supervised) Machine Learning? How do you go from data to model?
 author: obiwit
+comments: true
 ---
 
 <div id="ml-blog">
   <h1 id="title">What is (Supervised) Machine Learning?</h1>
   <h6 id="post-info">By Beatriz Borges R, <span class="small">edited on Mar 16, 12018</span></h6>
+
   <p>In Supervised Learning, Semi-Supervised Learning and part of Unsupervised Learning<sup><a href="#fn1" id="ref1">1</a></sup> you use an algorithm to transform <strong>data</strong> into a <strong>model</strong>, that you then use to try to predict some feature of new, never-before-seen data. A model is a representation (read: simplification) of some aspect of reality, and is created by combining a ML algorithm and data.</p>
   <p>It’s worth it to take a little detour here and talk about what this data actually is. A dataset has two main components: <strong>descriptive features</strong> (or just <strong>features</strong>) and a <strong>target feature</strong>.</p>
   <p>For example, if you want to predict house prices, the price of a given house is the target feature, and its location, area, number of rooms, etc. are the (descriptive) features. Another example could be a bird recognition system, that receives photos and returns a Boolean value (either true or false) that indicates whether the picture contains a bird. The target feature is the Boolean value, and the features are the (color) values of each pixel. This means that all images the system receives have to be scaled to a given resolution (and can also be converted to grayscale), i.e. 64px by 64px, for a total of 4096 features<sup><a href="#fn2" id="ref2">2</a></sup>.</p>

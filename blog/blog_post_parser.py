@@ -43,6 +43,7 @@ layout: blog
 title: """+ title +"""
 description: """+ meta_author + "'s " + meta_title + " - " + title +"""
 author: """+meta_author+"""
+comments: true
 ---
 
 <div id="ml-blog">

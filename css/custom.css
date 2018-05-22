@@ -613,22 +613,12 @@ section.main-content {
 ul.share-article {
   max-height: 200px;
   display: inline-block;
-  margin: 5% auto;
+  margin: 2% auto;
   width: 100%;
   padding: 0;
   text-align: center;
   color: #a0400f;
 }
-/* ul.share-article span {
-  font-weight: bold;
-  display: inline-block;
-  max-width: 80px;
-  font-size: 90%;
-  vertical-align: top;
-  margin: 0 1%;
-  height: 30px;
-  padding-top: 4px;
-} */
 ul.share-article li {
   display: inline-block;
   padding: 0 0.5%;
@@ -674,9 +664,11 @@ a#ref1, a#ref2, a#ref3, a#ref4, a#ref5 { padding-left: 1px; }
 @media screen and (max-width: 36em) { .blog-post figure#mid-size-image { margin: 0; } }
 
 section#sidebar { display: none; }
-section#sidebar h5 { color: #ff691a; font-size: 100%; }
-section#sidebar ul { padding: 0 3%; }
-section#sidebar ul li { list-style: none; }
+section#sidebar h5 { color: #ff691a; font-size: 100%; opacity: 0.6; }
+section#sidebar ul#map { padding: 0 3%; opacity: 0.6; }
+section#sidebar ul#map li { list-style: none; }
+section#sidebar ul.share-article { display: none; margin-bottom: 30px; }
+section#sidebar ul.share-article li { font-size: 100%; margin: 0 1.2%; }
 @media screen and (min-width: 71em) {
   section#sidebar {
     display: inline-block;
@@ -684,6 +676,7 @@ section#sidebar ul li { list-style: none; }
     max-width: 15%;
     position: absolute;
     font-size: 80%;
+    margin-top: 22px;
   }
 }
 
