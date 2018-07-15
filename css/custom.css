@@ -61,6 +61,7 @@ p.separated {
 
 ul li {
   list-style: square;
+  margin-bottom: 2%;
 }
 
 a {
@@ -658,10 +659,17 @@ a#ref1, a#ref2, a#ref3, a#ref4, a#ref5 { padding-left: 1px; }
   color: #d15514;
 }
 
-.blog-post figure#mid-size-image {
+.blog-post figure.mid-size-image {
   margin: 0 20%;
 }
-@media screen and (max-width: 36em) { .blog-post figure#mid-size-image { margin: 0; } }
+.blog-post figure.semi-big-size-image {
+  margin: 0 10%;
+}
+@media screen and (max-width: 36em) {
+  .blog-post figure.mid-size-image, .blog-post figure.semi-big-size-image {
+    margin: 0;
+  }
+}
 
 section#sidebar { display: none; }
 section#sidebar h5 { color: #ff691a; font-size: 100%; opacity: 0.6; }

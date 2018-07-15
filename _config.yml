@@ -26,6 +26,8 @@ blog:
           url: types-learning.html
         - title: What is (Supervised) Machine Learning?
           url: what-is-ml.html
+        - title: Data Preparation
+          url: data-preparation.html
     - category: Algorithms
       baseurl: algorithms/
       posts:

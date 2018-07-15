@@ -19,6 +19,7 @@ The input file should have the following format:
         + Asterisks denote bold text like *so*;
         + Double dollar signs denote italic text like $$so$$;
         + Pounds denote headings like # so (the heading and pound symbols must be separated by a space; 1 to 6 pound symbols are currently supported);
+        + To use a hyperlink, use brackets to indicate the text followed by a curly braces with the link, like [link text][http://link.here];
         + To use a footnote, use an underscore followed by a curly brace, the footnote text and a closing curly brace like _{so} (at the moment multi-line footnotes (i.e. a newline inside the footnote) aren't supported);
         + Double hyphens denote an unordered list item (the parser automatically detects the beginning and end of the unordered list), like -- so (again, the item and hyphens must be separated by a space);
         + No other markdown is currently supported.
@@ -85,6 +86,19 @@ comments: true
                 if italics_num > 0:
                     italics_list = ["<em>", "</em>"] if not open_italics else ["</em>", "<em>"]
                     line = systematic_cycle_replace(line.replace("$$", "`"), "`", italics_list)
+
+                # add hyperlinks
+                links_num = line.count("][")
+                line = re.split('\[|]\[|]', line)
+                list_index = 1
+                for i in range(0, links_num):
+                    line[list_index] = "<a href=\"" + line[list_index+1] + "\">" + line[list_index] + "</a>"
+
+                    line[list_index+1] = ""
+
+                    list_index += 3
+
+                line = ''.join(line)
 
                 # add foot notes
                 footnotes_num = line.count("_{")
