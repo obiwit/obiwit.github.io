@@ -261,17 +261,7 @@ div#top-projects div.background {
   background-position: 50% 50%;
 }
 div#nada div.background {
-  background-image: url("../img/projects/top/top_nada.jpg");
   transform: scale(1.5);
-}
-div#mpei div.background {
-  background-image: url("../img/projects/top/top_mpei.jpg");
-}
-div#cerebros div.background {
-  background-image: url("../img/projects/top/top_100cerebros.jpg");
-}
-div#pacman div.background {
-  background-image: url("../img/projects/top/top_pacman.jpg");
 }
 div#top-projects div.project img {
   display: block;

@@ -22,8 +22,16 @@ author: obiwit
 
   <ul id="projects">
     <h2 class="contrast">12018</h2>
-    <li>
-      <h3>Nothing yet, but Machine Learning projects are probably coming soon! ;)</h3>
+    <li id="musicinator">
+      <h3>Musicinator</h3>
+      <h4>A music programming language, and a compiler from it to Python 3</h4>
+      <p>A 5 person project done for the class 'Formal Languages and Automata.' The objective was the creation of both a new programming language, and a compiler from it into another Turing-complete language, using Java and ANTLR4. We created a musical language, and a compiler from it to Python 3, generating a Python file that, when executed, creates a MIDI file with the music.</p>
+      <p>I designed and documented the language, and was responsible for the semantic analysis and the compilation of the main input files (.mux) into Python 3 (using StringTemplates created by one of my colleagues).</p>
+      <p>You can find the source code <a href="https://github.com/obiwit/musicinator">here</a>.</p>
+      <button class="toggle-accordion">See more</button>
+      <div class="accordion" data-items="1">
+        <img src="{{ site.baseurl }}/img/projects/musicinator_1.png" alt="Excert of a generated MIDI file, which makes use of 15 instruments (and has over 6000 notes)!" data-index="1" data-project="musicinator">
+      </div>
     </li>
 
     <h2 class="contrast">12017</h2>
@@ -42,6 +50,7 @@ author: obiwit
       <h4>An automatic and semi-autonomous self-organizing text library</h4>
       <p>A 2-person group project, where we decided to implement an intelligent library. That is, a system which can automatically detect a text's language, and sort it into one of several categories according to its subject. If a given file is not already in the library, it's added to it, in its corresponding language and subject. To this end, MinHashes, a vanilla bloom filter (used to check whether the file already existed in the library), and a counting bloom filter (designed to supplement the 'choice' of a given text's subject) were used.</p>
       <p>This done for a class on Probabilistic Methods, using MATLAB. It was also heavily test-driven.</p>
+      <p>You can find the source code <a href="https://github.com/obiwit/smart-library">here</a>.</p>
       <button class="toggle-accordion">See more</button>
       <div class="accordion" data-items="7">
         <img src="{{ site.baseurl }}/img/projects/mpei1.png" alt="The 'opening' window of the application." data-index="1" data-project="mpei">
@@ -67,6 +76,7 @@ author: obiwit
       <h3>100 Cerebros Image Gallery</h3>
       <h4>Online Gallery, Photo Editor and Meme Generator</h4>
       <p>An online application allowing you to upload photos, to which you can add several effects, or turn into a meme. You can preview and undo each one of the effects (and meme captions). This was a 4-person group project, where the application's interface (ie. how the front and back-ends communicate) was done by me. I also did all the design and front-end, as well as about half of the back-end. The rest of the back-end, the database management and the images' processing and editing were done by the other 3 persons.</p>
+      <p>You can find the source code <a href="https://github.com/obiwit/100cerebros-image-gallery">here</a>.</p>
       <button class="toggle-accordion">See more</button>
       <div class="accordion" data-items="14">
         <img src="{{ site.baseurl }}/img/projects/100cerebros_1.jpg" alt="After login, the landing page of the app." data-index="1" data-project="100-cerebros">
@@ -88,7 +98,8 @@ author: obiwit
     <li id="vhdl-enigma" class="last">
       <h3>VHDL Model for Enigma M3</h3>
       <p>A VHDL Model for two Enigmas M3 - one for ciphering the message and a second one to decipher it, using the RS232 to communicate between themselves - that I developed for a class on Digital Systems. The devices, in terms of functionality, are identical to their World War Two counterparts, sharing the more than 158,962,555,217,826,360,000 possible configurations!</p>
-      <a target="_blank" href="https://www.youtube.com/watch?v=rjT6-Ye7jDg">Check it out in (almost spy-like) action!</a>
+      <p><a target="_blank" href="https://www.youtube.com/watch?v=rjT6-Ye7jDg">Check it out in (almost spy-like) action!</a></p>
+      <p>You can find the source code <a href="https://github.com/obiwit/vhdl-enigma">here</a>.</p>
       <button class="toggle-accordion">See more</button>
       <div class="accordion" data-items="4">
         <img src="{{ site.baseurl }}/img/projects/enigma_overview.jpg" alt="Overview of the final system, with the two FPGA kits connected." data-index="1" data-project="vhdl-enigma" class="break-after">
@@ -117,6 +128,7 @@ author: obiwit
       <h3>Pacman</h3>
       <p>A processing (Java based) implementation of Pacman, with the ghosts actively chasing Pacman (not following pre-determined routes), several difficulty levels, semi-random maps, and lots of cheat codes!</p>
       <p>Unfortunately, the interface is in Portuguese, since this project was part of a programming assignment for my university.</p>
+      <p>You can find the source code <a href="https://github.com/obiwit/pacman">here</a>.</p>
       <button class="toggle-accordion">See more</button>
       <div class="accordion" data-items="7">
         <img src="{{ site.baseurl }}/img/projects/pacman_menu.jpg" alt="Main menu of the game, which shows scores, allows the user to choose a difficulty level, and plays a catchy tune! The harder the level, the higher you score as well! (Though it isn't obvious from this image because I wasn't that good a player...)" data-index="1" data-project="pacman">

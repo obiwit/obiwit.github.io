@@ -1,5 +1,10 @@
 $(function() {
 
+   // set up background images
+   $("div.project").each(function() {
+     $(this).find("div.background").css("background-image", "url(\"../img/projects/top/top_"+$(this).attr('id')+".jpg");
+   });
+
   /**
    * Image Gallery Pop-Up/Modal Logic
    */
@@ -24,14 +29,10 @@ $(function() {
      if (next) {
        updateAmount = 0;
      }
-     console.log("[data-index='" + (
-                (projectIndex + updateAmount)%totalProjects + 1) + "']");
 
      $('div#top-projects div.project').not(".hidden").addClass("hidden");
      $('*[data-index="' + ((projectIndex + updateAmount)%totalProjects + 1)
          + '"]').removeClass("hidden");
-      // $('div#top-projects div.project').find("[data-index='" + (
-      //            (projectIndex + updateAmount)%totalProjects +1) + "']");
    }
 
 });
