@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
  # Run Jekyll with `bundle exec`, like so: bundle exec jekyll serve
- gem "jekyll", "3.5.2"
+ gem "jekyll", ">= 3.6.3"
 
  # gem "github-pages", group: :jekyll_plugins
 gem 'jekyll-seo-tag'
