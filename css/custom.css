@@ -315,6 +315,16 @@ span.subtle-color {
 /****************************/
 /************* ALL PROJECTS */
 /****************************/
+ul#projects h2:hover {
+  cursor: pointer;
+}
+ul#projects ol li {
+  list-style: decimal;
+  padding: 1% 0 0;
+  margin: 0;
+  border-bottom: none;
+}
+
 ul#projects li {
   list-style: none;
   margin-top: 4%;

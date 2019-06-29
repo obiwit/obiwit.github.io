@@ -1,6 +1,42 @@
 $(function() {
   /**
-   * Accordion Logic
+   * Year-level Accordion Logic
+   */
+  $('h2').on('click', function() {
+    // get year
+    var elem = $(this);
+    var year = elem.attr('id');
+
+    // change span arrow
+    var span = $(elem.children('span')[0]);
+    if (span.html() == "▶") {
+      span.html("▼");
+    } else {
+      span.html("▶");
+    }
+
+    // hide/unhide corresponding year's projects
+    $('#'+year+'-body').toggleClass('hidden');
+  });
+  // allow ongoing project 'jumping'
+  $('div#ongoing-projects a').on('click', function(e) {
+    e.preventDefault();
+
+    // show that year's projects
+    var elem = $('h2#12017');
+    var year = elem.attr('id');
+    var span = $(elem.children('span')[0]);
+    span.html("▼");
+    $('#'+year+'-body').removeClass('hidden');
+
+    // scroll to project
+    $([document.documentElement, document.body]).animate({
+      scrollTop: $($(this).attr('href')).offset().top
+  }, 1000);
+  });
+
+  /**
+   * Project-level Accordion Logic
    */
   $('button.toggle-accordion').on('click', function() {
     var elem = $(this);
@@ -101,7 +137,7 @@ $(function() {
 
    // Close a modal window
    function closeModal() {
-     history.replaceState(null, null, '/projects.html');
+     history.replaceState(null, null, '/all_projects.html');
      $('#modal-gallery').hide();
      $('#main-image').html('');
    }
