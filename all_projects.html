@@ -26,12 +26,70 @@ author: obiwit
       <span class="year-accordion-status open" style="font-style: normal; font-size: 80%;">▼</span> 12019
     </h2>
     <div id="12019-body">
-      <p>Coming very soon!</p>
-      <!-- barbershop -->
-      <!-- bd -->
-      <!-- exprover em geral (android + pei) -->
-      <!-- ar? -->
-      <!-- tba: mansa -->
+      <!-- <li id="sem">
+        <h3>SEM - Subaquatic Environments Monitoring</h3>
+        <h4>Computer Vision applied to fish detection and tracking</h4>
+        <p>Coming soon!</p>
+        <button class="toggle-accordion">See more</button>
+        <div class="accordion" data-items="1">
+          <img src="{{ site.baseurl }}/img/projects/12019/....png" alt="..." data-index="1" data-project="sem">
+        </div>
+      </li> -->
+      <li id="exprover">
+        <h3>ExpROVer</h3>
+        <h4>An open source solution enabling a myriad of functionalities around the 'VideoRay Pro 4' ROV</h4>
+        <p>Remotely Operated Vehicles (ROVs) are one of the most important underwater tools in today’s evermore sea- and ocean-dependent world. The ExpROVer software intends to add value to the inspection ROV market by introducing an open source solution enabling an easy and intuitive user interface, available anywhere and at anytime and ready to support extensions from the open source community.</p>
+        <p>ExpROVer was a 5-person semester long project, featuring low-level communication between Linux and the ROV, integrated with ROS (the Robot Operating System), ROSbridge-powered server capabilities, several extensions, like Computer Vision capabilities (fish detection using a  modified YOLOv3 architecture), a set of semi-autonomous maneuvers, and a dedicated Android and Web applications.</p>
+        <p>I was responsible for the Computer Vision Capabilities and the Android app. Due to the our originally 6th member abandoning the project, I subsequently also became responsible for the Web application. I was the team leader, and also responsible for the documentation, the oral presentation and pitches of the project.</p>
+        <p>You can find much more information in the <a target="_blank" href="http://obiwit.com/expROVer/">ExpROVer website</a>, in this <a target="_blank" href="https://prezi.com/p/f4rznatru7lv/">prezi presentation</a>, or <a target="_blank" href="https://www.youtube.com/watch?v=nNTeIgoWbVo">watch a relatively short video giving you an overview of the system</a>. You can watch the fish detection algorithm's evolution <a target="_blank" href="https://www.youtube.com/watch?v=ZMp_UqdHdmY">here</a>. Finally, you can also find the open source repository <a target="_blank" href="https://github.com/obiwit/expROVer">here</a>.</p>
+        <button class="toggle-accordion">See more</button>
+        <div class="accordion" data-items="7">
+          <img src="{{ site.baseurl }}/img/projects/12019/exprover/poster.png" alt="Our promotional poster, providing an overview of the project." data-index="1" data-project="exprover" class="break-after">
+          <img src="{{ site.baseurl }}/img/projects/12019/exprover/connection_diagram.png" alt="A diagram of the ExpROVer system, showing how all the system's hardware components are connected." data-index="2" data-project="exprover">
+          <img src="{{ site.baseurl }}/img/projects/12019/exprover/detailed_layers.png" alt="The layered architecture of the system, in some detail." data-index="3" data-project="exprover">
+          <img src="{{ site.baseurl }}/img/projects/12019/exprover/web_app_main.png" alt="The main screen of the web application." data-index="4" data-project="exprover">
+          <img src="{{ site.baseurl }}/img/projects/12019/exprover/web_app_cockpit.png" alt="The web app's cockpit screen, showing the ROV's video camera feed.." data-index="5" data-project="exprover">
+          <img src="{{ site.baseurl }}/img/projects/12019/exprover/android_app_main.png" alt="The Android app's main screen, listing the user's ROVs, as well as the screen for adding a new ROV." data-index="6" data-project="exprover">
+          <img src="{{ site.baseurl }}/img/projects/12019/exprover/android_app_cockpit.png" alt="The Android app's cockpit screen." data-index="7" data-project="exprover">
+        </div>
+      </li>
+      <li id="manabank">
+          <h3>ManABank</h3>
+          <h4>A T-SQL and C# application</h4>
+          <p>ManABank is a software solution for bank managers, allowing them to manage clients, accounts, investments and loans, as well as employees, and the bank's branches.</p>
+          <p>Using Windows Forms and C# for the front end, the application shines in its SQL backend, with SPs (Stored Procedures), UDFs (User Defined Functions), Triggers, transactions, index optimization, SQL injection prevention and other security measures.</p>
+          <p>This was a 2-person project for a class on databases. I handled the schemactic conception of the database, all of the front end, as well as the SPs (including transactions), UDFs, the SQL injection prevention and other security measures, and some of the triggers.</p>
+          <p>You can check out a relatively short video of the application <a target="_blank" href="https://www.youtube.com/watch?v=4KhEKKH3T7I">here!</a></p>
+          <button class="toggle-accordion">See more</button>
+          <div class="accordion" data-items="5">
+            <img src="{{ site.baseurl }}/img/projects/12019/manabank/der.png" alt="The Entity-Relation Diagram." data-index="1" data-project="manabank">
+            <img src="{{ site.baseurl }}/img/projects/12019/manabank/main.png" alt="The application's main screen." data-index="3" data-project="manabank">
+            <img src="{{ site.baseurl }}/img/projects/12019/manabank/er.png" alt="The Relational Scheme." data-index="2" data-project="manabank">
+            <img src="{{ site.baseurl }}/img/projects/12019/manabank/filter.png" alt="An example filter screen (in this case, for the clients' profiles)." data-index="4" data-project="manabank">
+            <img src="{{ site.baseurl }}/img/projects/12019/manabank/results.png" alt="An example results screen (in this case, for the client's card-associated accounts, both credit or debit)." data-index="5" data-project="manabank">
+          </div>
+        </li>
+      <li id="barbershop">
+          <h3>Barber Shop</h3>
+          <h4>A concurrent programming project</h4>
+          <p>A 3-person project on concurrent programming, using threads. A barbershop was simulated, where each client and barber ran concurrently, on different threads, and were synchronized through semaphores. Some care had to be put into their synchronization to avoid deadlocks as well.</p>
+          <button class="toggle-accordion">See more</button>
+          <div class="accordion" data-items="2">
+            <img src="{{ site.baseurl }}/img/projects/12019/barbershop/1.png" alt="A screenshot of the running program. Every client and barber uses a separate thread." data-index="1" data-project="barbershop">
+            <img src="{{ site.baseurl }}/img/projects/12019/barbershop/vim.png" alt="Another screenshot of the concurrent program, with less barbers and clients." data-index="2" data-project="barbershop">
+          </div>
+        </li>
+      <li id="network">
+          <h3>Enterprise-Level Network</h3>
+          <h4>Design and configuration of an enterprise-level network</h4>
+          <p>I designed an enterprise-level network, between 3 branch locations, some with several buildings - from designing the hierarchical model used, to deciding VLANs IP addresses' encodings (both IPv4 and IPv6), to the number of devices necessary, their minimum bandwidth, a budget for the equipment and Ganntt diagram for the whole process. The work was done in Portuguese.</p>
+          <p>I also configured the equipment, using OSPF v2 and v3 for internal routing, configuring the VLANs (distinguishing end-to-end VLANs from local ones, creating an interconnection VLAN for them), along with DHCP and DNS servers, quality of service (using DiffServ), among other configurations.</p>
+          <button class="toggle-accordion">See more</button>
+          <div class="accordion" data-items="2">
+            <img src="{{ site.baseurl }}/img/projects/12019/network/branch.png" alt="The network of one of the branch locations, at a glance." data-index="1" data-project="network">
+            <img src="{{ site.baseurl }}/img/projects/12019/network/vlans.png" alt="A first draft of the enconding for the VLANs IPv4 addressing (IPv6 used a similar scheme)." data-index="2" data-project="network">
+          </div>
+        </li>
     </div>  
 
 
