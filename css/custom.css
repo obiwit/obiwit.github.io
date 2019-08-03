@@ -22,7 +22,7 @@
   top: -6.5%;
   left: 0;
   padding-top: 2%;
-  padding-bottom: 1%;
+  /* padding-bottom: 1%; */
   width: 65%;
   text-align: left;
   background: linear-gradient(to right,rgba(255, 255, 255, 0.3) , rgba(255, 255, 255, 0));

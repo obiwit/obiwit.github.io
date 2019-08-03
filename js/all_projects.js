@@ -1,4 +1,9 @@
 $(function() {
+
+  function getProjectYear($project) {
+    return $project.parent().attr('id').split('-')[0];
+  }
+
   /**
    * Year-level Accordion Logic
    */
@@ -116,23 +121,31 @@ $(function() {
    // check if landing url is a "modal" url, and if so, open corresponding modal
    var hash = window.location.hash; //window.location.href.split('#')[1];
    if (hash) {
-     var url_parts = hash.split("/");
-     if (url_parts.length == 3) {
-       var list_elem_id = "li#"+ url_parts[1];
-       // open the modal immediately, so the website appears faster
-       $('#modal-gallery').toggle();
+    var url_parts = hash.split("/");
+    if (url_parts.length == 3) {
+      var list_elem_id = "li#"+ url_parts[1];
+      // open the modal immediately, so the website appears faster
+      $('#modal-gallery').toggle();
 
-       // open corresponding accordion
-       toggleAccordion($(list_elem_id + " button.toggle-accordion"));
-       // scroll to it
-       $('html, body').animate({
-         scrollTop: $(list_elem_id).offset().top
-       }, 1000);
+      // open corresponding accordion
+      toggleAccordion($(list_elem_id + " button.toggle-accordion"));
+      // scroll to it
+      $('html, body').animate({
+        scrollTop: $(list_elem_id).offset().top
+      }, 1000);
 
-       // add image to the modal
-       var $image = $(list_elem_id + " div.accordion img[data-index='"+ url_parts[2] +"']");
-       setTimeout(function(){ modalLoadImage($image); }, 1000); // 500 is too little for some images
-     }
+      // add image to the modal
+      var $image = $(list_elem_id + " div.accordion img[data-index='"+ url_parts[2] +"']");
+      setTimeout(function(){ modalLoadImage($image); }, 1000); // 500 is too little for some images
+     
+    } else if (url_parts.length == 1) {
+      // unhide corresponding year
+      var year = getProjectYear($(hash))
+      var elem = $('h2#'+year);
+      var span = $(elem.children('span')[0]);
+      span.html("▼");
+      $('#'+year+'-body').removeClass('hidden');
+    }
    }
 
    // Close a modal window
