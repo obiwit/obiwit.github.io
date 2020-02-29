@@ -1,7 +1,7 @@
 # Setup
-title:        Beatriz Borges R
+title:        Beatriz Borges
 tagline:      Passionate young computer, brain & data scientist!
-description:  Beatriz Borges R's, aka obiwit, machine learning blog and website
+description:  Beatriz Borges's, aka obiwit, machine learning blog and website
 baseurl:      ""
 url:          http://obiwit.com
 
@@ -41,7 +41,7 @@ blog:
 
 # About/contact
 author:
-  name:       Beatriz Borges R
+  name:       Beatriz Borges
   url:        http://obiwit.com
 
   email:      bea@obiwit.com
