@@ -21,7 +21,7 @@ $(function() {
    // The parameter is a boolean: true for next image; false for previous image
    function handleNextPrevious(next) {
      var $newProj;
-     var totalProjects = 4; // 4 projects total
+     var totalProjects = 3;//4; // 4 projects total
      var projectIndex = $('div#top-projects div.project').not(".hidden").data()["index"]
                             + totalProjects; // to garantee there are never negative numbers
 
