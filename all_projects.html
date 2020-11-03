@@ -30,7 +30,7 @@ author: obiwit
       <li id="humorBERT">
         <h3>Analyzing humor with BERT</h3>
         <h4>Using state-of-the-art NLP to tackle humor detection</h4>
-        <p>A semester long research project using BERT (Bidirectional Encoder Representations from Transformers) to construct reasonably well-performing humor-detection models on a <a href="https://github.com/epfl-dlab/unfun">paired satirical-and-serious headlines dataset</a> and then analyze them in order to discern what mechanisms are having an impact on their classification decisions.</p> 
+        <p>A semester-long research project using BERT (Bidirectional Encoder Representations from Transformers) to construct reasonably well-performing humor-detection models on a <a href="https://github.com/epfl-dlab/unfun">paired satirical-and-serious headlines dataset</a> and then analyze them in order to discern what mechanisms are having an impact on their classification decisions.</p> 
         <p>I started by showing it is indeed possible to build neural architectures that achieve remarkable performance on a humor classification task. Subsequently, the analysis revealed that these architectures need to be able to leverage semantic-level concepts and the context of words within the headline in order to be able to successfully identify humor.</p>
         <p>This project was done in EPFL's Data Science lab (<a href="https://dlab.epfl.ch">dlab</a>), under prof. Robert "Bob" West, Maxime Peyrard and Kristina Gligorić. Further work led to a paper submission at <a href="https://2021.eacl.org">EACL 2021</a>.</p>
         <p>You can read the report for the semester project <a class="pdf" target="_blank" data-project="humorBERT"
@@ -52,20 +52,20 @@ author: obiwit
     </h2>
     <div id="12019-body" class="hidden">
       <li id="ada">
-      <h3>We are <em>where</em> we eat</h3>
-       <h4>A data-driven look at Chicago's food scene</h4>
-       <p>A 4-person group project for EPFL's Applied Data Analysis class, where we took a structured look at Chicago’s food inspection scene and everything happening behind the curtain – starting with food violations and usual risk, progressing beyond year seasons and temperatures, reaching all the way down to location and block-level wealth and ethnicity.</p>
-       <p>You can find the data story for this analysis <a href="http://obiwit.com/ADAknow/">here</a> (the pictures below give you a sneak peek), and the whole github repository <a href="https://github.com/obiwit/ADAknow">here</a>.</p>
-       <button class="toggle-accordion">See more</button>
-       <div class="accordion" data-items="6">
-         <img src="{{ site.baseurl }}/img/projects/12019/ada/type_distribution.png" alt="A first glance view of the distribution of the inspected facilities' type. Hovering over any part of the donut provides some extra info." data-index="1" data-project="ada">
-         <img src="{{ site.baseurl }}/img/projects/12019/ada/results_ratios.png" alt="A breakdown of the inspection results as we get more and more specific about the type of the facility. <br/>This interactive plot allows you to explore how each type of facility did, on average." data-index="2" data-project="ada">
-         <img src="{{ site.baseurl }}/img/projects/12019/ada/ethnicity_map.png" alt="A map of Chicago overlaid with the most common ethnicity for each zip code area." data-index="3" data-project="ada">
-         <img src="{{ site.baseurl }}/img/projects/12019/ada/ethnicity_bars.png" alt="Existing correlations between the most common ethnicity in a given zip code area, and the average inspection results, the ratio between non-inspected and total number of restaurants, and the average number of inhabitants per restaurant." data-index="4" data-project="ada">
-         <img src="{{ site.baseurl }}/img/projects/12019/ada/chains_ratios.png" alt="The average inspection results for the 10 most common restaurant chains in the dataset." data-index="5" data-project="ada">
-         <img src="{{ site.baseurl }}/img/projects/12019/ada/chains_independent.png" alt="A comparison between the average inspection results of restaurant chains and independent restaurants." data-index="6" data-project="ada">
-       </div>
-     </li>
+        <h3>We are <em>where</em> we eat</h3>
+        <h4>A data-driven look at Chicago's food scene</h4>
+        <p>A 4-person group project for EPFL's Applied Data Analysis class, where we took a structured look at Chicago’s food inspection scene and everything happening behind the curtain – starting with food violations and usual risk, progressing beyond year seasons and temperatures, reaching all the way down to location and block-level wealth and ethnicity.</p>
+        <p>You can find the data story for this analysis <a href="http://obiwit.com/ADAknow/">here</a> (the pictures below give you a sneak peek), and the whole github repository <a href="https://github.com/obiwit/ADAknow">here</a>.</p>
+        <button class="toggle-accordion">See more</button>
+        <div class="accordion" data-items="6">
+          <img src="{{ site.baseurl }}/img/projects/12019/ada/type_distribution.png" alt="A first glance view of the distribution of the inspected facilities' type. Hovering over any part of the donut provides some extra info." data-index="1" data-project="ada">
+          <img src="{{ site.baseurl }}/img/projects/12019/ada/results_ratios.png" alt="A breakdown of the inspection results as we get more and more specific about the type of the facility. <br/>This interactive plot allows you to explore how each type of facility did, on average." data-index="2" data-project="ada">
+          <img src="{{ site.baseurl }}/img/projects/12019/ada/ethnicity_map.png" alt="A map of Chicago overlaid with the most common ethnicity for each zip code area." data-index="3" data-project="ada">
+          <img src="{{ site.baseurl }}/img/projects/12019/ada/ethnicity_bars.png" alt="Existing correlations between the most common ethnicity in a given zip code area, and the average inspection results, the ratio between non-inspected and total number of restaurants, and the average number of inhabitants per restaurant." data-index="4" data-project="ada">
+          <img src="{{ site.baseurl }}/img/projects/12019/ada/chains_ratios.png" alt="The average inspection results for the 10 most common restaurant chains in the dataset." data-index="5" data-project="ada">
+          <img src="{{ site.baseurl }}/img/projects/12019/ada/chains_independent.png" alt="A comparison between the average inspection results of restaurant chains and independent restaurants." data-index="6" data-project="ada">
+        </div>
+      </li>
       <li id="enchordings">
         <h3>Harmonic Embeddings</h3>
         <h4>Learning chord embeddings from the Annotated Beethoven Corpus</h4>
@@ -74,71 +74,84 @@ author: obiwit
         <p>You can read our report <a class="pdf" target="_blank" data-project="enchordings"
           href="{{ site.baseurl }}/pdf/projects/ml_harmony.pdf">here</a>.</p>
         </li>
-      <li id="sem">
-        <h3>SEM - Subaquatic Environments Monitoring</h3>
-        <h4>Computer Vision applied to fish detection and tracking</h4>
-        <p>Related to the <a href="#exprover">ExpROVer project</a> below, this project was more research oriented, though also connected to ROVs (Remotely Operated Vehicles), aquatic and usually small robotic vehicles.</p>
-        <p>After an exploration of the state-of-the-art technologies concerning intelligent underwater vision and movement, I focused on the transfer training of several different CNN (Convolutional Neural Network) architectures for fish classification, as well as the application and performance of YOLOv3 (You Only Look Once) to fish detection.</p>
-        <button class="toggle-accordion">See more</button>
-        <div class="accordion" data-items="1">
-          <img src="{{ site.baseurl }}/img/projects/12019/sem/fishDetection.png" alt="Results of the transfer training of the CNNs. For each image triplet, the left image represents the output of an untrained CNN, the middle one the output mid-training, and the right image the output after the end of training." data-index="1" data-project="sem">
-        </div>
-      </li>
-      <li id="exprover">
-        <h3>ExpROVer</h3>
-        <h4>An open source solution enabling a myriad of functionalities around the 'VideoRay Pro 4' ROV</h4>
-        <p>Remotely Operated Vehicles (ROVs) are one of the most important underwater tools in today’s evermore sea- and ocean-dependent world. The ExpROVer software intends to add value to the inspection ROV market by introducing an open source solution enabling an easy and intuitive user interface, available anywhere and at anytime and ready to support extensions from the open source community.</p>
-        <p>ExpROVer was a 5-person semester long project, featuring low-level communication between Linux and the ROV, integrated with ROS (the Robot Operating System), ROSbridge-powered server capabilities, several extensions, like Computer Vision capabilities (fish detection using a  modified YOLOv3 architecture), a set of semi-autonomous maneuvers, and a dedicated Android and Web applications.</p>
-        <p>I was responsible for the Computer Vision Capabilities and the Android app. Due to the our originally 6th member abandoning the project, I subsequently also became responsible for the Web application. I was the team leader, and also responsible for the documentation, the oral presentation and pitches of the project.</p>
-        <p>You can find much more information in the <a href="http://obiwit.com/expROVer/">ExpROVer website</a>, in this <a href="https://prezi.com/p/f4rznatru7lv/">prezi presentation</a>, or <a href="https://www.youtube.com/watch?v=nNTeIgoWbVo">watch a relatively short video giving you an overview of the system</a>. You can watch the fish detection algorithm's evolution <a href="https://www.youtube.com/watch?v=ZMp_UqdHdmY">here</a>. Finally, you can also find the open source repository <a href="https://github.com/obiwit/expROVer">here</a>.</p>
-        <button class="toggle-accordion">See more</button>
-        <div class="accordion" data-items="7">
-          <img src="{{ site.baseurl }}/img/projects/12019/exprover/poster.png" alt="Our promotional poster, providing an overview of the project." data-index="1" data-project="exprover" class="break-after">
-          <img src="{{ site.baseurl }}/img/projects/12019/exprover/connection_diagram.png" alt="A diagram of the ExpROVer system, showing how all the system's hardware components are connected." data-index="2" data-project="exprover">
-          <img src="{{ site.baseurl }}/img/projects/12019/exprover/detailed_layers.png" alt="The layered architecture of the system, in some detail." data-index="3" data-project="exprover">
-          <img src="{{ site.baseurl }}/img/projects/12019/exprover/web_app_main.png" alt="The main screen of the web application." data-index="4" data-project="exprover">
-          <img src="{{ site.baseurl }}/img/projects/12019/exprover/web_app_cockpit.png" alt="The web app's cockpit screen, showing the ROV's video camera feed.." data-index="5" data-project="exprover">
-          <img src="{{ site.baseurl }}/img/projects/12019/exprover/android_app_main.png" alt="The Android app's main screen, listing the user's ROVs, as well as the screen for adding a new ROV." data-index="6" data-project="exprover">
-          <img src="{{ site.baseurl }}/img/projects/12019/exprover/android_app_cockpit.png" alt="The Android app's cockpit screen." data-index="7" data-project="exprover">
-        </div>
-      </li>
-      <li id="manabank">
-          <h3>ManABank</h3>
-          <h4>A T-SQL and C# application</h4>
-          <p>ManABank is a software solution for bank managers, allowing them to manage clients, accounts, investments and loans, as well as employees, and the bank's branches.</p>
-          <p>Using Windows Forms and C# for the front end, the application shines in its SQL backend, with SPs (Stored Procedures), UDFs (User Defined Functions), Triggers, transactions, index optimization, SQL injection prevention and other security measures.</p>
-          <p>This was a 2-person project for a class on databases. I handled the schemactic conception of the database, all of the front end, as well as the SPs (including transactions), UDFs, the SQL injection prevention and other security measures, and some of the triggers.</p>
-          <p>You can check out a relatively short video of the application <a href="https://www.youtube.com/watch?v=4KhEKKH3T7I">here</a>!</p>
+        <li id="wabisabi">
+          <h3>WabiSabi</h3>
+          <h4>A personality-assuming conversational AI based on GPT-2</h4>
+          <p>WabiSabi is a smart inspirational chatbot developed by me and 2 other friends, for the 2019 LauzHack hackathon. Using ConvAI technology, we build personalities of different famous people through their quotes and speeches. These personalities are then used to build a chatbot that you can talk to about your hopes, dreams and worries or have a casual conversation with. WabiSabi was created with people's wellbeing in mind - its main focus is to offer pep talks and advice to users when they're feeling down.</p>
+          <p>We ended up winning second place! You can see a short video demo <a href="https://www.youtube.com/watch?v=NMSPDjRrZrw">here (it has no sound, and I recommend watching it at 1.5x or more)</a>, find its devpost page <a href="https://devpost.com/software/wabi-sabi">here</a> and the github repo <a href="https://github.com/liliaellouz/wabi-sabi">here</a>.</p>
           <button class="toggle-accordion">See more</button>
-          <div class="accordion" data-items="5">
-            <img src="{{ site.baseurl }}/img/projects/12019/manabank/der.png" alt="The Entity-Relation Diagram." data-index="1" data-project="manabank">
-            <img src="{{ site.baseurl }}/img/projects/12019/manabank/main.png" alt="The application's main screen." data-index="3" data-project="manabank">
-            <img src="{{ site.baseurl }}/img/projects/12019/manabank/er.png" alt="The Relational Scheme." data-index="2" data-project="manabank">
-            <img src="{{ site.baseurl }}/img/projects/12019/manabank/filter.png" alt="An example filter screen (in this case, for the clients' profiles)." data-index="4" data-project="manabank">
-            <img src="{{ site.baseurl }}/img/projects/12019/manabank/results.png" alt="An example results screen (in this case, for the client's card-associated accounts, both credit or debit)." data-index="5" data-project="manabank">
+          <div class="accordion" data-items="4">
+            <img src="{{ site.baseurl }}/img/projects/12019/wabisabi/wabisabi1.jpeg" alt="An example dialog, featuring a stressing event in the near future." data-index="1" data-project="wabisabi">
+            <img src="{{ site.baseurl }}/img/projects/12019/wabisabi/wabisabi2.jpeg" alt="Another example dialog with stressed out user." data-index="2" data-project="wabisabi">
+            <img src="{{ site.baseurl }}/img/projects/12019/wabisabi/wabisabi3.jpeg" alt="An example dialog, featuring a user who feels sad in general." data-index="3" data-project="wabisabi">
+            <img src="{{ site.baseurl }}/img/projects/12019/wabisabi/wabisabi4.jpeg" alt="An example dialog with a nice ending. :)" data-index="4" data-project="wabisabi">
           </div>
         </li>
-      <li id="barbershop">
-          <h3>Barber Shop</h3>
-          <h4>A concurrent programming project</h4>
-          <p>A 3-person project on concurrent programming, using threads. A barbershop was simulated, where each client and barber ran concurrently, on different threads, and were synchronized through semaphores. Some care had to be put into their synchronization to avoid deadlocks as well.</p>
+        <li id="sem">
+          <h3>SEM - Subaquatic Environments Monitoring</h3>
+          <h4>Computer Vision applied to fish detection and tracking</h4>
+          <p>Related to the <a href="#exprover">ExpROVer project</a> below, this project was more research oriented, though also connected to ROVs (Remotely Operated Vehicles), aquatic and usually small robotic vehicles.</p>
+          <p>After an exploration of the state-of-the-art technologies concerning intelligent underwater vision and movement, I focused on the transfer training of several different CNN (Convolutional Neural Network) architectures for fish classification, as well as the application and performance of YOLOv3 (You Only Look Once) to fish detection.</p>
           <button class="toggle-accordion">See more</button>
-          <div class="accordion" data-items="2">
-            <img src="{{ site.baseurl }}/img/projects/12019/barbershop/1.png" alt="A screenshot of the running program. Every client and barber uses a separate thread." data-index="1" data-project="barbershop">
-            <img src="{{ site.baseurl }}/img/projects/12019/barbershop/vim.png" alt="Another screenshot of the concurrent program, with less barbers and clients." data-index="2" data-project="barbershop">
+          <div class="accordion" data-items="1">
+            <img src="{{ site.baseurl }}/img/projects/12019/sem/fishDetection.png" alt="Results of the transfer training of the CNNs. For each image triplet, the left image represents the output of an untrained CNN, the middle one the output mid-training, and the right image the output after the end of training." data-index="1" data-project="sem">
           </div>
         </li>
-      <li id="network">
-          <h3>Enterprise-Level Network</h3>
-          <h4>Design and configuration of an enterprise-level network</h4>
-          <p>I designed an enterprise-level network, between 3 branch locations, some with several buildings - from designing the hierarchical model used, to deciding VLANs IP addresses' encodings (both IPv4 and IPv6), to the number of devices necessary, their minimum bandwidth, a budget for the equipment and Ganntt diagram for the whole process. The work was done in Portuguese.</p>
-          <p>I also configured the equipment, using OSPF v2 and v3 for internal routing, configuring the VLANs (distinguishing end-to-end VLANs from local ones, creating an interconnection VLAN for them), along with DHCP and DNS servers, quality of service (using DiffServ), among other configurations.</p>
+        <li id="exprover">
+          <h3>ExpROVer</h3>
+          <h4>An open source solution enabling a myriad of functionalities around the 'VideoRay Pro 4' ROV</h4>
+          <p>Remotely Operated Vehicles (ROVs) are one of the most important underwater tools in today’s evermore sea- and ocean-dependent world. The ExpROVer software intends to add value to the inspection ROV market by introducing an open source solution enabling an easy and intuitive user interface, available anywhere and at anytime and ready to support extensions from the open source community.</p>
+          <p>ExpROVer was a 5-person semester long project, featuring low-level communication between Linux and the ROV, integrated with ROS (the Robot Operating System), ROSbridge-powered server capabilities, several extensions, like Computer Vision capabilities (fish detection using a  modified YOLOv3 architecture), a set of semi-autonomous maneuvers, and a dedicated Android and Web applications.</p>
+          <p>I was responsible for the Computer Vision Capabilities and the Android app. Due to the our originally 6th member abandoning the project, I subsequently also became responsible for the Web application. I was the team leader, and also responsible for the documentation, the oral presentation and pitches of the project.</p>
+          <p>You can find much more information in the <a href="http://obiwit.com/expROVer/">ExpROVer website</a>, in this <a href="https://prezi.com/p/f4rznatru7lv/">prezi presentation</a>, or <a href="https://www.youtube.com/watch?v=nNTeIgoWbVo">watch a relatively short video giving you an overview of the system</a>. You can watch the fish detection algorithm's evolution <a href="https://www.youtube.com/watch?v=ZMp_UqdHdmY">here</a>. Finally, you can also find the open source repository <a href="https://github.com/obiwit/expROVer">here</a>.</p>
           <button class="toggle-accordion">See more</button>
-          <div class="accordion" data-items="2">
-            <img src="{{ site.baseurl }}/img/projects/12019/network/branch.png" alt="The network of one of the branch locations, at a glance." data-index="1" data-project="network">
-            <img src="{{ site.baseurl }}/img/projects/12019/network/vlans.png" alt="A first draft of the enconding for the VLANs IPv4 addressing (IPv6 used a similar scheme)." data-index="2" data-project="network">
+          <div class="accordion" data-items="7">
+            <img src="{{ site.baseurl }}/img/projects/12019/exprover/poster.png" alt="Our promotional poster, providing an overview of the project." data-index="1" data-project="exprover" class="break-after">
+            <img src="{{ site.baseurl }}/img/projects/12019/exprover/connection_diagram.png" alt="A diagram of the ExpROVer system, showing how all the system's hardware components are connected." data-index="2" data-project="exprover">
+            <img src="{{ site.baseurl }}/img/projects/12019/exprover/detailed_layers.png" alt="The layered architecture of the system, in some detail." data-index="3" data-project="exprover">
+            <img src="{{ site.baseurl }}/img/projects/12019/exprover/web_app_main.png" alt="The main screen of the web application." data-index="4" data-project="exprover">
+            <img src="{{ site.baseurl }}/img/projects/12019/exprover/web_app_cockpit.png" alt="The web app's cockpit screen, showing the ROV's video camera feed.." data-index="5" data-project="exprover">
+            <img src="{{ site.baseurl }}/img/projects/12019/exprover/android_app_main.png" alt="The Android app's main screen, listing the user's ROVs, as well as the screen for adding a new ROV." data-index="6" data-project="exprover">
+            <img src="{{ site.baseurl }}/img/projects/12019/exprover/android_app_cockpit.png" alt="The Android app's cockpit screen." data-index="7" data-project="exprover">
           </div>
         </li>
+        <li id="manabank">
+            <h3>ManABank</h3>
+            <h4>A T-SQL and C# application</h4>
+            <p>ManABank is a software solution for bank managers, allowing them to manage clients, accounts, investments and loans, as well as employees, and the bank's branches.</p>
+            <p>Using Windows Forms and C# for the front end, the application shines in its SQL backend, with SPs (Stored Procedures), UDFs (User Defined Functions), Triggers, transactions, index optimization, SQL injection prevention and other security measures.</p>
+            <p>This was a 2-person project for a class on databases. I handled the schemactic conception of the database, all of the front end, as well as the SPs (including transactions), UDFs, the SQL injection prevention and other security measures, and some of the triggers.</p>
+            <p>You can check out a relatively short video of the application <a href="https://www.youtube.com/watch?v=4KhEKKH3T7I">here</a>!</p>
+            <button class="toggle-accordion">See more</button>
+            <div class="accordion" data-items="5">
+              <img src="{{ site.baseurl }}/img/projects/12019/manabank/der.png" alt="The Entity-Relation Diagram." data-index="1" data-project="manabank">
+              <img src="{{ site.baseurl }}/img/projects/12019/manabank/main.png" alt="The application's main screen." data-index="3" data-project="manabank">
+              <img src="{{ site.baseurl }}/img/projects/12019/manabank/er.png" alt="The Relational Scheme." data-index="2" data-project="manabank">
+              <img src="{{ site.baseurl }}/img/projects/12019/manabank/filter.png" alt="An example filter screen (in this case, for the clients' profiles)." data-index="4" data-project="manabank">
+              <img src="{{ site.baseurl }}/img/projects/12019/manabank/results.png" alt="An example results screen (in this case, for the client's card-associated accounts, both credit or debit)." data-index="5" data-project="manabank">
+            </div>
+          </li>
+        <li id="barbershop">
+            <h3>Barber Shop</h3>
+            <h4>A concurrent programming project</h4>
+            <p>A 3-person project on concurrent programming, using threads. A barbershop was simulated, where each client and barber ran concurrently, on different threads, and were synchronized through semaphores. Some care had to be put into their synchronization to avoid deadlocks as well.</p>
+            <button class="toggle-accordion">See more</button>
+            <div class="accordion" data-items="2">
+              <img src="{{ site.baseurl }}/img/projects/12019/barbershop/1.png" alt="A screenshot of the running program. Every client and barber uses a separate thread." data-index="1" data-project="barbershop">
+              <img src="{{ site.baseurl }}/img/projects/12019/barbershop/vim.png" alt="Another screenshot of the concurrent program, with less barbers and clients." data-index="2" data-project="barbershop">
+            </div>
+          </li>
+        <li id="network">
+            <h3>Enterprise-Level Network</h3>
+            <h4>Design and configuration of an enterprise-level network</h4>
+            <p>I designed an enterprise-level network, between 3 branch locations, some with several buildings - from designing the hierarchical model used, to deciding VLANs IP addresses' encodings (both IPv4 and IPv6), to the number of devices necessary, their minimum bandwidth, a budget for the equipment and Ganntt diagram for the whole process. The work was done in Portuguese.</p>
+            <p>I also configured the equipment, using OSPF v2 and v3 for internal routing, configuring the VLANs (distinguishing end-to-end VLANs from local ones, creating an interconnection VLAN for them), along with DHCP and DNS servers, quality of service (using DiffServ), among other configurations.</p>
+            <button class="toggle-accordion">See more</button>
+            <div class="accordion" data-items="2">
+              <img src="{{ site.baseurl }}/img/projects/12019/network/branch.png" alt="The network of one of the branch locations, at a glance." data-index="1" data-project="network">
+              <img src="{{ site.baseurl }}/img/projects/12019/network/vlans.png" alt="A first draft of the enconding for the VLANs IPv4 addressing (IPv6 used a similar scheme)." data-index="2" data-project="network">
+            </div>
+          </li>
     </div>  
 
 
