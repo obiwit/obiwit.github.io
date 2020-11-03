@@ -3,7 +3,7 @@ title:        Beatriz Borges
 tagline:      Passionate young computer, brain & data scientist!
 description:  Beatriz Borges's, aka obiwit, machine learning blog and website
 baseurl:      ""
-url:          http://obiwit.com
+url:          https://obiwit.com
 
 # Blog-related
 blog:
@@ -42,7 +42,7 @@ blog:
 # About/contact
 author:
   name:       Beatriz Borges
-  url:        http://obiwit.com
+  url:        https://obiwit.com
 
   email:      bea@obiwit.com
   github_username:        obiwit
