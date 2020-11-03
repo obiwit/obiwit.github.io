@@ -267,6 +267,13 @@ $(function() {
 
      // add navigational previews below the caption
      addPreviews();
+
+     // vertically center everything
+     setTimeout(function(){ 
+       $('div#modal-gallery .modal-content').css("marginTop", 
+       ($('div#modal-gallery').height()
+       - $('div#modal-gallery .modal-content').height()) / 2 - 0.1); }, 
+       100); 
    }
 
    // Handles the click of a next of previous buttons/arrows

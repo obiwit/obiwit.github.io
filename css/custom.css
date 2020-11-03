@@ -418,7 +418,8 @@ div#modal-gallery .modal-content {
   position: relative;
   margin: auto;
   padding: 0;
-  height: 100%;
+  /* height: 100%; */
+  height: auto;
   width: 90%;
 }
 div#modal-gallery .close, div#modal-gallery .prev, div#modal-gallery .next {
@@ -434,7 +435,8 @@ div#modal-gallery .close {
 }
 div#modal-gallery .prev, div#modal-gallery .next {
   top: 50%;
-  padding: 16px;
+  /* padding: 16px; */
+  padding: 1px;
   margin-top: -50px;
   font-size: 20px;
 }
