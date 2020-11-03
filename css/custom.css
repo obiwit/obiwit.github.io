@@ -389,7 +389,7 @@ button.toggle-accordion.expanded, button.toggle-accordion:hover {
   height: auto !important;
   display: inline-block;
   margin: 0 0 1em;
-  float: left;
+  /* float: left; */
 }
 .accordion img:hover {
   opacity: 0.6;
@@ -449,7 +449,7 @@ div#modal-gallery .close:hover, div#modal-gallery .close:focus, div#modal-galler
 div#modal-gallery .modal-content div#main-image {
   text-align: center;
   margin: 0 auto;
-  margin-top: -5%;
+  /* margin-top: -5%; */
 }
 div#modal-gallery .caption-container {
   text-align: center;

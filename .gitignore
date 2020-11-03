@@ -3,4 +3,5 @@ _site
 .sass-cache
 Gemfile.lock
 backup
+.jekyll-cache
 .DS_Store

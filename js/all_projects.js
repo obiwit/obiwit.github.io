@@ -1,7 +1,32 @@
 $(function() {
+  
+  /**
+   * Define some setup variables and functions
+   */
+
+  imageProjectSet = new Set($('li img').map(function() { return $(this).data('project'); }).get());
+  pdfProjectSet = new Set($('li a.pdf').map(function() { return $(this).data('project'); }).get());
 
   function getProjectYear($project) {
     return $project.parent().attr('id').split('-')[0];
+  }
+
+  function removeHash() {
+    // based on https://stackoverflow.com/a/5298684
+    var scrollV, scrollH, loc = window.location;
+    if ("pushState" in history) {
+        history.pushState("", document.title, loc.pathname + loc.search);
+    } else {
+        // Prevent scrolling by storing the page's current scroll offset
+        scrollV = document.body.scrollTop;
+        scrollH = document.body.scrollLeft;
+
+        loc.hash = "";
+
+        // Restore the scroll offset, should be flicker free
+        document.body.scrollTop = scrollV;
+        document.body.scrollLeft = scrollH;
+    }
   }
 
   /**
@@ -80,11 +105,22 @@ $(function() {
        closeModal();
      } else {
        url_parts = hash.split("/");
-       if (url_parts.length != 3 || url_parts[2] != $('#modal-gallery img').data('index')) {
-         window.location.reload(true);
-       }
-     }
-   });
+       // if bad hash present, remove it
+      if (url_parts.length != 3 || (imageProjectSet.has(url_parts[1]) && pdfProjectSet.has(url_parts[1]))) {
+        // close modal and remove hash
+        closeModal();
+        removeHash();
+      }
+    }
+  });
+  $('#projects li a.pdf').on('click', function(event) {
+    if ($(event.target).prop('target') == "_blank") {
+       event.preventDefault();
+       // open up modal and display pdf
+       $('#modal-gallery').toggle();
+       loadModalPDF(($(this)).data('project'), ($(this)).attr('href'));
+    }
+  });
 
    // close modal on 'escape' key press, handle side arrows to navigate modal
    document.onkeydown = function(evt) {
@@ -108,6 +144,11 @@ $(function() {
      }
    };
 
+
+  /**
+   * General page Logic
+   */
+
    // handle (phone and tablet's) swiping events as well
    var modal_el = document.getElementById('modal-gallery');
    var mc = new Hammer(modal_el);
@@ -118,33 +159,54 @@ $(function() {
        handleNextPrevious(false);
    });
 
+
    // check if landing url is a "modal" url, and if so, open corresponding modal
    var hash = window.location.hash; //window.location.href.split('#')[1];
    if (hash) {
     var url_parts = hash.split("/");
+
     if (url_parts.length == 3) {
       var list_elem_id = "li#"+ url_parts[1];
+
+      var year = getProjectYear($(list_elem_id))
+      var elem = $('h2#'+year);
+      var span = $(elem.children('span')[0]);
+      span.html("▼");
+      $('#'+year+'-body').removeClass('hidden');
+
       // open the modal immediately, so the website appears faster
       $('#modal-gallery').toggle();
 
-      // open corresponding accordion
-      toggleAccordion($(list_elem_id + " button.toggle-accordion"));
-      // scroll to it
+      // scroll to relevant list item
       $('html, body').animate({
         scrollTop: $(list_elem_id).offset().top
       }, 1000);
 
-      // add image to the modal
-      var $image = $(list_elem_id + " div.accordion img[data-index='"+ url_parts[2] +"']");
-      setTimeout(function(){ modalLoadImage($image); }, 1000); // 500 is too little for some images
-     
-    } else if (url_parts.length == 1) {
+      // check whether the modal belongs to a project's image or pdf set
+      if (imageProjectSet.has(url_parts[1]) && !isNaN(url_parts[2])) {
+        // open corresponding accordion
+        toggleAccordion($(list_elem_id + " button.toggle-accordion"));
+
+        // add image to the modal
+        var $image = $(list_elem_id + " div.accordion img[data-index='"+ url_parts[2] +"']");
+        setTimeout(function(){ modalLoadImage($image); }, 1000); // 500 is too little for some images
+      }
+      else {
+        // handle pdf
+        var $a = $(list_elem_id + " a.pdf[href*='"+url_parts[2]+"']");
+        if ($a.prop('target') == "_blank") {
+          loadModalPDF($a.data('project'), $a.attr('href'));
+        }
+      }
+    } else if (url_parts.length == 1 && !isNaN(url_parts[0])) {
       // unhide corresponding year
       var year = getProjectYear($(hash))
       var elem = $('h2#'+year);
       var span = $(elem.children('span')[0]);
       span.html("▼");
       $('#'+year+'-body').removeClass('hidden');
+    } else {
+      removeHash();
     }
    }
 
@@ -273,4 +335,32 @@ $(function() {
        modalLoadImage($(event.target).css('margin', "0"));
      });
    }
+
+   function loadModalPDF(project, pdf_href) {
+    var options = {
+       fallbackLink: '<object data="[url]" type="application/pdf" width="100%" height="100%"> \
+         <!-- <iframe src="[url]" width="100%" height="100%" style="border: none;"> --> \
+         <div id="pdf-fail"><p>This browser does not support PDFs.<br/>Please download the PDF to view it:</p><a href="[url]">Download PDF</a></div> \
+         <!-- </iframe> --> \
+       </object>'
+    };
+
+     // guarantee modal is clean
+     $('#main-image').html('');
+     $('#modal-gallery a.prev').hide();
+     $('#modal-gallery a.next').hide();
+
+     // update url
+     window.location.hash = 'modal/' + project + '/' + pdf_href.split("/")[3];
+
+    // set dimensions
+     var imageHeight = $('#modal-gallery .modal-content').height();
+     var imageWidth = $('#modal-gallery .modal-content').width();
+    $('#main-image').css('maxWidth', (imageWidth/imageHeight * 80) + "vh" );
+    $('#main-image').css('marginTop', "3%");
+    $('#main-image').css('marginTop', "1%");
+    $('#main-image').css('height', "95%");
+
+    PDFObject.embed(pdf_href, "#main-image", options);
+  }
 });
