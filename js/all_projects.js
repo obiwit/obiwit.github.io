@@ -220,53 +220,54 @@ $(function() {
    // load an image into the main content part of the modal window (doesn't open
    // the modal window itself)
    function modalLoadImage($image) {
-     // guarantee modal is clean
-     $('#main-image').html('');
-     $('#modal-gallery a.prev').show();
-     $('#modal-gallery a.next').show();
+      // guarantee modal is clean
+      $('#main-image').html('');
+      $('#modal-gallery .modal-content').css('height', 'auto');
+      $('#modal-gallery a.prev').show();
+      $('#modal-gallery a.next').show();
 
-     // update url
-     window.location.hash = 'modal/' + $image.data('project') + '/' + $image.data('index');
+      // update url
+      window.location.hash = 'modal/' + $image.data('project') + '/' + $image.data('index');
 
-     // add selected image to the modal, and show it
-     $('#main-image').append($image.clone());
+      // add selected image to the modal, and show it
+      $('#main-image').append($image.clone());
 
-     var imageHeight = $image.height();
-     var imageWidth = $image.width();
-     if (imageHeight > imageWidth) {
-       $('#main-image').css('maxWidth', (imageWidth/imageHeight * 65) + "vh" );
-     } else {
-       $('#main-image').css('maxWidth', (imageWidth/imageHeight * 60) + "vh" );
-     }
-     var gallerySize = $image.parent().data()["items"];
-     if(gallerySize <= 1) {
-       $('#main-image').css('maxWidth', (imageWidth/imageHeight * 80) + "vh" );
-       if (gallerySize == 1) {
-         // if the gallery only has one element, hide the next and previous buttons
-         $('#modal-gallery a.prev').hide();
-         $('#modal-gallery a.next').hide();
-       }
-     }
-     // add caption based on img's alt text
-     var caption = $image.attr('alt');
+      var imageHeight = $image.height();
+      var imageWidth = $image.width();
 
-     // add pre-caption (bold italized text before the actual caption)if it exists
-     if ($image.data()["pre"]){
-       caption = '<strong><em>' + $image.data()["pre"] + '</em></strong>' + caption;
-     }
+      var gallerySize = $image.parent().data()["items"];
+      if(gallerySize <= 1) {
+        $('#main-image').css('maxWidth', (imageWidth/imageHeight * 80) + "vh" );
+        if (gallerySize == 1) {
+          // if the gallery only has one element, hide the next and previous buttons
+          $('#modal-gallery a.prev').hide();
+          $('#modal-gallery a.next').hide();
+        }
+      } else if (imageHeight > imageWidth) {
+        $('#main-image').css('maxWidth', (imageWidth/imageHeight * 65) + "vh" );
+      } else {
+        $('#main-image').css('maxWidth', (imageWidth/imageHeight * 60) + "vh" );
+      }
+      // add caption based on img's alt text
+      var caption = $image.attr('alt');
 
-     // add caption itself, with a very slight delay that creates a more 'fluid' experience
-     $('#caption').html(caption);
-     $('#caption').hide();
-     setTimeout(function() { $('#caption').show(); }, 100);
+      // add pre-caption (bold italized text before the actual caption)if it exists
+      if ($image.data()["pre"]){
+        caption = '<strong><em>' + $image.data()["pre"] + '</em></strong>' + caption;
+      }
 
-     // add PS (sub-caption) if it exists
-     if ($image.data()["ps"]){
+      // add caption itself, with a very slight delay that creates a more 'fluid' experience
+      $('#caption').html(caption);
+      $('#caption').hide();
+      setTimeout(function() { $('#caption').show(); }, 100);
+
+      // add PS (sub-caption) if it exists
+      if ($image.data()["ps"]){
         $('#caption').append('<br><span class="small" style="color: #bbb">'+$image.data()["ps"]+'</span>');
-     }
+      }
 
-     // add navigational previews below the caption
-     addPreviews();
+      // add navigational previews below the caption
+      addPreviews();
 
      // vertically center everything
      setTimeout(function(){ 
@@ -354,6 +355,7 @@ $(function() {
 
      // guarantee modal is clean
      $('#main-image').html('');
+     $('#modal-gallery .modal-content').css('height', '100%');
      $('#modal-gallery a.prev').hide();
      $('#modal-gallery a.next').hide();
 

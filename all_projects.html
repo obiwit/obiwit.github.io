@@ -27,63 +27,70 @@ author: obiwit
     </h2>
     <div id="12020-body">
 
-      <li id="sem">
+      <li id="humorBERT">
         <h3>Analyzing humor with BERT</h3>
-        <h4>NLP</h4>
-        <p>Coming soon!</p>
-        <!-- <button class="toggle-accordion">See more</button>
-        <div class="accordion" data-items="1">
-          <img src="{{ site.baseurl }}/img/projects/12019/....png" alt="..." data-index="1" data-project="sem">
-        </div> -->
+        <h4>Using state-of-the-art NLP to tackle humor detection</h4>
+        <p>A semester long research project using BERT (Bidirectional Encoder Representations from Transformers) to construct reasonably well-performing humor-detection models on a <a href="https://github.com/epfl-dlab/unfun">paired satirical-and-serious headlines dataset</a> and then analyze them in order to discern what mechanisms are having an impact on their classification decisions.</p> 
+        <p>I started by showing it is indeed possible to build neural architectures that achieve remarkable performance on a humor classification task. Subsequently, the analysis revealed that these architectures need to be able to leverage semantic-level concepts and the context of words within the headline in order to be able to successfully identify humor.</p>
+        <p>This project was done in EPFL's Data Science lab (<a href="https://dlab.epfl.ch">dlab</a>), under prof. Robert "Bob" West, Maxime Peyrard and Kristina Gligorić. Further work led to a paper submission at <a href="https://2021.eacl.org">EACL 2021</a>.</p>
+        <p>You can read the report for the semester project <a class="pdf" target="_blank" data-project="humorBERT"
+          href="{{ site.baseurl }}/pdf/projects/nlp_humor.pdf">here</a>.</p>
+      </li>
       </li>
 
-      <!-- <li id="sem">
-        <h3>SEM - Subaquatic Environments Monitoring</h3>
-        <h4>Computer Vision applied to fish detection and tracking</h4>
-        <p>Coming soon!</p>
-        <button class="toggle-accordion">See more</button>
-        <div class="accordion" data-items="1">
-          <img src="{{ site.baseurl }}/img/projects/12019/....png" alt="..." data-index="1" data-project="sem">
-        </div>
-      </li> -->
+      <li id="philosophy">
+        <h3>Philosophy of Explanation</h3>
+        <h4>A philosophical essay on Scientific Explanation</h4>
+        <p>In this essay, a prediction-based approach to scientific explanation (advantageous because it allows the grouping of different categories of explanation into a comparable whole) is presented. This is done by a focusing on the concrete set of predictions a theory can generate, given all the input it requires to do so. Through this, it then becomes possible to define the Predictor Framework, which incorporates not only the aforementioned predictions but also several evaluation and comparison metrics and procedures, including those of probabilistic predictors.</p>
+        <p>If you're curious, you can find it <a class="pdf" target="_blank" data-project="philosophy"
+          href="{{ site.baseurl }}/pdf/projects/philosophy_explanation.pdf">here</a>.</p>
+      </li>
     </div>
 
     <h2 class="contrast" id="12019">
       <span class="year-accordion-status" style="font-style: normal; font-size: 80%;">▶</span>12019
     </h2>
     <div id="12019-body" class="hidden">
+      <li id="ada">
+      <h3>We are <em>where</em> we eat</h3>
+       <h4>A data-driven look at Chicago's food scene</h4>
+       <p>A 4-person group project for EPFL's Applied Data Analysis class, where we took a structured look at Chicago’s food inspection scene and everything happening behind the curtain – starting with food violations and usual risk, progressing beyond year seasons and temperatures, reaching all the way down to location and block-level wealth and ethnicity.</p>
+       <p>You can find the data story for this analysis <a href="http://obiwit.com/ADAknow/">here</a> (the pictures below give you a sneak peek), and the whole github repository <a href="https://github.com/obiwit/ADAknow">here</a>.</p>
+       <button class="toggle-accordion">See more</button>
+       <div class="accordion" data-items="6">
+         <img src="{{ site.baseurl }}/img/projects/12019/ada/type_distribution.png" alt="A first glance view of the distribution of the inspected facilities' type. Hovering over any part of the donut provides some extra info." data-index="1" data-project="ada">
+         <img src="{{ site.baseurl }}/img/projects/12019/ada/results_ratios.png" alt="A breakdown of the inspection results as we get more and more specific about the type of the facility. <br/>This interactive plot allows you to explore how each type of facility did, on average." data-index="2" data-project="ada">
+         <img src="{{ site.baseurl }}/img/projects/12019/ada/ethnicity_map.png" alt="A map of Chicago overlaid with the most common ethnicity for each zip code area." data-index="3" data-project="ada">
+         <img src="{{ site.baseurl }}/img/projects/12019/ada/ethnicity_bars.png" alt="Existing correlations between the most common ethnicity in a given zip code area, and the average inspection results, the ratio between non-inspected and total number of restaurants, and the average number of inhabitants per restaurant." data-index="4" data-project="ada">
+         <img src="{{ site.baseurl }}/img/projects/12019/ada/chains_ratios.png" alt="The average inspection results for the 10 most common restaurant chains in the dataset." data-index="5" data-project="ada">
+         <img src="{{ site.baseurl }}/img/projects/12019/ada/chains_independent.png" alt="A comparison between the average inspection results of restaurant chains and independent restaurants." data-index="6" data-project="ada">
+       </div>
+     </li>
       <li id="enchordings">
         <h3>Harmonic Embeddings</h3>
         <h4>Learning chord embeddings from the Annotated Beethoven Corpus</h4>
-        <p>A 3-person group, for EPFL's Machine Learning class, where we analysed various possible representations of chords, as well as several possible dimensional spaces in which to embed them.</p>
+        <p>A 3-person group project, for EPFL's Machine Learning class, where we analysed various possible representations of chords, as well as several possible dimensional spaces in which to embed them.</p>
         <p>We conclude that a skip-gram model, for intermediate chord representations, using vectors with 3 dimensions, was the best approach for the chords of this corpus.</p>
         <p>You can read our report <a class="pdf" target="_blank" data-project="enchordings"
           href="{{ site.baseurl }}/pdf/projects/ml_harmony.pdf">here</a>.</p>
         </li>
-       <!-- <li id="ada">
-       <h3>We are <em>where</em> we eat</h3>
-        <h4>Learning chord embeddings from the Annotated Beethoven Corpus</h4>
-        <p>A 3-person group, for EPFL's Machine Learning class, where we analysed various possible representations of chords, as well as several possible dimensional spaces in which to embed them.</p>
-        <p>We conclude that a skip-gram model, for intermediate chord representations, using vectors with 3 dimensions, was the best approach for the chords of this corpus.</p>
-        <p>You can read our report <a class="pdf" target="_blank" data-project="enchordings"
-          href="{{ site.baseurl }}/pdf/projects/ml_harmony.pdf">here</a>.</p>
-      </li> -->
-      <!-- <li id="sem">
+      <li id="sem">
         <h3>SEM - Subaquatic Environments Monitoring</h3>
         <h4>Computer Vision applied to fish detection and tracking</h4>
-        <p>Coming soon!</p>
+        <p>Related to the <a href="#exprover">ExpROVer project</a> below, this project was more research oriented, though also connected to ROVs (Remotely Operated Vehicles), aquatic and usually small robotic vehicles.</p>
+        <p>After an exploration of the state-of-the-art technologies concerning intelligent underwater vision and movement, I focused on the transfer training of several different CNN (Convolutional Neural Network) architectures for fish classification, as well as the application and performance of YOLOv3 (You Only Look Once) to fish detection.</p>
         <button class="toggle-accordion">See more</button>
         <div class="accordion" data-items="1">
-          <img src="{{ site.baseurl }}/img/projects/12019/....png" alt="..." data-index="1" data-project="sem">
+          <img src="{{ site.baseurl }}/img/projects/12019/sem/fishDetection.png" alt="Results of the transfer training of the CNNs. For each image triplet, the left image represents the output of an untrained CNN, the middle one the output mid-training, and the right image the output after the end of training." data-index="1" data-project="sem">
         </div>
-      </li> -->
+      </li>
       <li id="exprover">
         <h3>ExpROVer</h3>
         <h4>An open source solution enabling a myriad of functionalities around the 'VideoRay Pro 4' ROV</h4>
         <p>Remotely Operated Vehicles (ROVs) are one of the most important underwater tools in today’s evermore sea- and ocean-dependent world. The ExpROVer software intends to add value to the inspection ROV market by introducing an open source solution enabling an easy and intuitive user interface, available anywhere and at anytime and ready to support extensions from the open source community.</p>
         <p>ExpROVer was a 5-person semester long project, featuring low-level communication between Linux and the ROV, integrated with ROS (the Robot Operating System), ROSbridge-powered server capabilities, several extensions, like Computer Vision capabilities (fish detection using a  modified YOLOv3 architecture), a set of semi-autonomous maneuvers, and a dedicated Android and Web applications.</p>
         <p>I was responsible for the Computer Vision Capabilities and the Android app. Due to the our originally 6th member abandoning the project, I subsequently also became responsible for the Web application. I was the team leader, and also responsible for the documentation, the oral presentation and pitches of the project.</p>
-        <p>You can find much more information in the <a target="_blank" href="http://obiwit.com/expROVer/">ExpROVer website</a>, in this <a target="_blank" href="https://prezi.com/p/f4rznatru7lv/">prezi presentation</a>, or <a target="_blank" href="https://www.youtube.com/watch?v=nNTeIgoWbVo">watch a relatively short video giving you an overview of the system</a>. You can watch the fish detection algorithm's evolution <a target="_blank" href="https://www.youtube.com/watch?v=ZMp_UqdHdmY">here</a>. Finally, you can also find the open source repository <a target="_blank" href="https://github.com/obiwit/expROVer">here</a>.</p>
+        <p>You can find much more information in the <a href="http://obiwit.com/expROVer/">ExpROVer website</a>, in this <a href="https://prezi.com/p/f4rznatru7lv/">prezi presentation</a>, or <a href="https://www.youtube.com/watch?v=nNTeIgoWbVo">watch a relatively short video giving you an overview of the system</a>. You can watch the fish detection algorithm's evolution <a href="https://www.youtube.com/watch?v=ZMp_UqdHdmY">here</a>. Finally, you can also find the open source repository <a href="https://github.com/obiwit/expROVer">here</a>.</p>
         <button class="toggle-accordion">See more</button>
         <div class="accordion" data-items="7">
           <img src="{{ site.baseurl }}/img/projects/12019/exprover/poster.png" alt="Our promotional poster, providing an overview of the project." data-index="1" data-project="exprover" class="break-after">
@@ -101,7 +108,7 @@ author: obiwit
           <p>ManABank is a software solution for bank managers, allowing them to manage clients, accounts, investments and loans, as well as employees, and the bank's branches.</p>
           <p>Using Windows Forms and C# for the front end, the application shines in its SQL backend, with SPs (Stored Procedures), UDFs (User Defined Functions), Triggers, transactions, index optimization, SQL injection prevention and other security measures.</p>
           <p>This was a 2-person project for a class on databases. I handled the schemactic conception of the database, all of the front end, as well as the SPs (including transactions), UDFs, the SQL injection prevention and other security measures, and some of the triggers.</p>
-          <p>You can check out a relatively short video of the application <a target="_blank" href="https://www.youtube.com/watch?v=4KhEKKH3T7I">here!</a></p>
+          <p>You can check out a relatively short video of the application <a href="https://www.youtube.com/watch?v=4KhEKKH3T7I">here</a>!</p>
           <button class="toggle-accordion">See more</button>
           <div class="accordion" data-items="5">
             <img src="{{ site.baseurl }}/img/projects/12019/manabank/der.png" alt="The Entity-Relation Diagram." data-index="1" data-project="manabank">
@@ -175,7 +182,7 @@ author: obiwit
       <li id="hackzurich2018">
         <h3>Autonomous Banking Helper Robot</h3>
         <p>Bringing together robotics (NAO Pepper robots), face recognition, speech generation and banking, this was a 4-person, 2-day project done during hackZurich2018. Its purpose was the creation of truly personalized (and automatized) customer service!</p>
-        <p>You check out a (very) short demo of the final system <a target="_blank" href="https://www.youtube.com/watch?v=uXrq9pSIh40">here!</a></p>
+        <p>You check out a (very) short demo of the final system <a" href="https://www.youtube.com/watch?v=uXrq9pSIh40">here</a>!</p>
       </li>
       <li id="sofs">
         <h3>sofs18</h3>
@@ -226,7 +233,7 @@ author: obiwit
       </li>
       <li id="kaggle">
         <h3>Kaggle</h3>
-        <p>Started using <a target="_blank" href="https://www.kaggle.com/">Kaggle</a>, and participated in several beginner level Kaggle competitions.</p>
+        <p>Started using <a href="https://www.kaggle.com/">Kaggle</a>, and participated in several beginner level Kaggle competitions.</p>
       </li>
       <li id="mpei">
         <h3>Smart Library</h3>
@@ -281,7 +288,7 @@ author: obiwit
       <li id="vhdl-enigma" class="last">
         <h3>VHDL Model for Enigma M3</h3>
         <p>A VHDL Model for two Enigmas M3 - one for ciphering the message and a second one to decipher it, using the RS232 to communicate between themselves - that I developed for a class on Digital Systems. The devices, in terms of functionality, are identical to their World War Two counterparts, sharing the more than 158,962,555,217,826,360,000 possible configurations!</p>
-        <p><a target="_blank" href="https://www.youtube.com/watch?v=rjT6-Ye7jDg">Check it out in (almost spy-like) action!</a></p>
+        <p><a href="https://www.youtube.com/watch?v=rjT6-Ye7jDg">Check it out in (almost spy-like) action!</a></p>
         <p>You can find the source code <a href="https://github.com/obiwit/vhdl-enigma">here</a>.</p>
         <button class="toggle-accordion">See more</button>
         <div class="accordion" data-items="4">
@@ -330,8 +337,8 @@ author: obiwit
       </li>
       <li id="80k-quizzes">
         <h3>80,000 Hours' Mock-Up Quizzes</h3>
-        <p>I did two mock-up quizzes for 80,000 Hours, devoting approximately three somewhat intensive days to each. The <a target="_blank" href="https://github.com/obiwit/80K_quiz_mockup">first one</a> is simpler, and beyond HTML, CSS, Javascript and jQuery, also uses Sass to greatly improve the quiz that was then being provided. This was not only an exercise in web development and programming, but also in design, which was redone from scratch, with a focus on usability.</p>
-        <p>The <a target="_blank" href="https://github.com/obiwit/ccApp">second one</a> used more advanced technologies, like Yeoman, Angular, Grunt, Bower (and Sass once again). This quiz was done by me, however I was in England and my laptop broke, so I ended using another computer, which was linked to another GitHub, hence the <em>@bborgesr</em>.</p>
+        <p>I did two mock-up quizzes for 80,000 Hours, devoting approximately three somewhat intensive days to each. The <a href="https://github.com/obiwit/80K_quiz_mockup">first one</a> is simpler, and beyond HTML, CSS, Javascript and jQuery, also uses Sass to greatly improve the quiz that was then being provided. This was not only an exercise in web development and programming, but also in design, which was redone from scratch, with a focus on usability.</p>
+        <p>The <a href="https://github.com/obiwit/ccApp">second one</a> used more advanced technologies, like Yeoman, Angular, Grunt, Bower (and Sass once again). This quiz was done by me, however I was in England and my laptop broke, so I ended using another computer, which was linked to another GitHub, hence the <em>@bborgesr</em>.</p>
         <button class="toggle-accordion">See more</button>
         <div class="accordion" data-items="7">
           <img src="{{ site.baseurl }}/img/projects/12016/80k/1.jpg" data-pre="First Mock-Up - " alt="The (to-the-point) landing page." data-index="1" data-project="80k-quizzes">
@@ -365,7 +372,7 @@ author: obiwit
     <div id="12015-body" class="hidden">
       <li id="ee40lx-robot">
         <h3>Stimuli-responsive robot</h3>
-        This was the final course project for BerkeleyX's Electronic Interfaces (EE40LX): a craft-stick vibrating hopper robot controlled by the MSP430G2 LaunchPad. It has the following subsystems: a voltage regulator, two photocell front ends, a speaker driver, a microphone front end and two DC motor drivers. These systems communicate with the MSP430G2 LaunchPad in order to allow the robot to move in response to its environment. In layman's terms, this robot will start moving and making noises in reaction to light and sound stimuli. <a target="_blank" href="https://www.youtube.com/watch?v=MmWrJUKf1GM">Check out the demo video!</a>
+        This was the final course project for BerkeleyX's Electronic Interfaces (EE40LX): a craft-stick vibrating hopper robot controlled by the MSP430G2 LaunchPad. It has the following subsystems: a voltage regulator, two photocell front ends, a speaker driver, a microphone front end and two DC motor drivers. These systems communicate with the MSP430G2 LaunchPad in order to allow the robot to move in response to its environment. In layman's terms, this robot will start moving and making noises in reaction to light and sound stimuli. <a href="https://www.youtube.com/watch?v=MmWrJUKf1GM">Check out the demo video!</a>
         <button class="toggle-accordion">See more</button>
         <div class="accordion" data-items="1">
           <img src="{{ site.baseurl }}/img/projects/12015/ee40lx_robot.jpg" alt="The robot. Notice the black cylindrical  buzzer, the two eye-like photocells, and its funny light-activated spring legs. Behind it all, the MSP430G2 LaunchPad, controlling the inputs and outputs of the circuit." data-index="1" data-project="ee40lx-robot">
@@ -399,7 +406,7 @@ author: obiwit
         <h3>Pig Game</h3>
         An implementation of the famous chance game, with abundant Javascript and SASS plugins (ex: compass, bourbon, refills, suzy). Check it out, it's pretty fun (even if slightly addicting)!
         <br><br>
-        See a <a target="_blank" href="https://www.youtube.com/watch?v=Qy-x7LhwmGM">short demo</a> or <a href="{{ site.baseurl }}/piggame/">play the game</a>!
+        See a <a href="https://www.youtube.com/watch?v=Qy-x7LhwmGM">short demo</a> or <a href="{{ site.baseurl }}/piggame/">play the game</a>!
         <button class="toggle-accordion">See more</button>
         <div class="accordion" data-items="1">
           <img src="{{ site.baseurl }}/img/projects/12014/piggame.jpg" alt="The main screen of the game." data-index="1" data-project="pig-game">
