@@ -106,7 +106,7 @@ $(function() {
      } else {
        url_parts = hash.split("/");
        // if bad hash present, remove it
-      if (url_parts.length != 3 || (imageProjectSet.has(url_parts[1]) && pdfProjectSet.has(url_parts[1]))) {
+      if (url_parts.length != 3 || (!imageProjectSet.has(url_parts[1]) && !pdfProjectSet.has(url_parts[1]))) {
         // close modal and remove hash
         closeModal();
         removeHash();
@@ -211,7 +211,7 @@ $(function() {
    }
 
    // Close a modal window
-   function closeModal() {
+   function closeModal() {  
      history.replaceState(null, null, '/all_projects.html');
      $('#modal-gallery').hide();
      $('#main-image').html('');
@@ -253,7 +253,7 @@ $(function() {
 
       // add pre-caption (bold italized text before the actual caption)if it exists
       if ($image.data()["pre"]){
-        caption = '<strong><em>' + $image.data()["pre"] + '</em></strong>' + caption;
+        caption = '<strong><em>' + $image.data("pre") + '</em></strong>' + caption;
       }
 
       // add caption itself, with a very slight delay that creates a more 'fluid' experience
@@ -262,8 +262,8 @@ $(function() {
       setTimeout(function() { $('#caption').show(); }, 100);
 
       // add PS (sub-caption) if it exists
-      if ($image.data()["ps"]){
-        $('#caption').append('<br><span class="small" style="color: #bbb">'+$image.data()["ps"]+'</span>');
+      if ($image.data("ps")){
+        $('#caption').append('<br><span class="small" style="color: #bbb">'+$image.data("ps")+'</span>');
       }
 
       // add navigational previews below the caption
@@ -281,9 +281,9 @@ $(function() {
    // The parameter is a boolean: true for next image; false for previous image
    function handleNextPrevious(next) {
      var $image;
-     var imgIndex = $('#main-image img').data()["index"];
-     var imgProject = $('#main-image img').data()["project"];
-     var totalImgNum = $("#" + imgProject + " div.accordion").data()["items"];
+     var imgIndex = $('#main-image img').data("index");
+     var imgProject = $('#main-image img').data("project");
+     var totalImgNum = $("#" + imgProject + " div.accordion").data("items");
 
      var updateAmount = totalImgNum-2; // previous image by default
      if (next) {
@@ -310,9 +310,9 @@ $(function() {
      // the above lines create a more 'fluid' experience
 
      // add new images
-     var imgIndex = $('#main-image img').data()["index"];
-     var imgProject = $('#main-image img').data()["project"];
-     var totalImgNum = $("#" + imgProject + " div.accordion").data()["items"];
+     var imgIndex = $('#main-image img').data("index");
+     var imgProject = $('#main-image img').data("project");
+     var totalImgNum = $("#" + imgProject + " div.accordion").data("items");
 
      var screenWidth = $(window).width();
 
