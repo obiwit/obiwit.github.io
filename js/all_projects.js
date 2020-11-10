@@ -6,6 +6,7 @@ $(function() {
 
   imageProjectSet = new Set($('li img').map(function() { return $(this).data('project'); }).get());
   pdfProjectSet = new Set($('li a.pdf').map(function() { return $(this).data('project'); }).get());
+  projectSet = new Set($('li').map(function() { return $(this).attr('id'); }).get());
 
   function getProjectYear($project) {
     return $project.parent().attr('id').split('-')[0];
@@ -26,6 +27,56 @@ $(function() {
         // Restore the scroll offset, should be flicker free
         document.body.scrollTop = scrollV;
         document.body.scrollLeft = scrollH;
+    }
+  }
+
+  function handleHash() {
+    if (hash) {
+      var url_parts = hash.split("/");
+  
+      if (url_parts.length == 3) {
+        var list_elem_id = "li#"+ url_parts[1];
+  
+        var year = getProjectYear($(list_elem_id))
+        var elem = $('h2#'+year);
+        var span = $(elem.children('span')[0]);
+        span.html("▼");
+        $('#'+year+'-body').removeClass('hidden');
+  
+        // open the modal immediately, so the website appears faster
+        $('#modal-gallery').toggle();
+  
+        // scroll to relevant list item
+        $('html, body').animate({
+          scrollTop: $(list_elem_id).offset().top
+        }, 1000);
+  
+        // check whether the modal belongs to a project's image or pdf set
+        if (imageProjectSet.has(url_parts[1]) && !isNaN(url_parts[2])) {
+          // open corresponding accordion
+          toggleAccordion($(list_elem_id + " button.toggle-accordion"));
+  
+          // add image to the modal
+          var $image = $(list_elem_id + " div.accordion img[data-index='"+ url_parts[2] +"']");
+          setTimeout(function(){ modalLoadImage($image); }, 1000); // 500 is too little for some images
+        }
+        else {
+          // handle pdf
+          var $a = $(list_elem_id + " a.pdf[href*='"+url_parts[2]+"']");
+          if ($a.prop('target') == "_blank") {
+            loadModalPDF($a.data('project'), $a.attr('href'));
+          }
+        }
+      } else if (url_parts.length == 1) {
+        // unhide corresponding year
+        var year = getProjectYear($(hash));
+        var elem = $('h2#'+year);
+        var span = $(elem.children('span')[0]);
+        span.html("▼");
+        $('#'+year+'-body').removeClass('hidden');
+      } else {
+        removeHash();
+      }
     }
   }
 
@@ -106,7 +157,8 @@ $(function() {
      } else {
        url_parts = hash.split("/");
        // if bad hash present, remove it
-      if (url_parts.length != 3 || (!imageProjectSet.has(url_parts[1]) && !pdfProjectSet.has(url_parts[1]))) {
+      if ((url_parts.length != 3 || (!imageProjectSet.has(url_parts[1]) && !pdfProjectSet.has(url_parts[1])))
+          && (url_parts.length != 1 || (!projectSet.has(url_parts[0])))) {
         // close modal and remove hash
         closeModal();
         removeHash();
@@ -162,53 +214,8 @@ $(function() {
 
    // check if landing url is a "modal" url, and if so, open corresponding modal
    var hash = window.location.hash; //window.location.href.split('#')[1];
-   if (hash) {
-    var url_parts = hash.split("/");
-
-    if (url_parts.length == 3) {
-      var list_elem_id = "li#"+ url_parts[1];
-
-      var year = getProjectYear($(list_elem_id))
-      var elem = $('h2#'+year);
-      var span = $(elem.children('span')[0]);
-      span.html("▼");
-      $('#'+year+'-body').removeClass('hidden');
-
-      // open the modal immediately, so the website appears faster
-      $('#modal-gallery').toggle();
-
-      // scroll to relevant list item
-      $('html, body').animate({
-        scrollTop: $(list_elem_id).offset().top
-      }, 1000);
-
-      // check whether the modal belongs to a project's image or pdf set
-      if (imageProjectSet.has(url_parts[1]) && !isNaN(url_parts[2])) {
-        // open corresponding accordion
-        toggleAccordion($(list_elem_id + " button.toggle-accordion"));
-
-        // add image to the modal
-        var $image = $(list_elem_id + " div.accordion img[data-index='"+ url_parts[2] +"']");
-        setTimeout(function(){ modalLoadImage($image); }, 1000); // 500 is too little for some images
-      }
-      else {
-        // handle pdf
-        var $a = $(list_elem_id + " a.pdf[href*='"+url_parts[2]+"']");
-        if ($a.prop('target') == "_blank") {
-          loadModalPDF($a.data('project'), $a.attr('href'));
-        }
-      }
-    } else if (url_parts.length == 1 && !isNaN(url_parts[0])) {
-      // unhide corresponding year
-      var year = getProjectYear($(hash))
-      var elem = $('h2#'+year);
-      var span = $(elem.children('span')[0]);
-      span.html("▼");
-      $('#'+year+'-body').removeClass('hidden');
-    } else {
-      removeHash();
-    }
-   }
+   handleHash();
+   
 
    // Close a modal window
    function closeModal() {  
