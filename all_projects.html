@@ -32,10 +32,20 @@ author: obiwit
         <h4>Using state-of-the-art NLP to tackle humor detection</h4>
         <p>A semester-long research project using BERT (Bidirectional Encoder Representations from Transformers) to construct reasonably well-performing humor-detection models on a <a href="https://github.com/epfl-dlab/unfun">paired satirical-and-serious headlines dataset</a> and then analyze them in order to discern what mechanisms are having an impact on their classification decisions.</p> 
         <p>I started by showing it is indeed possible to build neural architectures that achieve remarkable performance on a humor classification task. Subsequently, the analysis revealed that these architectures need to be able to leverage semantic-level concepts and the context of words within the headline in order to be able to successfully identify humor.</p>
-        <p>This project was done in EPFL's Data Science lab (<a href="https://dlab.epfl.ch">dlab</a>), under prof. Robert "Bob" West, Maxime Peyrard and Kristina Gligorić. Further work led to a paper submission at <a href="https://2021.eacl.org">EACL 2021</a>.</p>
-        <p>You can read the report for the semester project <a class="pdf" target="_blank" data-project="humorBERT"
-          href="{{ site.baseurl }}/pdf/projects/nlp_humor.pdf">here</a>.</p>
+        <p>This project was done in EPFL's Data Science lab (<a href="https://dlab.epfl.ch">dlab</a>), under prof. Robert "Bob" West, Maxime Peyrard and Kristina Gligorić. Further work led to a paper submission at <a href="https://ijcai-21.org">IJCAI 2021</a>.</p>
+        <p>You can read the report for the semester project <a class="pdf" target="_blank" data-project="humorBERT" href="{{ site.baseurl }}/pdf/projects/nlp_humor.pdf">here</a>.</p>
       </li>
+
+      <li id="venbiogen">
+        <h3>Venetian biographies generator</h3>
+        <h4>Generating biographies of Venetians up to the 20th century, using GPT-2 and BERT</h4>
+        <p>In this project developed in a group of 3, we used generative models to come up with creative biographies of Venetians up to and including the 19th century. This model allowed us to, on one hand, evaluate the current state, progress and limitation of text generation, and, on the other, question whether underlying historical tendencies - most commonly under the form of international or inter-familial relationships - are learnt by the model.</p>
+        <p>Our pipeline employed several modules: the generative module handled the generation of unadjusted biographies, which then had to satisfy a realism criteria. Then, the enhancements module was used to increase realism in those biographies. These adjustments concern mainly dates’ fine-tuning - to make sure that the dates in a given biography are as coherent as possible - as well as entity replacement – a submodule which makes sure that the historical figures mentioned in a biography correspond to the era of the biography.</p>
+        <p>We were able to create a pipeline which creates fictional biographies with a level of realism that exceeded our initial expectations. In fact, on average, 1 out of 4 fake biographies was able to fool us when we conducted an evaluation.</p>
+        <p>You can read a more comprehensive description <a class="pdf"
+          href="http://fdh.epfl.ch/index.php?title=VenBioGen&oldid=6053">in this wiki article</a> or in <a class="pdf" target="_blank" data-project="venbiogen" href="{{ site.baseurl }}/pdf/projects/venbiogen.pdf">its pdf counterpart</a>, and find the source code <a 
+          href="https://github.com/MSc-EPFL/biography-generation">here</a>.</p>
+        
       </li>
 
       <li id="philosophy">
