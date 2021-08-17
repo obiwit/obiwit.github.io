@@ -2,7 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&display=swap');
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap");
-// @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 /* Variables */
 
@@ -12,7 +11,7 @@ $medium-screen: 62em !default;
 $large-screen: 75em !default;
 $font-family: "Raleway", sans-serif;
 $font-family-numbers: "Josefin Sans", sans-serif;
-$font-family-about-me-body: "Raleway", sans-serif; //, "Open Sans"
+$font-family-about-me-body: "Raleway", sans-serif;
 $font-size-base: 1rem !default;
 $font-size-h1: 2rem !default;
 $font-weight-strong: 600;
@@ -33,10 +32,7 @@ html {
   font-family: $font-family;
   font-size: $font-size-base;
   font-weight: normal;
-  // height: 100%;
-  // overflow: hidden;
-
-  // height: 100vh;
+  
   overflow-x: hidden;
   overflow-y: auto;
   perspective: 2px;
@@ -46,32 +42,6 @@ body {
   height: 100%;
 }
 
-/* Parallax */
-// .parallax { 
-//   /* The image used */
-//   background-image: url("/assets/img/starry_bckg.jpg");
-
-//   /* Full height */
-//   height: 100%; 
-
-//   /* Create the parallax scrolling effect */
-//   // background-attachment: fixed;
-//   // background-position: center;
-//   // background-repeat: no-repeat;
-//   // background-size: cover;
-
-//   background-image: url(/assets/img/starry_bckg.jpg);
-//   background-attachment: scroll;
-//   background-position: 50%;
-//   /* background-repeat: no-repeat; */
-//   background-size: cover;
-//   overflow: scroll;
-// }
-// @media only screen and (max-device-width: 1366px) {
-//   .parallax {
-//     background-attachment: scroll;
-//   }
-// }
 .parallax {
   position: absolute; 
   top: 0; 
@@ -81,13 +51,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  // /* Full height */
-  // height: 100%; 
-
-  // /* Center and scale the image nicely */
-  // background-position: center;
-  // background-repeat: no-repeat;
-  // background-size: cover;
   z-index: -10;
   background-image: url("/assets/img/starry_bckg.jpg");
 }
@@ -99,10 +62,7 @@ body {
   bottom: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
-//   // transform: translateZ(-1px) scale(1.5);
-//   background-size: 100%;
   z-index: -9;
-//   background-image: url("{{ "/assets/img/starry_bckg.jpg" | prepend: site.baseurl }}");
 }
 
 /* Typography */
@@ -115,6 +75,7 @@ h1 {
 
 p {
   word-spacing: 0.1rem;
+  font-size: 1.25rem;
 }
 
 a {
@@ -173,9 +134,9 @@ a {
   text-align: center;
 }
 
-.layout .card .description {
-  text-align: justify;
-}
+// .layout .card .description {
+//   text-align: justify;
+// }
 
 .neumorphism-button {
   background: linear-gradient(
@@ -197,15 +158,6 @@ a {
     -1px -1px 2px rgba(0, 0, 0, 0.4), inset 3px 3px 2px 0 rgba(0, 0, 0, 0.4),
     inset -1px -2px 2px rgba(210, 210, 210, 0.4);
 }
-
-// .neumorphism-card {
-//   box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 1),
-//     inset -2px -2px 4px rgba(99, 99, 99, 1);
-// }
-
-// .neumorphism-card-big {
-//   box-shadow: 5px 5px 4px #161718, -5px -5px 4px #404346;
-// }
 
 /* Preloader */
 
@@ -464,39 +416,19 @@ a {
   }
 
   div[skill-type="field"] {
-    // color: #FFA45B; 
     color: #75CFB8;
-    
-    // color: #FF6701; 
-    // color: #FF6701; 
-    //color: #e84a5f;
   }
 
   div[skill-type="language"] {
-    // color: #ff847c; 
     color: #CDC733;
-
-    // color: #CDC733; 
-    // color: #FEA82F; 
-    //color: #ff847c;
   }
 
   div[skill-type="frametool"] {
-    // color: #CDC733; 
     color: #F0E5D8;
-    
-    // color: #D0AF84; 
-    // color: #FFC288; 
-    //color: #fecea8;
   }
 
   div[skill-type="softskill"] {
-    // color: #AEE6E6; 
     color: #FFC478;
-    
-    // color: #FFE6CA; 
-    // color: #FCECDD;  
-    //color: #d4a8fe;
   }
 
   div[skill-weight="1"] {
@@ -604,6 +536,7 @@ a {
     border-radius: 0.5rem;
     font-weight: $font-weight-strong;
     padding: 0.25rem 0.5rem;
+    line-height: 1.75rem;
 
     span {
       position: relative;
