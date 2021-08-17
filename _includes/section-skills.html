@@ -3,26 +3,33 @@
 <div id="skills">
   <input type="radio" id="all" name="filter" checked />
   <label class="filter-button neumorphism-button" for="all">All</label>
+  <input type="radio" id="field" name="filter" />
+  <label class="filter-button neumorphism-button" for="field">Fields</label>
   <input type="radio" id="language" name="filter" />
   <label class="filter-button neumorphism-button" for="language">Languages</label>
-  <input type="radio" id="framework" name="filter" />
-  <label class="filter-button neumorphism-button" for="framework">Frameworks</label>
-  <input type="radio" id="tool" name="filter" />
-  <label class="filter-button neumorphism-button" for="tool">Tools</label>
+  <input type="radio" id="softskill" name="filter" />
+  <label class="filter-button neumorphism-button" for="softskill">Soft Skills</label>
+  <input type="radio" id="frametool" name="filter" />
+  <label class="filter-button neumorphism-button" for="frametool">Frameworks & Tools</label>
 
+  {% for field in site.data.skills-fields %}
+    <div skill-type="field" skill-weight="{{field.weight}}" data-aos="zoom-in">
+      {{field.name}}
+    </div>
+  {% endfor %}
   {% for language in site.data.skills-languages %}
     <div skill-type="language" skill-weight="{{language.weight}}" data-aos="zoom-in">
       {{language.name}}
     </div>
   {% endfor %}
-  {% for framework in site.data.skills-frameworks %}
-    <div skill-type="framework" skill-weight="{{framework.weight}}" data-aos="zoom-in">
-      {{framework.name}}
+  {% for softskill in site.data.skills-softskills %}
+    <div skill-type="softskill" skill-weight="{{softskill.weight}}" data-aos="zoom-in">
+      {{softskill.name}}
     </div>
   {% endfor %}
-  {% for tool in site.data.skills-tools %}
-    <div skill-type="tool" skill-weight="{{tool.weight}}" data-aos="zoom-in">
-      {{tool.name}}
+  {% for frametool in site.data.skills-frameworks-tools %}
+    <div skill-type="frametool" skill-weight="{{frametool.weight}}" data-aos="zoom-in">
+      {{frametool.name}}
     </div>
   {% endfor %}
 </div>

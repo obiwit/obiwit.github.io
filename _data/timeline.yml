@@ -17,45 +17,34 @@
 #     - tag: Rails
 #   timeline-side: right
 
-- title: airbnb
-  title-url: https://example.com/
-  date: Sep 2019 - Present
-  subtitle: Fullstack Developer
+- title: LogicFlow
+  title-url: https://www.logicflow.ai
+  date: Aug 2021 - Jan 2022
+  subtitle: Algorithm & Machine Learning Intern
   tags:
-    - tag: React
-    - tag: Javascript
-    - tag: Ruby
-    - tag: Rails
+    - tag: Tensorflow
+    - tag: NLP
+    - tag: Python
+    - tag: C#
   timeline-side: right
 
-- title: Google
-  title-url: https://example.com/
-  date: Mar 2019 - Sep 2019
-  subtitle: Software Engineer as Intern
-  tags:
-    - tag: Flutter
-    - tag: Dart
-    - tag: Keycloak
-  timeline-side: right
-
-- title: Super University
-  title-url: https://example.com/
-  date: 2017 - 2019
-  subtitle: M.Sc. Computer Science
+- title: EPFL
+  title-url: https://www.epfl.ch/en/
+  date: 2019 - 2022
+  subtitle: MSc. Data Science
   timeline-side: left
 
-- title: Facebook
-  title-url: https://example.com/
-  date: Sep 2017 - Mar 2019
-  subtitle: Front-End Developer as Intern
+- title: Calouste Gulbenkian Foundation
+  title-url: https://gulbenkian.pt/en/
+  date: Nov 2018 - Sep 2019
+  subtitle: Gulbenkian Research Fellow
   tags:
-    - tag: React
-    - tag: Node
-    - tag: Javascript
+    - tag: Computer Vision
+    - tag: Python
   timeline-side: right
 
-- title: Super University
-  title-url: https://example.com/
-  date: 2014 - 2017
-  subtitle: B.A. Computer Science
+- title: University of Aveiro
+  title-url: https://www.ua.pt
+  date: 2016-2019
+  subtitle: BSc. Computer and Telematics Engineering
   timeline-side: left

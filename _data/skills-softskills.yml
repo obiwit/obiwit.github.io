@@ -1,0 +1,19 @@
+# > name: Name of the Soft Skill
+# > weight: Describes how relevant the soft skill is - values from 1 up to 5, try to go a bit low
+#
+# Example of a Soft Skill
+# - name: Soft Skill
+#   weight: 5
+
+
+# - name: Communication
+#   weight: 3
+
+- name: Team leadership
+  weight: 3
+
+- name: Project planning
+  weight: 4
+
+- name: Role assignment
+  weight: 2
