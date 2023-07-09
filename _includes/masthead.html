@@ -1,0 +1,55 @@
+{% capture logo_path %}{{ site.logo }}{% endcapture %}
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <ul class="visible-links">
+          {%- for link in site.data.navigation.main -%}
+            <li class="masthead__menu-item">
+              <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+            </li>
+          {%- endfor -%}
+        </ul>
+
+        <!-- Collapsible navigation by Erik Terwan (MIT License) -->
+        <div id="mastheadMenuToggle">
+          <!--
+          A fake / hidden checkbox is used as click reciever,
+          so you can use the :checked selector on it.
+          -->
+          <input type="checkbox" />
+          
+          <!--
+          Some spans to act as a hamburger.
+          
+          They are acting like a real hamburger,
+          not that McDonalds stuff.
+          -->
+          <span></span>
+          <span></span>
+          <span></span>
+          
+          <!--
+          Too bad the menu has to be inside of the button
+          but hey, it's pure CSS magic.
+          -->
+          <ul id="mastheadMenu">
+            {%- for link in site.data.navigation.main -%}
+            <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>
+              <li>{{ link.title }}</li>
+            </a>
+          {%- endfor -%}
+          </ul>
+        </div>
+
+        <!-- <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle menu" }}</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul> -->
+      </nav>
+    </div>
+  </div>
+</div>

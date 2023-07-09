@@ -1,0 +1,29 @@
+---
+layout: home
+author_profile: true
+---
+
+<p>Whether you'd like to work with me, collaborate on a cool project or something else, feel free to get in touch!</p>
+
+{% assign author = page.author | default: page.authors[0] | default: site.author %}
+{% assign author = site.data.authors[author] | default: author %}
+
+{% if author.links %}
+{% for link in author.links %}
+    {% if link.label and link.url %}
+        <p style="margin-bottom: 0px;">
+            <i class="{{ link.icon | default: 'fas fa-link' }}" aria-hidden="true"></i>
+            <a href="{{ link.url }}" rel="nofollow noopener noreferrer me"{% if link.url contains 'http' %} itemprop="sameAs"{% endif %}>
+                <span >{{ link.label }}</span>
+            </a>
+        </p>
+    {% endif %}
+{% endfor %}
+{% endif %}
+
+<!-- <a href="">Email</a></p>
+<p style="margin-bottom: 0px;"><a href="">Twitter</a></p>
+<p style="margin-bottom: 0px;"><a href="">LinkedIn</a></p>
+<p style="margin-bottom: 0px;"><a href="">Google Scholar</a></p>
+<p style="margin-bottom: 0px;"><a href="">Semantic Scholar</a></p>
+<p style="margin-bottom: 0px;"><a href="">Github</a></p> -->

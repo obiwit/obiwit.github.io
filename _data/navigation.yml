@@ -1,0 +1,10 @@
+# main links
+main:
+  - title: Home
+    url: /
+  - title: About Me
+    url: /about
+  - title: Publications
+    url: /publications
+  - title: Contact
+    url: /contact
