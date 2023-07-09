@@ -106,7 +106,7 @@ analytics:
 author:
   name             : "Beatriz Borges"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am a **pretty cool** person."
+  bio              : "I am a **pretty cool** person." #"(aka **obiwit**)"
   location         : "Switzerland"
   email            :
   links:
